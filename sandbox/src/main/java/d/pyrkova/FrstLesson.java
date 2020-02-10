@@ -1,6 +1,8 @@
 package d.pyrkova;
 
-public class FirstLesson {
+import d.pyrkova.Point;
+
+public class FrstLesson {
   public static void main(String[] args) {
     Point p1 = new Point(1,1);
     Point p2 = new Point(5,4);
