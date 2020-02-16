@@ -169,4 +169,12 @@ public class TestBase {
   protected void gotoNewUserPage() {
     wd.findElement(By.linkText("add new")).click();
   }
+
+  protected void closeAlertDialog() {
+    wd.switchTo().alert().accept();
+  }
+
+  protected void deleteSelectedUser() {
+    wd.findElement(By.xpath("//input[@value='Delete']")).click();
+  }
 }
