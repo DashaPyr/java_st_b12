@@ -85,27 +85,7 @@
       <recent name="D:\Dasha\java\GitHubDesktop\java_st_b12\addressbook-web-tests\src\test" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.UserDeletionTests">
-    <configuration name="GroupCreationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/addressbook-web-tests" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;dd.pyrkova.addressbook.GroupCreationTests&quot;" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="TestNG.DeletUserTests">
     <configuration name="CreateNewUser" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
@@ -116,6 +96,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="dd.pyrkova.addressbook" />
       <option name="MAIN_CLASS_NAME" value="dd.pyrkova.addressbook.CreateNewUser" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeletUserTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="addressbook-web-tests.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dd.pyrkova.addressbook.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dd.pyrkova.addressbook" />
+      <option name="MAIN_CLASS_NAME" value="dd.pyrkova.addressbook.DeletUserTests" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -176,11 +173,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.DeletUserTests" />
         <item itemvalue="TestNG.UserDeletionTests" />
         <item itemvalue="TestNG.CreateNewUser" />
         <item itemvalue="TestNG.GroupDeletionTests" />
         <item itemvalue="TestNG.GroupCreationTests" />
-        <item itemvalue="Gradle.GroupCreationTests" />
       </list>
     </recent_temporary>
   </component>
@@ -235,22 +232,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="461" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581837963120" />
-    <state width="1877" height="321" key="GridCell.Tab.0.bottom" timestamp="1581855027375">
+    <state width="1877" height="321" key="GridCell.Tab.0.bottom" timestamp="1581857070506">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="321" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581855027375" />
-    <state width="1877" height="321" key="GridCell.Tab.0.center" timestamp="1581855027375">
+    <state width="1877" height="321" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581857070506" />
+    <state width="1877" height="321" key="GridCell.Tab.0.center" timestamp="1581857070505">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="321" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581855027375" />
-    <state width="1877" height="321" key="GridCell.Tab.0.left" timestamp="1581855027375">
+    <state width="1877" height="321" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581857070505" />
+    <state width="1877" height="321" key="GridCell.Tab.0.left" timestamp="1581857070505">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="321" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581855027375" />
-    <state width="1877" height="321" key="GridCell.Tab.0.right" timestamp="1581855027375">
+    <state width="1877" height="321" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581857070505" />
+    <state width="1877" height="321" key="GridCell.Tab.0.right" timestamp="1581857070505">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="321" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581855027375" />
+    <state width="1877" height="321" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581857070505" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1581370943049">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -291,10 +288,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="536" y="257" width="847" height="602" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040@0.0.1920.1040" timestamp="1581362592859" />
-    <state x="938" y="227" width="540" height="496" key="extract.method.dialog" timestamp="1581850899894">
+    <state x="938" y="227" width="540" height="496" key="extract.method.dialog" timestamp="1581856163326">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="938" y="227" width="540" height="496" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581850899894" />
+    <state x="938" y="227" width="540" height="496" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581856163326" />
     <state x="358" y="283" key="new project wizard" timestamp="1581779823858">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
