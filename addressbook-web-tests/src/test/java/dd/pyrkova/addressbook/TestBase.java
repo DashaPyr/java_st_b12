@@ -92,7 +92,7 @@ public class TestBase {
     wd.findElement(By.name("delete")).click();
   }
 
-  protected void selectGroup() {
+  protected void selectElement() {
     wd.findElement(By.xpath("(//input[@name='selected[]'])[4]")).click();
   }
 

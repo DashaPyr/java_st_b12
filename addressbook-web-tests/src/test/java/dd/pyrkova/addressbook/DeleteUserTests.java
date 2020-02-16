@@ -6,7 +6,7 @@ import static org.testng.Assert.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class DeletUserTests {
+public class DeleteUserTests {
   private WebDriver wd;
 
   @BeforeClass(alwaysRun = true)

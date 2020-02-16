@@ -85,7 +85,7 @@
       <recent name="D:\Dasha\java\GitHubDesktop\java_st_b12\addressbook-web-tests\src\test" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.DeletUserTests">
+  <component name="RunManager" selected="TestNG.DeleteUserTests">
     <configuration name="CreateNewUser" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
@@ -103,7 +103,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeletUserTests" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="DeleteUserTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
         <pattern>
@@ -112,7 +112,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="dd.pyrkova.addressbook" />
-      <option name="MAIN_CLASS_NAME" value="dd.pyrkova.addressbook.DeletUserTests" />
+      <option name="MAIN_CLASS_NAME" value="dd.pyrkova.addressbook.DeleteUserTests" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -173,7 +173,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.DeletUserTests" />
+        <item itemvalue="TestNG.DeleteUserTests" />
         <item itemvalue="TestNG.UserDeletionTests" />
         <item itemvalue="TestNG.CreateNewUser" />
         <item itemvalue="TestNG.GroupDeletionTests" />
@@ -208,10 +208,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="679" y="148" key="#SquareTests/0.0.1920.1040@0.0.1920.1040" timestamp="1581363599483" />
-    <state x="414" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581368330487">
+    <state x="414" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581858777336">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="414" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581368330487" />
+    <state x="414" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581858777336" />
     <state x="689" y="305" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1581368329632">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -232,22 +232,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="461" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581837963120" />
-    <state width="1877" height="321" key="GridCell.Tab.0.bottom" timestamp="1581857070506">
+    <state width="1877" height="321" key="GridCell.Tab.0.bottom" timestamp="1581858845076">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="321" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581857070506" />
-    <state width="1877" height="321" key="GridCell.Tab.0.center" timestamp="1581857070505">
+    <state width="1877" height="321" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581858845076" />
+    <state width="1877" height="321" key="GridCell.Tab.0.center" timestamp="1581858845076">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="321" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581857070505" />
-    <state width="1877" height="321" key="GridCell.Tab.0.left" timestamp="1581857070505">
+    <state width="1877" height="321" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581858845076" />
+    <state width="1877" height="321" key="GridCell.Tab.0.left" timestamp="1581858845076">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="321" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581857070505" />
-    <state width="1877" height="321" key="GridCell.Tab.0.right" timestamp="1581857070505">
+    <state width="1877" height="321" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581858845076" />
+    <state width="1877" height="321" key="GridCell.Tab.0.right" timestamp="1581858845076">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="321" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581857070505" />
+    <state width="1877" height="321" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581858845076" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1581370943049">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
