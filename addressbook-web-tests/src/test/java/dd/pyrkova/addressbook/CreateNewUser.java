@@ -17,16 +17,16 @@ public class CreateNewUser {
     wd = new ChromeDriver();
     wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     wd.get("http://localhost/addressbook/");
-    login();
+    login("admin", "secret");
   }
 
-  private void login() {
+  private void login(String userlogin, String userpassword) {
     wd.findElement(By.name("user")).click();
     wd.findElement(By.name("user")).clear();
-    wd.findElement(By.name("user")).sendKeys("admin");
+    wd.findElement(By.name("user")).sendKeys(userlogin);
     wd.findElement(By.name("pass")).click();
     wd.findElement(By.name("pass")).clear();
-    wd.findElement(By.name("pass")).sendKeys("secret");
+    wd.findElement(By.name("pass")).sendKeys(userpassword);
     wd.findElement(By.xpath("//input[@value='Login']")).click();
   }
 
@@ -34,12 +34,12 @@ public class CreateNewUser {
   public void testCreateNewUser() throws Exception {
 
     gotoNewUserPage();
-    fillInUserName();
-    fillInCompany();
-    fillInAddress();
-    fillInPhones();
-    fillInEmail();
-    fillInBirthday();
+    fillInUserName("Daria", "Vladimirovna", "Pyrkova", "dd");
+    fillInCompany("U");
+    fillInAddress("Dolgoprudny");
+    fillInPhones("999", "777", "888");
+    fillInEmail("d@u.ru", "d@g.com");
+    fillInBirthday("1", "January", "1990");
     submitUserCreation();
     returnToHomePage();
     logout();
@@ -57,66 +57,66 @@ public class CreateNewUser {
     wd.findElement(By.xpath("(//input[@name='submit'])[2]")).click();
   }
 
-  private void fillInBirthday() {
+  private void fillInBirthday(String birthday, String birthmonth, String birthyear) {
     wd.findElement(By.name("bday")).click();
-    new Select(wd.findElement(By.name("bday"))).selectByVisibleText("1");
+    new Select(wd.findElement(By.name("bday"))).selectByVisibleText(birthday);
     wd.findElement(By.name("bday")).click();
     wd.findElement(By.name("bmonth")).click();
-    new Select(wd.findElement(By.name("bmonth"))).selectByVisibleText("January");
+    new Select(wd.findElement(By.name("bmonth"))).selectByVisibleText(birthmonth);
     wd.findElement(By.name("bmonth")).click();
     wd.findElement(By.name("byear")).click();
     wd.findElement(By.name("byear")).clear();
-    wd.findElement(By.name("byear")).sendKeys("1990");
+    wd.findElement(By.name("byear")).sendKeys(birthyear);
   }
 
-  private void fillInEmail() {
+  private void fillInEmail(String emailone, String emailtwo) {
     wd.findElement(By.name("email")).click();
     wd.findElement(By.name("email")).clear();
-    wd.findElement(By.name("email")).sendKeys("d@u.ru");
+    wd.findElement(By.name("email")).sendKeys(emailone);
     wd.findElement(By.name("email2")).click();
     wd.findElement(By.name("email2")).clear();
-    wd.findElement(By.name("email2")).sendKeys("d@g.com");
+    wd.findElement(By.name("email2")).sendKeys(emailtwo);
   }
 
-  private void fillInPhones() {
+  private void fillInPhones(String phonehome, String phonemobile, String phonework) {
     wd.findElement(By.name("home")).click();
     wd.findElement(By.name("home")).clear();
-    wd.findElement(By.name("home")).sendKeys("999");
+    wd.findElement(By.name("home")).sendKeys(phonehome);
     wd.findElement(By.name("mobile")).click();
     wd.findElement(By.name("mobile")).clear();
-    wd.findElement(By.name("mobile")).sendKeys("777");
+    wd.findElement(By.name("mobile")).sendKeys(phonemobile);
     wd.findElement(By.name("work")).click();
     wd.findElement(By.name("work")).clear();
-    wd.findElement(By.name("work")).sendKeys("888");
+    wd.findElement(By.name("work")).sendKeys(phonework);
   }
 
-  private void fillInAddress() {
+  private void fillInAddress(String address) {
     wd.findElement(By.name("address")).click();
     wd.findElement(By.name("address")).click();
     wd.findElement(By.name("address")).click();
     wd.findElement(By.name("address")).clear();
-    wd.findElement(By.name("address")).sendKeys("Dolgoprudny");
+    wd.findElement(By.name("address")).sendKeys(address);
   }
 
-  private void fillInCompany() {
+  private void fillInCompany(String company) {
     wd.findElement(By.name("company")).click();
     wd.findElement(By.name("company")).clear();
-    wd.findElement(By.name("company")).sendKeys("U");
+    wd.findElement(By.name("company")).sendKeys(company);
   }
 
-  private void fillInUserName() {
+  private void fillInUserName(String firstname, String middlename, String lastname, String nickname) {
     wd.findElement(By.name("firstname")).click();
     wd.findElement(By.name("firstname")).clear();
-    wd.findElement(By.name("firstname")).sendKeys("Daria");
+    wd.findElement(By.name("firstname")).sendKeys(firstname);
     wd.findElement(By.name("middlename")).click();
     wd.findElement(By.name("middlename")).clear();
-    wd.findElement(By.name("middlename")).sendKeys("Vladimirovna");
+    wd.findElement(By.name("middlename")).sendKeys(middlename);
     wd.findElement(By.name("lastname")).click();
     wd.findElement(By.name("lastname")).clear();
-    wd.findElement(By.name("lastname")).sendKeys("Pyrkova");
+    wd.findElement(By.name("lastname")).sendKeys(lastname);
     wd.findElement(By.name("nickname")).click();
     wd.findElement(By.name("nickname")).clear();
-    wd.findElement(By.name("nickname")).sendKeys("dd");
+    wd.findElement(By.name("nickname")).sendKeys(nickname);
   }
 
   private void gotoNewUserPage() {
