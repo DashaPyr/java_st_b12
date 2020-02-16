@@ -1,4 +1,4 @@
-package dd.pyrkova.addressbook;
+package dd.pyrkova.addressbook.model;
 
 public class UserNameData {
   private final String firstname;
