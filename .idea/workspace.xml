@@ -78,6 +78,7 @@
       <recent name="dd.pyrkova" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="dd.pyrkova.addressbook.appmanager" />
       <recent name="dd.pyrkova.addressbook" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -220,10 +221,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="808" y="410" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581838004684" />
-    <state x="662" y="273" key="#com.intellij.refactoring.memberPullUp.PullUpDialog" timestamp="1581861051789">
+    <state x="662" y="273" key="#com.intellij.refactoring.memberPullUp.PullUpDialog" timestamp="1581864592983">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="662" y="273" key="#com.intellij.refactoring.memberPullUp.PullUpDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581861051789" />
+    <state x="662" y="273" key="#com.intellij.refactoring.memberPullUp.PullUpDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581864592983" />
     <state x="756" y="380" width="408" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1581193560923">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -232,22 +233,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="461" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581837963120" />
-    <state width="1877" height="321" key="GridCell.Tab.0.bottom" timestamp="1581861815909">
+    <state width="1877" height="321" key="GridCell.Tab.0.bottom" timestamp="1581865763100">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="321" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581861815909" />
-    <state width="1877" height="321" key="GridCell.Tab.0.center" timestamp="1581861815909">
+    <state width="1877" height="321" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581865763100" />
+    <state width="1877" height="321" key="GridCell.Tab.0.center" timestamp="1581865763100">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="321" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581861815909" />
-    <state width="1877" height="321" key="GridCell.Tab.0.left" timestamp="1581861815909">
+    <state width="1877" height="321" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581865763100" />
+    <state width="1877" height="321" key="GridCell.Tab.0.left" timestamp="1581865763099">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="321" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581861815909" />
-    <state width="1877" height="321" key="GridCell.Tab.0.right" timestamp="1581861815909">
+    <state width="1877" height="321" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581865763099" />
+    <state width="1877" height="321" key="GridCell.Tab.0.right" timestamp="1581865763100">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="321" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581861815909" />
+    <state width="1877" height="321" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581865763100" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1581370943049">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
