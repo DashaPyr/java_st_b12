@@ -82,33 +82,7 @@
       <recent name="D:\Dasha\java\GitHubDesktop\java_st_b12\addressbook-web-tests\src\test" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.GroupCreationTests">
-    <configuration name="FirstLesson" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="d.pyrkova.FirstLesson" />
-      <module name="sandbox.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="d.pyrkova.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FrstLesson" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="d.pyrkova.FrstLesson" />
-      <module name="sandbox.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="d.pyrkova.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.CreateNewUser">
     <configuration name="GroupCreationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -128,6 +102,23 @@
       </ExternalSystemSettings>
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
+    </configuration>
+    <configuration name="CreateNewUser" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="addressbook-web-tests.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dd.pyrkova.addressbook.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dd.pyrkova.addressbook" />
+      <option name="MAIN_CLASS_NAME" value="dd.pyrkova.addressbook.CreateNewUser" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="GroupCreationTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
@@ -182,11 +173,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.CreateNewUser" />
         <item itemvalue="TestNG.GroupCreationTests" />
         <item itemvalue="Gradle.GroupCreationTests" />
         <item itemvalue="Gradle.GroupCreationTests" />
         <item itemvalue="Gradle.GroupCreationTests" />
-        <item itemvalue="TestNG.PointTests (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -225,30 +216,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="689" y="305" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581368329632" />
+    <state x="808" y="410" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1581838004684">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="808" y="410" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581838004684" />
     <state x="756" y="380" width="408" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1581193560923">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="756" y="380" width="408" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1581193560923" />
-    <state x="0" y="461" key="FileChooserDialogImpl" timestamp="1581782894838">
+    <state x="0" y="461" key="FileChooserDialogImpl" timestamp="1581837963120">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="0" y="461" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581782894838" />
-    <state width="1877" height="321" key="GridCell.Tab.0.bottom" timestamp="1581801304263">
+    <state x="0" y="461" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581837963120" />
+    <state width="1877" height="321" key="GridCell.Tab.0.bottom" timestamp="1581838052307">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="321" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581801304263" />
-    <state width="1877" height="321" key="GridCell.Tab.0.center" timestamp="1581801304263">
+    <state width="1877" height="321" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581838052307" />
+    <state width="1877" height="321" key="GridCell.Tab.0.center" timestamp="1581838052306">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="321" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581801304263" />
-    <state width="1877" height="321" key="GridCell.Tab.0.left" timestamp="1581801304263">
+    <state width="1877" height="321" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581838052306" />
+    <state width="1877" height="321" key="GridCell.Tab.0.left" timestamp="1581838052306">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="321" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581801304263" />
-    <state width="1877" height="321" key="GridCell.Tab.0.right" timestamp="1581801304263">
+    <state width="1877" height="321" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581838052306" />
+    <state width="1877" height="321" key="GridCell.Tab.0.right" timestamp="1581838052306">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="321" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581801304263" />
+    <state width="1877" height="321" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581838052306" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1581370943049">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -273,18 +268,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="631" y="176" width="657" height="713" key="RefactorJ.IntroduceParameterObject/0.0.1920.1040@0.0.1920.1040" timestamp="1581801192346" />
-    <state x="461" y="163" key="SettingsEditor" timestamp="1581796740477">
+    <state x="461" y="163" key="SettingsEditor" timestamp="1581837989590">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="163" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581796740477" />
+    <state x="461" y="163" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581837989590" />
     <state x="776" y="303" key="chooseDestDirectoryDialog" timestamp="1581193560881">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="776" y="303" key="chooseDestDirectoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581193560881" />
-    <state x="769" y="666" key="com.intellij.ide.util.TipDialog" timestamp="1581782191069">
+    <state x="769" y="666" key="com.intellij.ide.util.TipDialog" timestamp="1581837467347">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="769" y="666" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581782191069" />
+    <state x="769" y="666" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581837467347" />
     <state x="536" y="257" width="847" height="602" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1581362592859">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
