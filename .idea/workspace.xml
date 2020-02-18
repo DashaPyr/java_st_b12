@@ -86,17 +86,17 @@
       <recent name="D:\Dasha\java\GitHubDesktop\java_st_b12\addressbook-web-tests\src\test" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.UserModificationTests">
-    <configuration name="DeleteUserTests" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.DeleteUserTests">
+    <configuration name="CreateNewUser" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dd.pyrkova.addressbook.appmanager.*" />
+          <option name="PATTERN" value="dd.pyrkova.addressbook.tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="dd.pyrkova.addressbook" />
-      <option name="MAIN_CLASS_NAME" value="dd.pyrkova.addressbook.tests.DeleteUserTests" />
+      <option name="PACKAGE_NAME" value="dd.pyrkova.addressbook.tests" />
+      <option name="MAIN_CLASS_NAME" value="dd.pyrkova.addressbook.tests.CreateNewUser" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -104,16 +104,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GroupCreationTests" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="DeleteUserTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="dd.pyrkova.addressbook.appmanager.*" />
+          <option name="PATTERN" value="dd.pyrkova.addressbook.tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="dd.pyrkova.addressbook" />
-      <option name="MAIN_CLASS_NAME" value="dd.pyrkova.addressbook.tests.GroupCreationTests" />
+      <option name="PACKAGE_NAME" value="dd.pyrkova.addressbook.tests" />
+      <option name="MAIN_CLASS_NAME" value="dd.pyrkova.addressbook.tests.DeleteUserTests" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -174,11 +174,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.DeleteUserTests" />
         <item itemvalue="TestNG.UserModificationTests" />
+        <item itemvalue="TestNG.CreateNewUser" />
         <item itemvalue="TestNG.GroupModificationTests" />
         <item itemvalue="TestNG.GroupDeletionTests" />
-        <item itemvalue="TestNG.GroupCreationTests" />
-        <item itemvalue="TestNG.DeleteUserTests" />
       </list>
     </recent_temporary>
   </component>
@@ -233,22 +233,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="461" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581837963120" />
-    <state width="1877" height="321" key="GridCell.Tab.0.bottom" timestamp="1581873917203">
+    <state width="1877" height="321" key="GridCell.Tab.0.bottom" timestamp="1581997422312">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="321" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581873917203" />
-    <state width="1877" height="321" key="GridCell.Tab.0.center" timestamp="1581873917202">
+    <state width="1877" height="321" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581997422312" />
+    <state width="1877" height="321" key="GridCell.Tab.0.center" timestamp="1581997422312">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="321" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581873917202" />
-    <state width="1877" height="321" key="GridCell.Tab.0.left" timestamp="1581873917202">
+    <state width="1877" height="321" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581997422312" />
+    <state width="1877" height="321" key="GridCell.Tab.0.left" timestamp="1581997422312">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="321" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581873917202" />
-    <state width="1877" height="321" key="GridCell.Tab.0.right" timestamp="1581873917202">
+    <state width="1877" height="321" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581997422312" />
+    <state width="1877" height="321" key="GridCell.Tab.0.right" timestamp="1581997422312">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="321" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581873917202" />
+    <state width="1877" height="321" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581997422312" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1581370943049">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -285,10 +285,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="776" y="303" key="chooseDestDirectoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581193560881" />
-    <state x="769" y="666" key="com.intellij.ide.util.TipDialog" timestamp="1581837467347">
+    <state x="769" y="666" key="com.intellij.ide.util.TipDialog" timestamp="1581996942178">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="769" y="666" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581837467347" />
+    <state x="769" y="666" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581996942178" />
     <state x="536" y="257" width="847" height="602" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1581362592859">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

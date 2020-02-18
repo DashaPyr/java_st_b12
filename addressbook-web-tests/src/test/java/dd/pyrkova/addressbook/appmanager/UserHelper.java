@@ -15,8 +15,8 @@ public class UserHelper extends HelperBase {
   }
 
   public void submitUserCreation() {
-    click(By.xpath("(//input[@name='submit'])[2]"));
-  }
+    click(By.xpath("//input[@name='submit']"));
+}
 
   public void fillInBirthday(BirthData birthData) {
     select(By.name("bday"), birthData.getBirthday());
@@ -63,6 +63,6 @@ public class UserHelper extends HelperBase {
   }
 
   public void submitUserModification() {
-    click(By.xpath("(//input[@name='update'])[2]"));
+    click(By.xpath("//input[@name='update']"));
   }
 }
