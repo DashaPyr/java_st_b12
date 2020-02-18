@@ -10,6 +10,6 @@ public class SelectHelper extends HelperBase {
   }
 
   public void selectElement() {
-   click(By.xpath("(//input[@name='selected[]'])[4]"));
+   click(By.xpath("//input[@name='selected[]']"));
   }
 }

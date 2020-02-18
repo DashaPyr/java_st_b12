@@ -1,7 +1,5 @@
 package dd.pyrkova.addressbook.appmanager;
 
-import dd.pyrkova.addressbook.model.BirthData;
-import dd.pyrkova.addressbook.model.PhoneData;
 import dd.pyrkova.addressbook.model.UserData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -14,18 +12,6 @@ public class UserHelper extends HelperBase {
 
   public void submitUserCreation() {
     click(By.xpath("//input[@name='submit']"));
-}
-
-  public void fillInBirthday(BirthData birthData) {
-    select(By.name("bday"), birthData.getBirthday());
-    select(By.name("bmonth"), birthData.getBirthmonth());
-    type(By.name("byear"), birthData.getBirthyear());
-  }
-
-  public void fillInPhones(PhoneData phoneData) {
-    type(By.name("home"), phoneData.getPhonehome());
-    type(By.name("mobile"), phoneData.getPhonemobile());
-    type(By.name("work"), phoneData.getPhonework());
   }
 
   public void fillInAddress(String address) {
@@ -36,13 +22,19 @@ public class UserHelper extends HelperBase {
     type(By.name("company"), company);
   }
 
-  public void fillInUserName(UserData userData) {
+  public void fillInUserData(UserData userData) {
     type(By.name("firstname"), userData.getFirstname());
     type(By.name("middlename"), userData.getMiddlename());
     type(By.name("lastname"), userData.getLastname());
     type(By.name("nickname"), userData.getNickname());
     type(By.name("email"), userData.getEmailone());
     type(By.name("email2"), userData.getEmailtwo());
+    type(By.name("home"), userData.getPhonehome());
+    type(By.name("mobile"), userData.getPhonemobile());
+    type(By.name("work"), userData.getPhonework());
+    select(By.name("bday"), userData.getBirthday());
+    select(By.name("bmonth"), userData.getBirthmonth());
+    type(By.name("byear"), userData.getBirthyear());
   }
 
   public void gotoNewUserPage() {
