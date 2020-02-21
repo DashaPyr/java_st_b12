@@ -5,6 +5,8 @@ public class UserData {
   private final String middlename;
   private final String lastname;
   private final String nickname;
+  private final String company;
+  private final String address;
   private final String emailone;
   private final String emailtwo;
   private final String phonehome;
@@ -14,11 +16,13 @@ public class UserData {
   private final String birthmonth;
   private final String birthyear;
 
-  public UserData(String firstname, String middlename, String lastname, String nickname, String emailone, String emailtwo, String phonehome, String phonemobile, String phonework, String birthday, String birthmonth, String birthyear) {
+  public UserData(String firstname, String middlename, String lastname, String nickname, String company, String address, String emailone, String emailtwo, String phonehome, String phonemobile, String phonework, String birthday, String birthmonth, String birthyear) {
     this.firstname = firstname;
     this.middlename = middlename;
     this.lastname = lastname;
     this.nickname = nickname;
+    this.company = company;
+    this.address = address;
     this.emailone = emailone;
     this.emailtwo = emailtwo;
     this.phonehome = phonehome;
@@ -44,6 +48,12 @@ public class UserData {
   public String getNickname() {
     return nickname;
   }
+
+  public String getCompany() {
+    return company;
+  }
+
+  public String getAddress() { return address; }
 
   public String getEmailone() {
     return emailone;

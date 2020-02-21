@@ -14,19 +14,13 @@ public class UserHelper extends HelperBase {
     click(By.xpath("//input[@name='submit']"));
   }
 
-  public void fillInAddress(String address) {
-    type(By.name("address"), address);
-  }
-
-  public void fillInCompany(String company) {
-    type(By.name("company"), company);
-  }
-
   public void fillInUserData(UserData userData) {
     type(By.name("firstname"), userData.getFirstname());
     type(By.name("middlename"), userData.getMiddlename());
     type(By.name("lastname"), userData.getLastname());
     type(By.name("nickname"), userData.getNickname());
+    type(By.name("company"), userData.getCompany());
+    type(By.name("address"), userData.getAddress());
     type(By.name("email"), userData.getEmailone());
     type(By.name("email2"), userData.getEmailtwo());
     type(By.name("home"), userData.getPhonehome());
