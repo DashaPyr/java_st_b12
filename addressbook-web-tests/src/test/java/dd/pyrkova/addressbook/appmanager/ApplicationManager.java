@@ -14,7 +14,6 @@ public class ApplicationManager {
 
   private SessionHelper sessionHelper;
   private CloseAlertHelper closeAlertHelper;
-  private SelectHelper selectHelper;
   private NavigationHelper navigationHelper;
   private UserHelper userHelper;
   private GroupHelper groupHelper;
@@ -40,7 +39,6 @@ public class ApplicationManager {
     groupHelper = new GroupHelper(wd);
     userHelper = new UserHelper(wd);
     navigationHelper = new NavigationHelper(wd);
-    selectHelper = new SelectHelper(wd);
     closeAlertHelper = new CloseAlertHelper(wd);
     sessionHelper = new SessionHelper(wd);
     sessionHelper.login("admin", "secret");
@@ -60,10 +58,6 @@ public class ApplicationManager {
 
   public NavigationHelper getNavigationHelper() {
     return navigationHelper;
-  }
-
-  public SelectHelper getSelectHelper() {
-    return selectHelper;
   }
 
   public CloseAlertHelper getCloseAlertHelper() {
