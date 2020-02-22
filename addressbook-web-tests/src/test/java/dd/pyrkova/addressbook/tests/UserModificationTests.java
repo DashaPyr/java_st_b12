@@ -9,7 +9,11 @@ public class UserModificationTests extends TestBase {
   @Test
   public void testGroupModification() {
     app.getNavigationHelper().returnToHomePage();
-    app.getSelectHelper().selectElement();
+    if (! app.getUserHelper().isThereAUser()){
+      app.getUserHelper().createUser(new UserData("Daria", "Vladimirovna", "Pyrkova", "dd", "U", "Dolgoprudny", "d@u.ru", "d@g.com", "999", "777", "888", "1", "January", "1990", "test1"), true);
+      app.getNavigationHelper().returnToHomePage();
+    }
+    app.getUserHelper().selectUser();
     app.getUserHelper().initUserModification();
     app.getUserHelper().fillInUserData(new UserData("Darya", "V.", "Pyrkova", "ddd", "M", "Moscow region", "d@m.ru", "d@g.com", "555", "777", "333", "1", "January", "1990", null), false);
     app.getUserHelper().submitUserModification();

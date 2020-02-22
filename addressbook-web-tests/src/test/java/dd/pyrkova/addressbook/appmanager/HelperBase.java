@@ -43,7 +43,17 @@ public class HelperBase {
     }
   }
 
-  protected boolean isElementPresent(By locator) {
+  protected boolean isGroupElementPresent(By locator) {
+    try {
+      wd.findElement(locator);
+      return true;
+    } catch (NoSuchElementException ex){
+      return false;
+    }
+  }
+
+
+  protected boolean isUserElementPresent(By locator) {
     try {
       wd.findElement(locator);
       return true;

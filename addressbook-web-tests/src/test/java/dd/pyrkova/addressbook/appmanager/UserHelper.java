@@ -2,7 +2,6 @@ package dd.pyrkova.addressbook.appmanager;
 
 import dd.pyrkova.addressbook.model.UserData;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
@@ -36,7 +35,7 @@ public class UserHelper extends HelperBase {
     if (creation) {
       new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(userData.getGroup());
     } else {
-      Assert.assertFalse(isElementPresent(By.name("new_group")));
+      Assert.assertFalse(isGroupElementPresent(By.name("new_group")));
     }
   }
 
@@ -54,5 +53,17 @@ public class UserHelper extends HelperBase {
 
   public void submitUserModification() {
     click(By.xpath("//input[@name='update']"));
+  }
+
+  public void selectUser() { click(By.name("selected[]")); }
+
+  public boolean isThereAUser() {
+    return isUserElementPresent(By.name("selected[]"));
+  }
+
+  public void createUser(UserData user, boolean b) {
+    gotoNewUserPage();
+    fillInUserData(user, b);
+    submitUserCreation();
   }
 }
