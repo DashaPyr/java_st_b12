@@ -34,15 +34,6 @@ public class HelperBase {
     }
   }
 
- // private boolean isElementPresent(By by) {
- //   try {
- //     wd.findElement(by);
- //     return true;
- //   } catch (NoSuchElementException ex) {
- //     return false;
- //   }
-//  }
-
   private boolean isAlertPresent() {
     try {
       wd.switchTo().alert();

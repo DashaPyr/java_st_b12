@@ -12,4 +12,8 @@ public class SelectHelper extends HelperBase {
   public void selectElement() {
    click(By.xpath("//input[@name='selected[]']"));
   }
+
+  public boolean isThereAElement() {
+    return isElementPresent(By.xpath("//input[@name='selected[]']"));
+  }
 }
