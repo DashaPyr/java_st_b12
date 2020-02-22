@@ -10,7 +10,7 @@ public class DeleteUserTests extends TestBase {
   public void testDeleteUser() throws Exception {
     app.getNavigationHelper().returnToHomePage();
     if (! app.getUserHelper().isThereAUser()){
-      app.getUserHelper().createUser(new UserData("Daria", "Vladimirovna", "Pyrkova", "dd", "U", "Dolgoprudny", "d@u.ru", "d@g.com", "999", "777", "888", "1", "January", "1990", "test1"), true);
+      app.getUserHelper().createUser(new UserData("Daria", "Vladimirovna", "Pyrkova", "dd", "U", "Dolgoprudny", "d@u.ru", "d@g.com", "999", "777", "888", "1", "January", "1990", "[none]"), true);
       app.getNavigationHelper().returnToHomePage();
     }
     app.getUserHelper().selectUser();
