@@ -15,8 +15,9 @@ public class UserData {
   private final String birthday;
   private final String birthmonth;
   private final String birthyear;
+  private String group;
 
-  public UserData(String firstname, String middlename, String lastname, String nickname, String company, String address, String emailone, String emailtwo, String phonehome, String phonemobile, String phonework, String birthday, String birthmonth, String birthyear) {
+  public UserData(String firstname, String middlename, String lastname, String nickname, String company, String address, String emailone, String emailtwo, String phonehome, String phonemobile, String phonework, String birthday, String birthmonth, String birthyear, String group) {
     this.firstname = firstname;
     this.middlename = middlename;
     this.lastname = lastname;
@@ -31,6 +32,7 @@ public class UserData {
     this.birthday = birthday;
     this.birthmonth = birthmonth;
     this.birthyear = birthyear;
+    this.group = group;
   }
 
   public String getFirstname() {
@@ -85,5 +87,9 @@ public class UserData {
 
   public String getBirthyear() {
     return birthyear;
+  }
+
+  public String getGroup() {
+    return group;
   }
 }

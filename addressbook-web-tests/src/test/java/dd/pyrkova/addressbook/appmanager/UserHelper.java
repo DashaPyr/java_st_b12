@@ -2,7 +2,10 @@ package dd.pyrkova.addressbook.appmanager;
 
 import dd.pyrkova.addressbook.model.UserData;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 
 public class UserHelper extends HelperBase {
 
@@ -14,7 +17,7 @@ public class UserHelper extends HelperBase {
     click(By.xpath("//input[@name='submit']"));
   }
 
-  public void fillInUserData(UserData userData) {
+  public void fillInUserData(UserData userData, boolean creation ) {
     type(By.name("firstname"), userData.getFirstname());
     type(By.name("middlename"), userData.getMiddlename());
     type(By.name("lastname"), userData.getLastname());
@@ -29,6 +32,12 @@ public class UserHelper extends HelperBase {
     select(By.name("bday"), userData.getBirthday());
     select(By.name("bmonth"), userData.getBirthmonth());
     type(By.name("byear"), userData.getBirthyear());
+
+    if (creation) {
+      new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(userData.getGroup());
+    } else {
+      Assert.assertFalse(isElementPresent(By.name("new_group")));
+    }
   }
 
   public void gotoNewUserPage() {
