@@ -25,7 +25,6 @@ public class UserModificationTests extends TestBase {
     app.getUserHelper().fillInUserData(user, false);
     app.getUserHelper().submitUserModification();
     app.getNavigationHelper().returnToHomePage();
-//    app.getSessionHelper().logout();
     List<UserData> after = app.getUserHelper().getUserList();
     Assert.assertEquals(after.size(), before.size());
 
