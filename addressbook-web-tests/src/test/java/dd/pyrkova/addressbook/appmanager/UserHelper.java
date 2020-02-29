@@ -66,4 +66,8 @@ public class UserHelper extends HelperBase {
     fillInUserData(user, b);
     submitUserCreation();
   }
+
+  public int getUserCount() {
+    return wd.findElements(By.name("selected[]")).size();
+  }
 }
