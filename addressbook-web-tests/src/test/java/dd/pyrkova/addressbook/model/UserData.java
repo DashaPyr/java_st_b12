@@ -21,7 +21,7 @@ public class UserData {
   private String group;
 
   public UserData(String firstname, String middlename, String lastname, String nickname, String company, String address, String emailone, String emailtwo, String phonehome, String phonemobile, String phonework, String birthday, String birthmonth, String birthyear, String group) {
-    this.id = 0;
+    this.id = Integer.MAX_VALUE;
     this.firstname = firstname;
     this.middlename = middlename;
     this.lastname = lastname;
@@ -138,13 +138,12 @@ public class UserData {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
     UserData userData = (UserData) o;
-    return id == userData.id &&
-            Objects.equals(firstname, userData.firstname) &&
+    return Objects.equals(firstname, userData.firstname) &&
             Objects.equals(lastname, userData.lastname);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, firstname, lastname);
+    return Objects.hash(firstname, lastname);
   }
 }
