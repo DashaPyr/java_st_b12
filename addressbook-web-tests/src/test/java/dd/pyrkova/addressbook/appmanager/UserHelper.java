@@ -3,8 +3,12 @@ package dd.pyrkova.addressbook.appmanager;
 import dd.pyrkova.addressbook.model.UserData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class UserHelper extends HelperBase {
 
@@ -71,5 +75,18 @@ public class UserHelper extends HelperBase {
 
   public int getUserCount() {
     return wd.findElements(By.name("selected[]")).size();
+  }
+
+  public List<UserData> getUserList() {
+    List<UserData> users = new ArrayList<UserData>();
+    List<WebElement> elements = wd.findElements(By.name("entry"));
+    for (WebElement element : elements){
+      List<WebElement> cells = element.findElements(By.tagName("td"));
+      String fname = cells.get(1).getText();
+      String mname = cells.get(2).getText();
+      UserData user = new UserData(fname, mname, null, null, null, null, null, null, null, null, null, null, null, null, null);
+      users.add(user);
+    }
+    return users;
   }
 }
