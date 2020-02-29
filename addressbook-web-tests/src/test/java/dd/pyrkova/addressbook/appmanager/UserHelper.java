@@ -82,7 +82,7 @@ public class UserHelper extends HelperBase {
     List<WebElement> elements = wd.findElements(By.name("entry"));
     for (WebElement element : elements){
       List<WebElement> cells = element.findElements(By.tagName("td"));
-      String id = cells.get(0).findElement(By.tagName("input")).getAttribute("id");
+      int id = Integer.parseInt(cells.get(0).findElement(By.tagName("input")).getAttribute("id"));
       String lname = cells.get(1).getText();
       String fname = cells.get(2).getText();
       String addr = cells.get(3).getText();

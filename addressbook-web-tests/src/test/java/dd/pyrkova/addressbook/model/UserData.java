@@ -3,7 +3,7 @@ package dd.pyrkova.addressbook.model;
 import java.util.Objects;
 
 public class UserData {
-  private final String id;
+  private int id;
   private final String firstname;
   private final String middlename;
   private final String lastname;
@@ -21,7 +21,7 @@ public class UserData {
   private String group;
 
   public UserData(String firstname, String middlename, String lastname, String nickname, String company, String address, String emailone, String emailtwo, String phonehome, String phonemobile, String phonework, String birthday, String birthmonth, String birthyear, String group) {
-    this.id = null;
+    this.id = 0;
     this.firstname = firstname;
     this.middlename = middlename;
     this.lastname = lastname;
@@ -39,7 +39,7 @@ public class UserData {
     this.group = group;
   }
 
-  public UserData(String id, String firstname, String middlename, String lastname, String nickname, String company, String address, String emailone, String emailtwo, String phonehome, String phonemobile, String phonework, String birthday, String birthmonth, String birthyear, String group) {
+  public UserData(int id, String firstname, String middlename, String lastname, String nickname, String company, String address, String emailone, String emailtwo, String phonehome, String phonemobile, String phonework, String birthday, String birthmonth, String birthyear, String group) {
     this.id = id;
     this.firstname = firstname;
     this.middlename = middlename;
@@ -58,7 +58,7 @@ public class UserData {
     this.group = group;
   }
 
-  public String getId() {
+  public int getId() {
     return id;
   }
 
@@ -100,6 +100,10 @@ public class UserData {
     return phonemobile;
   }
 
+  public void setId(int id) {
+    this.id = id;
+  }
+
   public String getPhonework() {
     return phonework;
   }
@@ -134,7 +138,7 @@ public class UserData {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
     UserData userData = (UserData) o;
-    return Objects.equals(id, userData.id) &&
+    return id == userData.id &&
             Objects.equals(firstname, userData.firstname) &&
             Objects.equals(lastname, userData.lastname);
   }
