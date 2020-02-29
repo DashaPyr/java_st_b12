@@ -91,7 +91,7 @@
       <recent name="D:\Dasha\java\GitHubDesktop\java_st_b12\addressbook-web-tests\src\test" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.GroupCreationTests">
+  <component name="RunManager" selected="TestNG.GroupModificationTests">
     <configuration name="DeleteUserTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
@@ -179,9 +179,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.GroupModificationTests" />
         <item itemvalue="TestNG.GroupCreationTests" />
         <item itemvalue="TestNG.GroupDeletionTests" />
-        <item itemvalue="TestNG.GroupModificationTests" />
         <item itemvalue="TestNG.UserModificationTests" />
         <item itemvalue="TestNG.DeleteUserTests" />
       </list>
@@ -218,10 +218,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="176" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581858777336" />
-    <state x="730" y="222" key="#com.intellij.ide.util.MemberChooser" timestamp="1582977696810">
+    <state x="730" y="222" key="#com.intellij.ide.util.MemberChooser" timestamp="1582979472091">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="730" y="222" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1582977696810" />
+    <state x="730" y="222" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1582979472091" />
     <state x="689" y="305" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1581368329632">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -246,38 +246,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="461" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581837963120" />
-    <state width="1877" height="372" key="GridCell.Tab.0.bottom" timestamp="1582978325975">
+    <state width="1877" height="372" key="GridCell.Tab.0.bottom" timestamp="1582980399645">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="372" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582978325975" />
-    <state width="1877" height="372" key="GridCell.Tab.0.center" timestamp="1582978325975">
+    <state width="1877" height="372" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582980399645" />
+    <state width="1877" height="372" key="GridCell.Tab.0.center" timestamp="1582980399645">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="372" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582978325975" />
-    <state width="1877" height="372" key="GridCell.Tab.0.left" timestamp="1582978325974">
+    <state width="1877" height="372" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582980399645" />
+    <state width="1877" height="372" key="GridCell.Tab.0.left" timestamp="1582980399645">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="372" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582978325974" />
-    <state width="1877" height="372" key="GridCell.Tab.0.right" timestamp="1582978325975">
+    <state width="1877" height="372" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582980399645" />
+    <state width="1877" height="372" key="GridCell.Tab.0.right" timestamp="1582980399645">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="372" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582978325975" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1582970284911">
+    <state width="1877" height="372" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582980399645" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1582980137622">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582970284911" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1582970284911">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1582980137622" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1582980137622">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582970284911" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1582970284911">
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1582980137622" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1582980137622">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582970284911" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1582970284911">
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1582980137622" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1582980137622">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582970284911" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1582980137622" />
     <state x="702" y="380" key="NewModule_or_Project.wizard" timestamp="1581782885998">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -326,6 +326,11 @@
           <url>file://$PROJECT_DIR$/addressbook-web-tests/build.gradle</url>
           <line>4</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/dd/pyrkova/addressbook/tests/GroupModificationTests.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
