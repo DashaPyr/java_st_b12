@@ -15,7 +15,7 @@ public class DeleteUserTests extends TestBase {
       app.getNavigationHelper().returnToHomePage();
     }
     int before = app.getUserHelper().getUserCount();
-    app.getUserHelper().selectUser();
+    app.getUserHelper().selectUser(before - 1);
     app.getUserHelper().deleteSelectedUser();
     app.getCloseAlertHelper().closeAlertDialog();
     app.getNavigationHelper().returnToHomePage();

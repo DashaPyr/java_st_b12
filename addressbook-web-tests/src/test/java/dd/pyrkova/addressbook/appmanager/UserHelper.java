@@ -55,7 +55,9 @@ public class UserHelper extends HelperBase {
     click(By.xpath("//input[@name='update']"));
   }
 
-  public void selectUser() { click(By.name("selected[]")); }
+  public void selectUser(int index) {
+    wd.findElements(By.name("selected[]")).get(index).click();
+  }
 
   public boolean isThereAUser() {
     return isUserElementPresent(By.name("selected[]"));
