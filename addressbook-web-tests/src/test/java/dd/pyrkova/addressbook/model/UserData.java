@@ -3,6 +3,7 @@ package dd.pyrkova.addressbook.model;
 import java.util.Objects;
 
 public class UserData {
+  private final String id;
   private final String firstname;
   private final String middlename;
   private final String lastname;
@@ -20,6 +21,7 @@ public class UserData {
   private String group;
 
   public UserData(String firstname, String middlename, String lastname, String nickname, String company, String address, String emailone, String emailtwo, String phonehome, String phonemobile, String phonework, String birthday, String birthmonth, String birthyear, String group) {
+    this.id = null;
     this.firstname = firstname;
     this.middlename = middlename;
     this.lastname = lastname;
@@ -35,6 +37,29 @@ public class UserData {
     this.birthmonth = birthmonth;
     this.birthyear = birthyear;
     this.group = group;
+  }
+
+  public UserData(String id, String firstname, String middlename, String lastname, String nickname, String company, String address, String emailone, String emailtwo, String phonehome, String phonemobile, String phonework, String birthday, String birthmonth, String birthyear, String group) {
+    this.id = id;
+    this.firstname = firstname;
+    this.middlename = middlename;
+    this.lastname = lastname;
+    this.nickname = nickname;
+    this.company = company;
+    this.address = address;
+    this.emailone = emailone;
+    this.emailtwo = emailtwo;
+    this.phonehome = phonehome;
+    this.phonemobile = phonemobile;
+    this.phonework = phonework;
+    this.birthday = birthday;
+    this.birthmonth = birthmonth;
+    this.birthyear = birthyear;
+    this.group = group;
+  }
+
+  public String getId() {
+    return id;
   }
 
   public String getFirstname() {
@@ -98,7 +123,8 @@ public class UserData {
   @Override
   public String toString() {
     return "UserData{" +
-            "firstname='" + firstname + '\'' +
+            "id='" + id + '\'' +
+            ", firstname='" + firstname + '\'' +
             ", lastname='" + lastname + '\'' +
             '}';
   }
@@ -108,12 +134,13 @@ public class UserData {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
     UserData userData = (UserData) o;
-    return Objects.equals(firstname, userData.firstname) &&
+    return Objects.equals(id, userData.id) &&
+            Objects.equals(firstname, userData.firstname) &&
             Objects.equals(lastname, userData.lastname);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(firstname, lastname);
+    return Objects.hash(id, firstname, lastname);
   }
 }
