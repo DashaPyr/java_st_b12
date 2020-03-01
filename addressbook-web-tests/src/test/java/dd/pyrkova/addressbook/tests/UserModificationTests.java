@@ -20,9 +20,8 @@ public class UserModificationTests extends TestBase {
       app.getNavigationHelper().returnToHomePage();
     }
     List<UserData> before = app.getUserHelper().getUserList();
-    app.getUserHelper().selectUser(before.size() - 1);
-    app.getUserHelper().initUserModification();
-    UserData user = new UserData(before.get(before.size() - 1).getId(),"Daria", "V.", "Pyrkova", "ddd", "M", "Moscow region", "d@m.ru", "d@g.com", "555", "777", "333", "1", "January", "1990", null);
+    app.getUserHelper().initUserModification(before.size() - 1);
+    UserData user = new UserData(before.get(before.size() - 1).getId(),"Darya", "V.", "Pyrkova", "ddd", "M", "Moscow region", "d@m.ru", "d@g.com", "555", "777", "333", "1", "January", "1990", null);
     app.getUserHelper().fillInUserData(user, false);
     app.getUserHelper().submitUserModification();
     app.getNavigationHelper().returnToHomePage();
