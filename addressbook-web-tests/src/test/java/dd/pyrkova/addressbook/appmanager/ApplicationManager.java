@@ -13,7 +13,6 @@ public class ApplicationManager {
   protected WebDriver wd;
 
   private SessionHelper sessionHelper;
-  private CloseAlertHelper closeAlertHelper;
   private NavigationHelper navigationHelper;
   private UserHelper userHelper;
   private GroupHelper groupHelper;
@@ -39,7 +38,6 @@ public class ApplicationManager {
     groupHelper = new GroupHelper(wd);
     userHelper = new UserHelper(wd);
     navigationHelper = new NavigationHelper(wd);
-    closeAlertHelper = new CloseAlertHelper(wd);
     sessionHelper = new SessionHelper(wd);
     sessionHelper.login("admin", "secret");
   }
@@ -58,10 +56,6 @@ public class ApplicationManager {
 
   public NavigationHelper getNavigationHelper() {
     return navigationHelper;
-  }
-
-  public CloseAlertHelper getCloseAlertHelper() {
-    return closeAlertHelper;
   }
 
   public SessionHelper getSessionHelper() {

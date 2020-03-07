@@ -19,7 +19,6 @@ public class DeleteUserTests extends TestBase {
     List<UserData> before = app.getUserHelper().getUserList();
     app.getUserHelper().selectUser(before.size() - 1);
     app.getUserHelper().deleteSelectedUser();
-    app.getCloseAlertHelper().closeAlertDialog();
     app.getNavigationHelper().returnToHomePage();
     List<UserData> after = app.getUserHelper().getUserList();
     Assert.assertEquals(after.size(), before.size() - 1);
