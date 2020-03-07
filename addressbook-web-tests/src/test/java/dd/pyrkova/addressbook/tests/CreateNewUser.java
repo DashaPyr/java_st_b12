@@ -5,19 +5,18 @@ import org.testng.Assert;
 import org.testng.annotations.*;
 
 import java.util.Comparator;
-import java.util.HashSet;
 import java.util.List;
 
 public class CreateNewUser extends TestBase {
 
   @Test
   public void testCreateNewUser() throws Exception {
-    app.getUserHelper().returnToHomePage();
-    List<UserData> before = app.getUserHelper().getUserList();
+    app.goTo().homePage();
+    List<UserData> before = app.user().list();
     UserData user = new UserData("Daria", "Vladimirovna", "Pyrkova", "dd", "U", "Dolgoprudny", "d@u.ru", "d@g.com", "999", "777", "888", "1", "January", "1990", "[none]");
-    app.getUserHelper().createUser(user, true);
-    app.getUserHelper().returnToHomePage();
-    List<UserData> after = app.getUserHelper().getUserList();
+    app.user().create(user, true);
+    app.goTo().homePage();
+    List<UserData> after = app.user().list();
     Assert.assertEquals(after.size(), before.size() + 1);
 
     user.setId(after.stream().max((o1, o2) -> Integer.compare(o1.getId(), o2.getId())).get().getId());

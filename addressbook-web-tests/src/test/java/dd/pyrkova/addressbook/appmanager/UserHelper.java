@@ -69,31 +69,29 @@ public class UserHelper extends HelperBase {
     return isUserElementPresent(By.name("selected[]"));
   }
 
-  public void returnToHomePage() {
-    if (isUserElementPresent(By.id("maintable"))){
-      return;
-    }
-    click(By.linkText("home"));
-  }
-
-  public void createUser(UserData user, boolean b) {
+  public void create(UserData user, boolean b) {
     gotoNewUserPage();
     fillInUserData(user, b);
     submitUserCreation();
   }
 
-  public void modifyUser(int index, UserData user) {
+  public void modify(int index, UserData user) {
     initUserModification(index);
     fillInUserData(user, false);
     submitUserModification();
-    returnToHomePage();
+  }
+
+
+  public void delete(int index) {
+    selectUser(index);
+    deleteSelectedUser();
   }
 
   public int getUserCount() {
     return wd.findElements(By.name("selected[]")).size();
   }
 
-  public List<UserData> getUserList() {
+  public List<UserData> list() {
     List<UserData> users = new ArrayList<UserData>();
     List<WebElement> elements = wd.findElements(By.name("entry"));
     for (WebElement element : elements){

@@ -6,29 +6,28 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import javax.management.MBeanRegistration;
 import java.util.Comparator;
-import java.util.HashSet;
 import java.util.List;
 
 public class UserModificationTests extends TestBase {
 
   @BeforeMethod
   public void preconditions (){
-    app.getUserHelper().returnToHomePage();
-    if (! app.getUserHelper().isThereAUser()){
-      app.getUserHelper().createUser(new UserData("Daria", "Vladimirovna", "Pyrkova", "dd", "U", "Dolgoprudny", "d@u.ru", "d@g.com", "999", "777", "888", "1", "January", "1990", "[none]"), true);
-      app.getUserHelper().returnToHomePage();
+    app.goTo().homePage();
+    if (app.user().list().size() == 0){
+      app.user().create(new UserData("Daria", "Vladimirovna", "Pyrkova", "dd", "U", "Dolgoprudny", "d@u.ru", "d@g.com", "999", "777", "888", "1", "January", "1990", "[none]"), true);
+      app.goTo().homePage();
     }
   }
 
   @Test
   public void testGroupModification() {
-    List<UserData> before = app.getUserHelper().getUserList();
+    List<UserData> before = app.user().list();
     int index = before.size() - 1;
     UserData user = new UserData(before.get(index).getId(),"Darya", "V.", "Pyrkova", "ddd", "M", "Moscow region", "d@m.ru", "d@g.com", "555", "777", "333", "1", "January", "1990", null);
-    app.getUserHelper().modifyUser(index, user);
-    List<UserData> after = app.getUserHelper().getUserList();
+    app.user().modify(index, user);
+    app.goTo().homePage();
+    List<UserData> after = app.user().list();
     Assert.assertEquals(after.size(), before.size());
 
     before.remove(index);
