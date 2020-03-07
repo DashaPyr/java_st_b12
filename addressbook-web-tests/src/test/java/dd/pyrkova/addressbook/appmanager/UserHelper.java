@@ -50,7 +50,7 @@ public class UserHelper extends HelperBase {
   public void deleteSelectedUser() {
     click(By.xpath("//input[@value='Delete']"));
     wd.switchTo().alert().accept();
-//    wd.findElement(By.cssSelector("div.msgbox"));
+    wd.findElement(By.cssSelector("div.msgbox"));
   }
 
   public void initUserModification(int index) {
