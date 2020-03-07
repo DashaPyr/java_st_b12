@@ -14,6 +14,15 @@ public class GroupHelper extends HelperBase {
     super(wd);
   }
 
+  public void gotoGroupPage() {
+    if (isGroupElementPresent(By.tagName("h1"))
+            && wd.findElement(By.tagName("h1")).getText().equals("Groups")
+            && isGroupElementPresent(By.name("new"))){
+      return;
+    }
+    click(By.linkText("groups"));
+  }
+
   public void returnToGroupPage() {
     click(By.linkText("group page"));
   }
@@ -56,6 +65,14 @@ public class GroupHelper extends HelperBase {
     initGroupCreation();
     fillGroupForm(group);
     submitGroupCreation();
+    returnToGroupPage();
+  }
+
+  public void modifyGroup(int index, GroupData group) {
+    selectGroup(index);
+    initGroupModification();
+    fillGroupForm(group);
+    submitGroupModification();
     returnToGroupPage();
   }
 

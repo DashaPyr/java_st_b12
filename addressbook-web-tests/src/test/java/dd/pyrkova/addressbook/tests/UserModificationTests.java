@@ -14,25 +14,25 @@ public class UserModificationTests extends TestBase {
 
   @Test
   public void testGroupModification() {
-    app.getNavigationHelper().returnToHomePage();
+    app.getUserHelper().returnToHomePage();
     if (! app.getUserHelper().isThereAUser()){
       app.getUserHelper().createUser(new UserData("Daria", "Vladimirovna", "Pyrkova", "dd", "U", "Dolgoprudny", "d@u.ru", "d@g.com", "999", "777", "888", "1", "January", "1990", "[none]"), true);
-      app.getNavigationHelper().returnToHomePage();
+      app.getUserHelper().returnToHomePage();
     }
     List<UserData> before = app.getUserHelper().getUserList();
-    app.getUserHelper().initUserModification(before.size() - 1);
-    UserData user = new UserData(before.get(before.size() - 1).getId(),"Darya", "V.", "Pyrkova", "ddd", "M", "Moscow region", "d@m.ru", "d@g.com", "555", "777", "333", "1", "January", "1990", null);
-    app.getUserHelper().fillInUserData(user, false);
-    app.getUserHelper().submitUserModification();
-    app.getNavigationHelper().returnToHomePage();
+    int index = before.size() - 1;
+    UserData user = new UserData(before.get(index).getId(),"Darya", "V.", "Pyrkova", "ddd", "M", "Moscow region", "d@m.ru", "d@g.com", "555", "777", "333", "1", "January", "1990", null);
+    app.getUserHelper().modifyUser(index, user);
     List<UserData> after = app.getUserHelper().getUserList();
     Assert.assertEquals(after.size(), before.size());
 
-    before.remove(before.size() - 1);
+    before.remove(index);
     before.add(user);
     Comparator<? super UserData> byId = (g1, g2) -> Integer.compare(g1.getId(), g2.getId());
     before.sort(byId);
     after.sort(byId);
     Assert.assertEquals(before, after);
   }
+
+
 }

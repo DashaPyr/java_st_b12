@@ -92,7 +92,7 @@
     </key>
   </component>
   <component name="RunManager" selected="TestNG.dd.pyrkova.addressbook.tests">
-    <configuration name="CreateNewUser" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="GroupCreationTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
         <pattern>
@@ -101,7 +101,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="dd.pyrkova.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="dd.pyrkova.addressbook.tests.CreateNewUser" />
+      <option name="MAIN_CLASS_NAME" value="dd.pyrkova.addressbook.tests.GroupCreationTests" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -109,7 +109,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeleteUserTests" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="GroupDeletionTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
         <pattern>
@@ -118,7 +118,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="dd.pyrkova.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="dd.pyrkova.addressbook.tests.DeleteUserTests" />
+      <option name="MAIN_CLASS_NAME" value="dd.pyrkova.addressbook.tests.GroupDeletionTests" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -179,10 +179,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.dd.pyrkova.addressbook.tests" />
-        <item itemvalue="TestNG.CreateNewUser" />
-        <item itemvalue="TestNG.DeleteUserTests" />
         <item itemvalue="TestNG.UserModificationTests" />
         <item itemvalue="TestNG.GroupModificationTests" />
+        <item itemvalue="TestNG.GroupDeletionTests" />
+        <item itemvalue="TestNG.GroupCreationTests" />
       </list>
     </recent_temporary>
   </component>
@@ -249,22 +249,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="461" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581837963120" />
-    <state width="1877" height="372" key="GridCell.Tab.0.bottom" timestamp="1583571639732">
+    <state width="1877" height="372" key="GridCell.Tab.0.bottom" timestamp="1583572898189">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="372" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583571639732" />
-    <state width="1877" height="372" key="GridCell.Tab.0.center" timestamp="1583571639732">
+    <state width="1877" height="372" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583572898189" />
+    <state width="1877" height="372" key="GridCell.Tab.0.center" timestamp="1583572898189">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="372" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583571639732" />
-    <state width="1877" height="372" key="GridCell.Tab.0.left" timestamp="1583571639732">
+    <state width="1877" height="372" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583572898189" />
+    <state width="1877" height="372" key="GridCell.Tab.0.left" timestamp="1583572898189">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="372" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583571639732" />
-    <state width="1877" height="372" key="GridCell.Tab.0.right" timestamp="1583571639732">
+    <state width="1877" height="372" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583572898189" />
+    <state width="1877" height="372" key="GridCell.Tab.0.right" timestamp="1583572898189">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="372" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583571639732" />
+    <state width="1877" height="372" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583572898189" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1583568745182">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -309,10 +309,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="536" y="257" width="847" height="602" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040@0.0.1920.1040" timestamp="1581362592859" />
-    <state x="938" y="227" width="540" height="496" key="extract.method.dialog" timestamp="1581869855144">
+    <state x="938" y="227" width="540" height="496" key="extract.method.dialog" timestamp="1583572413007">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="938" y="227" width="540" height="496" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581869855144" />
+    <state x="938" y="227" width="540" height="496" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583572413007" />
     <state x="358" y="283" key="new project wizard" timestamp="1581779823858">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

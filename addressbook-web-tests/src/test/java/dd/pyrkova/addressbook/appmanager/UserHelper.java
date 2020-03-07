@@ -69,10 +69,24 @@ public class UserHelper extends HelperBase {
     return isUserElementPresent(By.name("selected[]"));
   }
 
+  public void returnToHomePage() {
+    if (isUserElementPresent(By.id("maintable"))){
+      return;
+    }
+    click(By.linkText("home"));
+  }
+
   public void createUser(UserData user, boolean b) {
     gotoNewUserPage();
     fillInUserData(user, b);
     submitUserCreation();
+  }
+
+  public void modifyUser(int index, UserData user) {
+    initUserModification(index);
+    fillInUserData(user, false);
+    submitUserModification();
+    returnToHomePage();
   }
 
   public int getUserCount() {
