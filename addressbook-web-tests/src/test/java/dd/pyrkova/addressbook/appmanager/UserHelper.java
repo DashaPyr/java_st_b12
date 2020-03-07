@@ -60,7 +60,8 @@ public class UserHelper extends HelperBase {
   }
 
   public void initUserModificationById(int id) {
-    wd.findElement(By.xpath("//img[@alt='Edit']")).click();
+    wd.findElement(By.cssSelector("a[href='edit.php?id=" + id +"']")).click();
+ //   wd.findElement(By.xpath("//img[@alt='Edit']")).click();
   }
 
   public void submitUserModification() {

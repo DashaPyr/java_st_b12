@@ -91,7 +91,7 @@
       <recent name="dd.pyrkova.addressbook" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.GroupModificationTests">
+  <component name="RunManager" selected="TestNG.UserModificationTests">
     <configuration name="CreateNewUser" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
@@ -179,8 +179,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.GroupModificationTests" />
         <item itemvalue="TestNG.UserModificationTests" />
+        <item itemvalue="TestNG.GroupModificationTests" />
         <item itemvalue="TestNG.DeleteUserTests" />
         <item itemvalue="TestNG.GroupDeletionTests" />
         <item itemvalue="TestNG.CreateNewUser" />
@@ -250,22 +250,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="461" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581837963120" />
-    <state width="1877" height="372" key="GridCell.Tab.0.bottom" timestamp="1583604843437">
+    <state width="1877" height="372" key="GridCell.Tab.0.bottom" timestamp="1583606231321">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="372" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583604843437" />
-    <state width="1877" height="372" key="GridCell.Tab.0.center" timestamp="1583604843437">
+    <state width="1877" height="372" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583606231321" />
+    <state width="1877" height="372" key="GridCell.Tab.0.center" timestamp="1583606231321">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="372" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583604843437" />
-    <state width="1877" height="372" key="GridCell.Tab.0.left" timestamp="1583604843437">
+    <state width="1877" height="372" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583606231321" />
+    <state width="1877" height="372" key="GridCell.Tab.0.left" timestamp="1583606231320">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="372" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583604843437" />
-    <state width="1877" height="372" key="GridCell.Tab.0.right" timestamp="1583604843437">
+    <state width="1877" height="372" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583606231320" />
+    <state width="1877" height="372" key="GridCell.Tab.0.right" timestamp="1583606231321">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="372" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583604843437" />
+    <state width="1877" height="372" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583606231321" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1583568745182">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
