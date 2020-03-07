@@ -1,5 +1,6 @@
 package dd.pyrkova.addressbook.appmanager;
 
+import dd.pyrkova.addressbook.model.Groups;
 import dd.pyrkova.addressbook.model.UserData;
 import dd.pyrkova.addressbook.model.Users;
 import org.openqa.selenium.By;
@@ -80,25 +81,34 @@ public class UserHelper extends HelperBase {
     gotoNewUserPage();
     fillInUserData(user, b);
     submitUserCreation();
+    userCache = null;
   }
 
   public void modify(UserData user) {
     initUserModificationById(user.getId());
     fillInUserData(user, false);
     submitUserModification();
+    userCache = null;
   }
 
   public void delete(UserData user) {
     selectUserById(user.getId());
     deleteSelectedUser();
+    userCache = null;
   }
 
   public int getUserCount() {
     return wd.findElements(By.name("selected[]")).size();
   }
 
+  private Users userCache = null;
+
   public Users allUser() {
-    Users users = new Users();
+    if (userCache != null){
+      return new Users(userCache);
+    }
+
+    userCache = new Users();
     List<WebElement> elements = wd.findElements(By.name("entry"));
     for (WebElement element : elements){
       List<WebElement> cells = element.findElements(By.tagName("td"));
@@ -106,9 +116,9 @@ public class UserHelper extends HelperBase {
       String lname = cells.get(1).getText();
       String fname = cells.get(2).getText();
       String addr = cells.get(3).getText();
-      users.add(new UserData().withId(id).withFirstname(fname).withLastname(lname).withAddress(addr));
+      userCache.add(new UserData().withId(id).withFirstname(fname).withLastname(lname).withAddress(addr));
     }
-    return users;
+    return new Users(userCache);
   }
 
 
