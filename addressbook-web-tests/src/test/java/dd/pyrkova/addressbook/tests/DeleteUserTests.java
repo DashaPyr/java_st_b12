@@ -7,6 +7,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.List;
+import java.util.Set;
 
 public class DeleteUserTests extends TestBase {
 
@@ -24,14 +25,15 @@ public class DeleteUserTests extends TestBase {
 
   @Test
   public void testDeleteUser() throws Exception {
-    List<UserData> before = app.user().list();
-    int index = before.size() - 1;
-    app.user().delete(index);
+    Set<UserData> before = app.user().allUser();
+    UserData deletedUser = before.iterator().next();
+//    int index = before.size() - 1;
+    app.user().delete(deletedUser);
     app.goTo().homePage();
-    List<UserData> after = app.user().list();
+    Set<UserData> after = app.user().allUser();
     Assert.assertEquals(after.size(), before.size() - 1);
 
-    before.remove(index);
+    before.remove(deletedUser);
     Assert.assertEquals(before, after);
   }
 

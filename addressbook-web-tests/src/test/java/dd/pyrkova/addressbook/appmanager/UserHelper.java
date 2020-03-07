@@ -67,6 +67,11 @@ public class UserHelper extends HelperBase {
     wd.findElements(By.name("selected[]")).get(index).click();
   }
 
+  public void selectUserById(int id) {
+
+    wd.findElement(By.cssSelector("input[value='" + id + "']")).click();
+  }
+
   public boolean isThereAUser() {
     return isUserElementPresent(By.name("selected[]"));
   }
@@ -86,6 +91,11 @@ public class UserHelper extends HelperBase {
 
   public void delete(int index) {
     selectUser(index);
+    deleteSelectedUser();
+  }
+
+  public void delete(UserData user) {
+    selectUserById(user.getId());
     deleteSelectedUser();
   }
 
@@ -120,4 +130,6 @@ public class UserHelper extends HelperBase {
     }
     return users;
   }
+
+
 }
