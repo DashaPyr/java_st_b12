@@ -14,7 +14,7 @@ public class DeleteUserTests extends TestBase {
   @BeforeMethod
   public void preconditions(){
     app.goTo().homePage();
-    if (app.user().list().size() == 0){
+    if (app.user().allUser().size() == 0){
       app.user().create(new UserData().withFirstname("Daria").withMiddlename("Vladimirovna").withLastname("Pyrkova").withNickname("dd")
               .withCompany("U").withAddress("Dolgoprudny").withEmailone("d@u.ru").withEmailtwo("d@g.com")
               .withPhonehome("999").withPhonemobile("777").withPhonework("888")
@@ -27,7 +27,6 @@ public class DeleteUserTests extends TestBase {
   public void testDeleteUser() throws Exception {
     Set<UserData> before = app.user().allUser();
     UserData deletedUser = before.iterator().next();
-//    int index = before.size() - 1;
     app.user().delete(deletedUser);
     app.goTo().homePage();
     Set<UserData> after = app.user().allUser();

@@ -59,6 +59,10 @@ public class UserHelper extends HelperBase {
     wd.findElements(By.xpath("//img[@alt='Edit']")).get(index).click();
   }
 
+  public void initUserModificationById(int id) {
+    wd.findElement(By.xpath("//img[@alt='Edit']")).click();
+  }
+
   public void submitUserModification() {
     click(By.xpath("//input[@name='update']"));
   }
@@ -68,7 +72,6 @@ public class UserHelper extends HelperBase {
   }
 
   public void selectUserById(int id) {
-
     wd.findElement(By.cssSelector("input[value='" + id + "']")).click();
   }
 
@@ -82,8 +85,8 @@ public class UserHelper extends HelperBase {
     submitUserCreation();
   }
 
-  public void modify(int index, UserData user) {
-    initUserModification(index);
+  public void modify(UserData user) {
+    initUserModificationById(user.getId());
     fillInUserData(user, false);
     submitUserModification();
   }
@@ -101,20 +104,6 @@ public class UserHelper extends HelperBase {
 
   public int getUserCount() {
     return wd.findElements(By.name("selected[]")).size();
-  }
-
-  public List<UserData> list() {
-    List<UserData> users = new ArrayList<UserData>();
-    List<WebElement> elements = wd.findElements(By.name("entry"));
-    for (WebElement element : elements){
-      List<WebElement> cells = element.findElements(By.tagName("td"));
-      int id = Integer.parseInt(cells.get(0).findElement(By.tagName("input")).getAttribute("id"));
-      String lname = cells.get(1).getText();
-      String fname = cells.get(2).getText();
-      String addr = cells.get(3).getText();
-      users.add(new UserData().withId(id).withFirstname(fname).withLastname(lname).withAddress(addr));
-    }
-    return users;
   }
 
   public Set<UserData> allUser() {

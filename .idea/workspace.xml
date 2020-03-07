@@ -91,7 +91,7 @@
       <recent name="dd.pyrkova.addressbook" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.DeleteUserTests">
+  <component name="RunManager" selected="TestNG.GroupModificationTests">
     <configuration name="CreateNewUser" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
@@ -126,23 +126,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GroupCreationTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="addressbook-web-tests.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dd.pyrkova.addressbook.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dd.pyrkova.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="dd.pyrkova.addressbook.tests.GroupCreationTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="GroupDeletionTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
@@ -160,7 +143,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="dd.pyrkova.addressbook.tests" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="GroupModificationTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
         <pattern>
@@ -169,7 +152,25 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="dd.pyrkova.addressbook.tests" />
-      <option name="TEST_OBJECT" value="PACKAGE" />
+      <option name="MAIN_CLASS_NAME" value="dd.pyrkova.addressbook.tests.GroupModificationTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserModificationTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="addressbook-web-tests.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dd.pyrkova.addressbook.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dd.pyrkova.addressbook.tests" />
+      <option name="MAIN_CLASS_NAME" value="dd.pyrkova.addressbook.tests.UserModificationTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -178,11 +179,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.GroupModificationTests" />
+        <item itemvalue="TestNG.UserModificationTests" />
         <item itemvalue="TestNG.DeleteUserTests" />
         <item itemvalue="TestNG.GroupDeletionTests" />
         <item itemvalue="TestNG.CreateNewUser" />
-        <item itemvalue="TestNG.GroupCreationTests" />
-        <item itemvalue="TestNG.dd.pyrkova.addressbook.tests" />
       </list>
     </recent_temporary>
   </component>
@@ -249,22 +250,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="461" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581837963120" />
-    <state width="1877" height="372" key="GridCell.Tab.0.bottom" timestamp="1583602205659">
+    <state width="1877" height="372" key="GridCell.Tab.0.bottom" timestamp="1583604843437">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="372" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583602205659" />
-    <state width="1877" height="372" key="GridCell.Tab.0.center" timestamp="1583602205652">
+    <state width="1877" height="372" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583604843437" />
+    <state width="1877" height="372" key="GridCell.Tab.0.center" timestamp="1583604843437">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="372" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583602205652" />
-    <state width="1877" height="372" key="GridCell.Tab.0.left" timestamp="1583602205652">
+    <state width="1877" height="372" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583604843437" />
+    <state width="1877" height="372" key="GridCell.Tab.0.left" timestamp="1583604843437">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="372" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583602205652" />
-    <state width="1877" height="372" key="GridCell.Tab.0.right" timestamp="1583602205659">
+    <state width="1877" height="372" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583604843437" />
+    <state width="1877" height="372" key="GridCell.Tab.0.right" timestamp="1583604843437">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="372" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583602205659" />
+    <state width="1877" height="372" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583604843437" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1583568745182">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
