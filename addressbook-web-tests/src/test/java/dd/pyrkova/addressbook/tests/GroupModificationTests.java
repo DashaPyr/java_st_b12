@@ -1,14 +1,14 @@
 package dd.pyrkova.addressbook.tests;
 
 import dd.pyrkova.addressbook.model.GroupData;
+import dd.pyrkova.addressbook.model.Groups;
 import dd.pyrkova.addressbook.model.TestBase;
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.Comparator;
-import java.util.List;
-import java.util.Set;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+import static org.testng.Assert.assertEquals;
 
 public class GroupModificationTests extends TestBase {
 
@@ -22,17 +22,15 @@ public class GroupModificationTests extends TestBase {
 
   @Test
   public void testGroupModification() throws Exception {
-    Set<GroupData> before = app.group().allGroup();
+    Groups before = app.group().allGroup();
     GroupData modifiedGroup = before.iterator().next();
     GroupData group = new GroupData()
-            .withId(modifiedGroup.getId()).withName("test55").withHeader("test22").withFooter("test33");
+            .withId(modifiedGroup.getId()).withName("test33").withHeader("test11").withFooter("test22");
     app.group().modify(group);
-    Set<GroupData> after = app.group().allGroup();
-    Assert.assertEquals(after.size(), before.size());
+    Groups after = app.group().allGroup();
+    assertEquals(after.size(), before.size());
 
-    before.remove(modifiedGroup);
-    before.add(group);
-    Assert.assertEquals(before, after);
+    assertThat(after, equalTo(before.without(modifiedGroup).withAdded(group)));
   }
 
 

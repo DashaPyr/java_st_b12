@@ -1,12 +1,13 @@
 package dd.pyrkova.addressbook.tests;
 
 import dd.pyrkova.addressbook.model.GroupData;
+import dd.pyrkova.addressbook.model.Groups;
 import dd.pyrkova.addressbook.model.TestBase;
-import org.testng.Assert;
 import org.testng.annotations.*;
 
-import java.util.List;
-import java.util.Set;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+import static org.testng.Assert.assertEquals;
 
 public class GroupDeletionTests extends TestBase {
 
@@ -20,14 +21,13 @@ public class GroupDeletionTests extends TestBase {
 
   @Test
   public void testGroupDeletion() throws Exception {
-    Set<GroupData> before = app.group().allGroup();
+    Groups before = app.group().allGroup();
     GroupData deletedGroup = before.iterator().next();
     app.group().delete(deletedGroup);
-    Set<GroupData> after = app.group().allGroup();
-    Assert.assertEquals(after.size(), before.size() - 1);
+    Groups after = app.group().allGroup();
+    assertEquals(after.size(), before.size() - 1);
 
-    before.remove(deletedGroup);
-    Assert.assertEquals(before, after);
+    assertThat(after,equalTo(before.without(deletedGroup)));
   }
 
 

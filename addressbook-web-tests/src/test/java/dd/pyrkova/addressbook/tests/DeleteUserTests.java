@@ -2,12 +2,13 @@ package dd.pyrkova.addressbook.tests;
 
 import dd.pyrkova.addressbook.model.TestBase;
 import dd.pyrkova.addressbook.model.UserData;
+import dd.pyrkova.addressbook.model.Users;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.List;
-import java.util.Set;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
 
 public class DeleteUserTests extends TestBase {
 
@@ -25,14 +26,15 @@ public class DeleteUserTests extends TestBase {
 
   @Test
   public void testDeleteUser() throws Exception {
-    Set<UserData> before = app.user().allUser();
+    Users before = app.user().allUser();
     UserData deletedUser = before.iterator().next();
     app.user().delete(deletedUser);
     app.goTo().homePage();
-    Set<UserData> after = app.user().allUser();
+    Users after = app.user().allUser();
     Assert.assertEquals(after.size(), before.size() - 1);
 
     before.remove(deletedUser);
+    assertThat(after, equalTo(before.without(deletedUser)));
     Assert.assertEquals(before, after);
   }
 
