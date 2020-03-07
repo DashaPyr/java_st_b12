@@ -3,6 +3,7 @@ package dd.pyrkova.addressbook.tests;
 import dd.pyrkova.addressbook.model.GroupData;
 import dd.pyrkova.addressbook.model.TestBase;
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.Collection;
@@ -12,12 +13,16 @@ import java.util.List;
 
 public class GroupModificationTests extends TestBase {
 
-  @Test
-  public void testGroupModification() throws Exception {
+  @BeforeMethod
+  public void preconditions() {
     app.getGroupHelper().gotoGroupPage();
     if (! app.getGroupHelper().isThereAGroup()){
       app.getGroupHelper().createGroup(new GroupData("test1", "test2", "test3"));
     }
+  }
+
+  @Test
+  public void testGroupModification() throws Exception {
     List<GroupData> before = app.getGroupHelper().getGroupList();
     int index = before.size() - 1;
     GroupData group = new GroupData(before.get(index).getId(),"test55", "test22", "test33");
