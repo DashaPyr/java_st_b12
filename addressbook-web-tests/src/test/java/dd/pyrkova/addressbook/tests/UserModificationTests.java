@@ -15,7 +15,10 @@ public class UserModificationTests extends TestBase {
   public void preconditions (){
     app.goTo().homePage();
     if (app.user().list().size() == 0){
-      app.user().create(new UserData("Daria", "Vladimirovna", "Pyrkova", "dd", "U", "Dolgoprudny", "d@u.ru", "d@g.com", "999", "777", "888", "1", "January", "1990", "[none]"), true);
+      app.user().create(new UserData().withFirstname("Daria").withMiddlename("Vladimirovna").withLastname("Pyrkova").withNickname("dd")
+              .withCompany("U").withAddress("Dolgoprudny").withEmailone("d@u.ru").withEmailtwo("d@g.com")
+              .withPhonehome("999").withPhonemobile("777").withPhonework("888")
+              .withBirthday("1").withBirthmonth("January").withBirthyear("1990").withGroup("[none]"), true);
       app.goTo().homePage();
     }
   }
@@ -24,7 +27,10 @@ public class UserModificationTests extends TestBase {
   public void testGroupModification() {
     List<UserData> before = app.user().list();
     int index = before.size() - 1;
-    UserData user = new UserData(before.get(index).getId(),"Darya", "V.", "Pyrkova", "ddd", "M", "Moscow region", "d@m.ru", "d@g.com", "555", "777", "333", "1", "January", "1990", null);
+    UserData user = new UserData().withId(before.get(index).getId()).withFirstname("Daria").withMiddlename("Vladimirovna").withLastname("Pyrkova").withNickname("dd")
+            .withCompany("U").withAddress("Dolgoprudny").withEmailone("d@u.ru").withEmailtwo("d@g.com")
+            .withPhonehome("999").withPhonemobile("777").withPhonework("888")
+            .withBirthday("1").withBirthmonth("January").withBirthyear("1990");
     app.user().modify(index, user);
     app.goTo().homePage();
     List<UserData> after = app.user().list();

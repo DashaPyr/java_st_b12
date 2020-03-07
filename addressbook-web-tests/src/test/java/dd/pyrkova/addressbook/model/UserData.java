@@ -3,60 +3,22 @@ package dd.pyrkova.addressbook.model;
 import java.util.Objects;
 
 public class UserData {
-  private int id;
-  private final String firstname;
-  private final String middlename;
-  private final String lastname;
-  private final String nickname;
-  private final String company;
-  private final String address;
-  private final String emailone;
-  private final String emailtwo;
-  private final String phonehome;
-  private final String phonemobile;
-  private final String phonework;
-  private final String birthday;
-  private final String birthmonth;
-  private final String birthyear;
+  private int id = Integer.MAX_VALUE;
+  private String firstname;
+  private String middlename;
+  private String lastname;
+  private String nickname;
+  private String company;
+  private String address;
+  private String emailone;
+  private String emailtwo;
+  private String phonehome;
+  private String phonemobile;
+  private String phonework;
+  private String birthday;
+  private String birthmonth;
+  private String birthyear;
   private String group;
-
-  public UserData(String firstname, String middlename, String lastname, String nickname, String company, String address, String emailone, String emailtwo, String phonehome, String phonemobile, String phonework, String birthday, String birthmonth, String birthyear, String group) {
-    this.id = Integer.MAX_VALUE;
-    this.firstname = firstname;
-    this.middlename = middlename;
-    this.lastname = lastname;
-    this.nickname = nickname;
-    this.company = company;
-    this.address = address;
-    this.emailone = emailone;
-    this.emailtwo = emailtwo;
-    this.phonehome = phonehome;
-    this.phonemobile = phonemobile;
-    this.phonework = phonework;
-    this.birthday = birthday;
-    this.birthmonth = birthmonth;
-    this.birthyear = birthyear;
-    this.group = group;
-  }
-
-  public UserData(int id, String firstname, String middlename, String lastname, String nickname, String company, String address, String emailone, String emailtwo, String phonehome, String phonemobile, String phonework, String birthday, String birthmonth, String birthyear, String group) {
-    this.id = id;
-    this.firstname = firstname;
-    this.middlename = middlename;
-    this.lastname = lastname;
-    this.nickname = nickname;
-    this.company = company;
-    this.address = address;
-    this.emailone = emailone;
-    this.emailtwo = emailtwo;
-    this.phonehome = phonehome;
-    this.phonemobile = phonemobile;
-    this.phonework = phonework;
-    this.birthday = birthday;
-    this.birthmonth = birthmonth;
-    this.birthyear = birthyear;
-    this.group = group;
-  }
 
   public int getId() {
     return id;
@@ -100,10 +62,6 @@ public class UserData {
     return phonemobile;
   }
 
-  public void setId(int id) {
-    this.id = id;
-  }
-
   public String getPhonework() {
     return phonework;
   }
@@ -122,6 +80,87 @@ public class UserData {
 
   public String getGroup() {
     return group;
+  }
+
+
+  public UserData withId(int id) {
+    this.id = id;
+    return this;
+  }
+
+  public UserData withFirstname(String firstname) {
+    this.firstname = firstname;
+    return this;
+  }
+
+  public UserData withMiddlename(String middlename) {
+    this.middlename = middlename;
+    return this;
+  }
+
+  public UserData withLastname(String lastname) {
+    this.lastname = lastname;
+    return this;
+  }
+
+  public UserData withNickname(String nickname) {
+    this.nickname = nickname;
+    return this;
+  }
+
+  public UserData withCompany(String company) {
+    this.company = company;
+    return this;
+  }
+
+  public UserData withAddress(String address) {
+    this.address = address;
+    return this;
+  }
+
+  public UserData withEmailone(String emailone) {
+    this.emailone = emailone;
+    return this;
+  }
+
+  public UserData withEmailtwo(String emailtwo) {
+    this.emailtwo = emailtwo;
+    return this;
+  }
+
+  public UserData withPhonehome(String phonehome) {
+    this.phonehome = phonehome;
+    return this;
+  }
+
+  public UserData withPhonemobile(String phonemobile) {
+    this.phonemobile = phonemobile;
+    return this;
+  }
+
+  public UserData withPhonework(String phonework) {
+    this.phonework = phonework;
+    return this;
+  }
+
+  public UserData withBirthday(String birthday) {
+    this.birthday = birthday;
+    return this;
+  }
+
+  public UserData withBirthmonth(String birthmonth) {
+    this.birthmonth = birthmonth;
+    return this;
+  }
+
+  public UserData withBirthyear(String birthyear) {
+    this.birthyear = birthyear;
+    return this;
+  }
+
+  public UserData withGroup(String group) {
+    this.group = group;
+    return this;
   }
 
   @Override

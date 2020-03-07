@@ -14,7 +14,10 @@ public class DeleteUserTests extends TestBase {
   public void preconditions(){
     app.goTo().homePage();
     if (app.user().list().size() == 0){
-      app.user().create(new UserData("Daria", "Vladimirovna", "Pyrkova", "dd", "U", "Dolgoprudny", "d@u.ru", "d@g.com", "999", "777", "888", "1", "January", "1990", "[none]"), true);
+      app.user().create(new UserData().withFirstname("Daria").withMiddlename("Vladimirovna").withLastname("Pyrkova").withNickname("dd")
+              .withCompany("U").withAddress("Dolgoprudny").withEmailone("d@u.ru").withEmailtwo("d@g.com")
+              .withPhonehome("999").withPhonemobile("777").withPhonework("888")
+              .withBirthday("1").withBirthmonth("January").withBirthyear("1990").withGroup("[none]"), true);
       app.goTo().homePage();
     }
   }

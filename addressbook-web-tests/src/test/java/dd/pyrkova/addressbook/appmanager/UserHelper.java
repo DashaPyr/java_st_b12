@@ -100,8 +100,8 @@ public class UserHelper extends HelperBase {
       String lname = cells.get(1).getText();
       String fname = cells.get(2).getText();
       String addr = cells.get(3).getText();
-      UserData user = new UserData(id, fname, null, lname, null, null, addr, null, null, null, null, null, null, null, null, null);
-      users.add(user);
+ //     UserData user = new UserData().withId(id).withFirstname(fname).withLastname(lname).withAddress(addr);
+      users.add(new UserData().withId(id).withFirstname(fname).withLastname(lname).withAddress(addr));
     }
     return users;
   }
