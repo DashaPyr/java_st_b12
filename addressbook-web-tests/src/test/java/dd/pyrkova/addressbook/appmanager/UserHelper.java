@@ -1,6 +1,7 @@
 package dd.pyrkova.addressbook.appmanager;
 
 import dd.pyrkova.addressbook.model.UserData;
+import dd.pyrkova.addressbook.model.Users;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -61,15 +62,10 @@ public class UserHelper extends HelperBase {
 
   public void initUserModificationById(int id) {
     wd.findElement(By.cssSelector("a[href='edit.php?id=" + id +"']")).click();
- //   wd.findElement(By.xpath("//img[@alt='Edit']")).click();
   }
 
   public void submitUserModification() {
     click(By.xpath("//input[@name='update']"));
-  }
-
-  public void selectUser(int index) {
-    wd.findElements(By.name("selected[]")).get(index).click();
   }
 
   public void selectUserById(int id) {
@@ -92,12 +88,6 @@ public class UserHelper extends HelperBase {
     submitUserModification();
   }
 
-
-  public void delete(int index) {
-    selectUser(index);
-    deleteSelectedUser();
-  }
-
   public void delete(UserData user) {
     selectUserById(user.getId());
     deleteSelectedUser();
@@ -107,8 +97,8 @@ public class UserHelper extends HelperBase {
     return wd.findElements(By.name("selected[]")).size();
   }
 
-  public Set<UserData> allUser() {
-    Set<UserData> users = new HashSet<UserData>();
+  public Users allUser() {
+    Users users = new Users();
     List<WebElement> elements = wd.findElements(By.name("entry"));
     for (WebElement element : elements){
       List<WebElement> cells = element.findElements(By.tagName("td"));
