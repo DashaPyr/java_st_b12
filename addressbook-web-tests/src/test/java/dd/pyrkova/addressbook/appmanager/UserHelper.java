@@ -8,7 +8,9 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class UserHelper extends HelperBase {
 
@@ -93,6 +95,20 @@ public class UserHelper extends HelperBase {
 
   public List<UserData> list() {
     List<UserData> users = new ArrayList<UserData>();
+    List<WebElement> elements = wd.findElements(By.name("entry"));
+    for (WebElement element : elements){
+      List<WebElement> cells = element.findElements(By.tagName("td"));
+      int id = Integer.parseInt(cells.get(0).findElement(By.tagName("input")).getAttribute("id"));
+      String lname = cells.get(1).getText();
+      String fname = cells.get(2).getText();
+      String addr = cells.get(3).getText();
+      users.add(new UserData().withId(id).withFirstname(fname).withLastname(lname).withAddress(addr));
+    }
+    return users;
+  }
+
+  public Set<UserData> allUser() {
+    Set<UserData> users = new HashSet<UserData>();
     List<WebElement> elements = wd.findElements(By.name("entry"));
     for (WebElement element : elements){
       List<WebElement> cells = element.findElements(By.tagName("td"));
