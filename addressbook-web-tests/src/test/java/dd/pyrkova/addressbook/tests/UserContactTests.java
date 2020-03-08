@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
-public class UserPhoneTests extends TestBase {
+public class UserContactTests extends TestBase {
 
   @BeforeMethod
   public void preconditions (){
@@ -28,6 +28,8 @@ public class UserPhoneTests extends TestBase {
     UserData user = app.user().allUser().iterator().next();
     UserData userInfoFroEditForm = app.user().infoFromUserForm(user);
 
+    assertThat(user.getEmailone(), equalTo(cleaned(userInfoFroEditForm.getEmailone())));
+    assertThat(user.getEmailtwo(), equalTo(cleaned(userInfoFroEditForm.getEmailtwo())));
     assertThat(user.getPhonehome(), equalTo(cleaned(userInfoFroEditForm.getPhonehome())));
     assertThat(user.getPhonemobile(), equalTo(cleaned(userInfoFroEditForm.getPhonemobile())));
     assertThat(user.getPhonework(), equalTo(cleaned(userInfoFroEditForm.getPhonework())));

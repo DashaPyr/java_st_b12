@@ -117,8 +117,10 @@ public class UserHelper extends HelperBase {
       String lname = cells.get(1).getText();
       String fname = cells.get(2).getText();
       String addr = cells.get(3).getText();
+      String[] emails = cells.get(4).getText().split("\n");
       String[] phones = cells.get(5).getText().split("\n");
       userCache.add(new UserData().withId(id).withFirstname(fname).withLastname(lname).withAddress(addr)
+              .withEmailone(emails[0]).withEmailtwo(emails[1])
               .withPhonehome(phones[0]).withPhonemobile(phones[1]).withPhonework(phones[2]));
     }
     return new Users(userCache);
@@ -131,8 +133,11 @@ public class UserHelper extends HelperBase {
     String home = wd.findElement(By.name("home")).getAttribute("value");
     String mobile = wd.findElement(By.name("mobile")).getAttribute("value");
     String work = wd.findElement(By.name("work")).getAttribute("value");
+    String email = wd.findElement(By.name("email")).getAttribute("value");
+    String email2 = wd.findElement(By.name("email2")).getAttribute("value");
     wd.navigate().back();
     return new UserData().withId(user.getId()).withFirstname(firstname).withLastname(lastname)
+            .withEmailone(email).withEmailtwo(email2)
             .withPhonehome(home).withPhonemobile(mobile).withPhonework(work);
   }
 }
