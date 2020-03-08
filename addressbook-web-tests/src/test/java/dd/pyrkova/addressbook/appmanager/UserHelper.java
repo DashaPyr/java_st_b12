@@ -117,11 +117,11 @@ public class UserHelper extends HelperBase {
       String lname = cells.get(1).getText();
       String fname = cells.get(2).getText();
       String addr = cells.get(3).getText();
-      String[] emails = cells.get(4).getText().split("\n");
-      String[] phones = cells.get(5).getText().split("\n");
+      String allEmails = cells.get(4).getText();
+      String allPhones = cells.get(5).getText();
       userCache.add(new UserData().withId(id).withFirstname(fname).withLastname(lname).withAddress(addr)
-              .withEmailone(emails[0]).withEmailtwo(emails[1])
-              .withPhonehome(phones[0]).withPhonemobile(phones[1]).withPhonework(phones[2]));
+              .withAllEmails(allEmails)
+              .withAllPhones(allPhones));
     }
     return new Users(userCache);
   }
