@@ -18,9 +18,8 @@ public class CreateNewUser extends TestBase {
             .withBirthday("1").withBirthmonth("January").withBirthyear("1990").withGroup("[none]");
     app.user().create(user, true);
     app.goTo().homePage();
+    assertThat(app.user().userCount(), equalTo(before.size() + 1));
     Users after = app.user().allUser();
-    assertThat(after.size(), equalTo(before.size() + 1));
-
     assertThat(after, equalTo(
             before.withAdded(user.withId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt()))));
   }

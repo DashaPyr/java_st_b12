@@ -91,7 +91,7 @@
       <recent name="dd.pyrkova.addressbook" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.GroupDeletionTests">
+  <component name="RunManager" selected="TestNG.dd.pyrkova.addressbook.tests">
     <configuration name="GroupCreationTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
@@ -178,9 +178,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.GroupDeletionTests" />
-        <item itemvalue="TestNG.GroupCreationTests" />
         <item itemvalue="TestNG.dd.pyrkova.addressbook.tests" />
+        <item itemvalue="TestNG.GroupCreationTests" />
+        <item itemvalue="TestNG.GroupDeletionTests" />
         <item itemvalue="TestNG.GroupModificationTests" />
         <item itemvalue="TestNG.UserModificationTests" />
       </list>
@@ -249,22 +249,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="461" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581837963120" />
-    <state width="1877" height="372" key="GridCell.Tab.0.bottom" timestamp="1583612966838">
+    <state width="1877" height="372" key="GridCell.Tab.0.bottom" timestamp="1583647036994">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="372" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583612966838" />
-    <state width="1877" height="372" key="GridCell.Tab.0.center" timestamp="1583612966838">
+    <state width="1877" height="372" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583647036994" />
+    <state width="1877" height="372" key="GridCell.Tab.0.center" timestamp="1583647036993">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="372" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583612966838" />
-    <state width="1877" height="372" key="GridCell.Tab.0.left" timestamp="1583612966838">
+    <state width="1877" height="372" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583647036993" />
+    <state width="1877" height="372" key="GridCell.Tab.0.left" timestamp="1583647036993">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="372" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583612966838" />
-    <state width="1877" height="372" key="GridCell.Tab.0.right" timestamp="1583612966838">
+    <state width="1877" height="372" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583647036993" />
+    <state width="1877" height="372" key="GridCell.Tab.0.right" timestamp="1583647036993">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="372" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583612966838" />
+    <state width="1877" height="372" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583647036993" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1583611125445">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -324,5 +324,8 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/java_st_b12$SquareTests.ic" NAME="SquareTests Coverage Results" MODIFIED="1581362624140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/java_st_b12$dd_pyrkova_addressbook_tests.ic" NAME="dd.pyrkova.addressbook.tests Coverage Results" MODIFIED="1583646632335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>dd.pyrkova.addressbook.tests.*</FILTER>
+    </SUITE>
   </component>
 </project>

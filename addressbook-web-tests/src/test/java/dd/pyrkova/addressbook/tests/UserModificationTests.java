@@ -34,9 +34,8 @@ public class UserModificationTests extends TestBase {
             .withBirthday("1").withBirthmonth("January").withBirthyear("1990");
     app.user().modify(user);
     app.goTo().homePage();
+    assertThat(app.user().userCount(), equalTo(before.size()));
     Users after = app.user().allUser();
-    assertEquals(after.size(), before.size());
-
     assertThat(after, equalTo(before.without(modifiedUser).withAdded(user)));
   }
 
