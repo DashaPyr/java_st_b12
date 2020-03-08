@@ -57,12 +57,14 @@ public class UserHelper extends HelperBase {
     wd.findElement(By.cssSelector("div.msgbox"));
   }
 
-  public void initUserModification(int index) {
-    wd.findElements(By.xpath("//img[@alt='Edit']")).get(index).click();
-  }
-
   public void initUserModificationById(int id) {
-    wd.findElement(By.cssSelector("a[href='edit.php?id=" + id +"']")).click();
+//    wd.findElement(By.cssSelector(String.format("a[href='edit.php?id=%s']", id))).click();
+//    wd.findElement(By.xpath(String.format("//input[@value='%s']/../../td[8]/a", id))).click();
+    wd.findElement(By.xpath(String.format("//tr[.//input[@value='%s']]/td[8]/a", id))).click();
+//    WebElement checkbox = wd.findElement(By.cssSelector(String.format("input[value='%s']", id)));
+//    WebElement row = checkbox.findElement(By.xpath("./../.."));
+//    List<WebElement> cells = row.findElements(By.tagName("td"));
+//    cells.get(7).findElement(By.tagName("a")).click();
   }
 
   public void submitUserModification() {
@@ -70,7 +72,8 @@ public class UserHelper extends HelperBase {
   }
 
   public void selectUserById(int id) {
-    wd.findElement(By.cssSelector("input[value='" + id + "']")).click();
+//    wd.findElement(By.cssSelector("input[value='" + id + "']")).click();
+    wd.findElement(By.cssSelector(String.format("input[value='%s']", id))).click();
   }
 
   public boolean isThereAUser() {
@@ -121,5 +124,15 @@ public class UserHelper extends HelperBase {
     return new Users(userCache);
   }
 
-
+  public UserData infoFromUserForm(UserData user) {
+    initUserModificationById(user.getId());
+    String firstname = wd.findElement(By.name("firstname")).getAttribute("value");
+    String lastname = wd.findElement(By.name("lastname")).getAttribute("value");
+    String home = wd.findElement(By.name("home")).getAttribute("value");
+    String mobile = wd.findElement(By.name("mobile")).getAttribute("value");
+    String work = wd.findElement(By.name("work")).getAttribute("value");
+    wd.navigate().back();
+    return new UserData().withId(user.getId()).withFirstname(firstname).withLastname(lastname)
+            .withPhonehome(home).withPhonemobile(mobile).withPhonework(work);
+  }
 }
