@@ -72,7 +72,6 @@ public class UserHelper extends HelperBase {
   }
 
   public void selectUserById(int id) {
-//    wd.findElement(By.cssSelector("input[value='" + id + "']")).click();
     wd.findElement(By.cssSelector(String.format("input[value='%s']", id))).click();
   }
 
@@ -110,7 +109,6 @@ public class UserHelper extends HelperBase {
     if (userCache != null){
       return new Users(userCache);
     }
-
     userCache = new Users();
     List<WebElement> elements = wd.findElements(By.name("entry"));
     for (WebElement element : elements){
@@ -119,7 +117,9 @@ public class UserHelper extends HelperBase {
       String lname = cells.get(1).getText();
       String fname = cells.get(2).getText();
       String addr = cells.get(3).getText();
-      userCache.add(new UserData().withId(id).withFirstname(fname).withLastname(lname).withAddress(addr));
+      String[] phones = cells.get(5).getText().split("\n");
+      userCache.add(new UserData().withId(id).withFirstname(fname).withLastname(lname).withAddress(addr)
+              .withPhonehome(phones[0]).withPhonemobile(phones[1]).withPhonework(phones[2]));
     }
     return new Users(userCache);
   }
