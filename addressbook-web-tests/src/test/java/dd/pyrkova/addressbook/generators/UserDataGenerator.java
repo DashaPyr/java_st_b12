@@ -40,18 +40,21 @@ public class UserDataGenerator {
   private static void save(List<UserData> users, File file) throws IOException {
     Writer writer = new FileWriter(file);
     for (UserData user : users) {
-      writer.write(String.format("%s;%s;%s;%s;%s\n", user.getFirstname(),
-              user.getMiddlename(), user.getLastname(), user.getPhonehome(), user.getEmailone()));
+      writer.write(String.format("%s;%s;%s;%s;%s;%s;%s;%s;%s\n", user.getFirstname(),
+              user.getMiddlename(), user.getLastname(), user.getPhonehome(), user.getEmailone(),
+              user.getBirthday(), user.getBirthmonth(), user.getBirthyear(), user.getGroup()));
     }
     writer.close();
   }
 
   private static List<UserData> generatorUsers(int count) {
     List<UserData> users = new ArrayList<UserData>();
+    File photo = new File("src/test/resouces/catbus.jpg");
     for (int i = 0; i < count; i++){
-      users.add(new UserData().withFirstname(String.format("Dasha %s", i))
-              .withMiddlename("V").withLastname(String.format("P %s", i))
-              .withPhonehome(String.format("+%s%s", i, i)).withEmailone(String.format("%s@g.c", i)));
+      users.add(new UserData().withFirstname(String.format("Dasha %s", i+10))
+              .withMiddlename("V").withLastname(String.format("P %s", i+10))
+              .withPhonehome(String.format("+%s%s", i, i)).withEmailone(String.format("%s@g.c", i+10))
+              .withBirthday("1").withBirthmonth("January").withBirthyear(String.format("199%s", i)).withGroup("[none]"));
     }
     return users;
   }
