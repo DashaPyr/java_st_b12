@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="dd.pyrkova.addressbook.tests.GroupDeletionTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-03-14T18:44:24" hostname="CONGO" time="2.271">
+<testsuite name="dd.pyrkova.addressbook.tests.GroupDeletionTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-03-14T19:23:30" hostname="CONGO" time="2.576">
   <properties/>
-  <testcase name="testGroupDeletion" classname="dd.pyrkova.addressbook.tests.GroupDeletionTests" time="2.271"/>
+  <testcase name="testGroupDeletion" classname="dd.pyrkova.addressbook.tests.GroupDeletionTests" time="2.576"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
