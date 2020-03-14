@@ -1,5 +1,6 @@
 package dd.pyrkova.addressbook.model;
 
+import com.google.gson.annotations.Expose;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 
@@ -10,20 +11,35 @@ import java.util.Objects;
 public class UserData {
   @XStreamOmitField
   private int id = Integer.MAX_VALUE;
+  @Expose
   private String firstname;
+  @Expose
   private String middlename;
+  @Expose
   private String lastname;
+  @Expose
   private String nickname;
+  @Expose
   private String company;
+  @Expose
   private String address;
+  @Expose
   private String emailone;
+  @Expose
   private String emailtwo;
+  @Expose
   private String phonehome;
+  @Expose
   private String phonemobile;
+  @Expose
   private String phonework;
+  @Expose
   private String birthday;
+  @Expose
   private String birthmonth;
+  @Expose
   private String birthyear;
+  @Expose
   private String group;
   private String allPhones;
   private String allEmails;

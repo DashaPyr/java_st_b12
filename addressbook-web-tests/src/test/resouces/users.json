@@ -1,0 +1,35 @@
+[
+  {
+    "firstname": "Dasha 10\n",
+    "middlename": "V",
+    "lastname": "P\n 10",
+    "emailone": "10@g.c",
+    "phonehome": "+00",
+    "birthday": "1",
+    "birthmonth": "January",
+    "birthyear": "1990",
+    "group": "[none]"
+  },
+  {
+    "firstname": "Dasha 11\n",
+    "middlename": "V",
+    "lastname": "P\n 11",
+    "emailone": "11@g.c",
+    "phonehome": "+11",
+    "birthday": "1",
+    "birthmonth": "January",
+    "birthyear": "1991",
+    "group": "[none]"
+  },
+  {
+    "firstname": "Dasha 12\n",
+    "middlename": "V",
+    "lastname": "P\n 12",
+    "emailone": "12@g.c",
+    "phonehome": "+22",
+    "birthday": "1",
+    "birthmonth": "January",
+    "birthyear": "1992",
+    "group": "[none]"
+  }
+]
