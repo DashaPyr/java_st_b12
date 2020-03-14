@@ -1,5 +1,8 @@
 package dd.pyrkova.addressbook.generators;
 
+import com.beust.jcommander.JCommander;
+import com.beust.jcommander.Parameter;
+import com.beust.jcommander.ParameterException;
 import dd.pyrkova.addressbook.model.UserData;
 
 import java.io.File;
@@ -11,12 +14,27 @@ import java.util.List;
 
 public class UserDataGenerator {
 
-  public static void main(String[] args) throws IOException {
-    int count = Integer.parseInt(args[0]);
-    File file = new File(args[1]);
+  @Parameter (names = "-c", description = "User count")
+  public int count;
 
+  @Parameter (names = "-f", description = "Target file")
+  public String file;
+
+  public static void main(String[] args) throws IOException {
+    UserDataGenerator generator = new UserDataGenerator();
+    JCommander jCommander = new JCommander(generator);
+    try {
+      jCommander.parse(args);
+    } catch (ParameterException ex){
+      jCommander.usage();
+      return;
+    }
+    generator.run();
+  }
+
+  private void run() throws IOException {
     List<UserData> users = generatorUsers(count);
-    save(users, file);
+    save(users, new File(file));
   }
 
   private static void save(List<UserData> users, File file) throws IOException {
