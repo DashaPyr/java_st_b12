@@ -1,5 +1,6 @@
 package dd.pyrkova.addressbook.model;
 
+import java.io.File;
 import java.util.Objects;
 
 public class UserData {
@@ -21,6 +22,7 @@ public class UserData {
   private String group;
   private String allPhones;
   private String allEmails;
+  private File photo;
 
   public int getId() {
     return id;
@@ -87,6 +89,8 @@ public class UserData {
   public String getAllPhones() { return allPhones; }
 
   public String getAllEmails() { return allEmails;  }
+
+  public File getPhoto() { return photo;  }
 
   public UserData withId(int id) {
     this.id = id;
@@ -175,6 +179,11 @@ public class UserData {
 
   public UserData withAllEmails(String allEmails) {
     this.allEmails = allEmails;
+    return this;
+  }
+
+  public UserData withPhoto(File photo) {
+    this.photo = photo;
     return this;
   }
 

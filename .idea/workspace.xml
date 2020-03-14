@@ -91,7 +91,24 @@
       <recent name="dd.pyrkova.addressbook" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.dd.pyrkova.addressbook.tests">
+  <component name="RunManager" selected="TestNG.CreateNewUser">
+    <configuration name="CreateNewUser" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="addressbook-web-tests.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dd.pyrkova.addressbook.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="dd.pyrkova.addressbook.tests" />
+      <option name="MAIN_CLASS_NAME" value="dd.pyrkova.addressbook.tests.CreateNewUser" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="DeleteUserTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
@@ -109,7 +126,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GroupModificationTests" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="GroupCreationTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
         <pattern>
@@ -118,7 +135,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="dd.pyrkova.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="dd.pyrkova.addressbook.tests.GroupModificationTests" />
+      <option name="MAIN_CLASS_NAME" value="dd.pyrkova.addressbook.tests.GroupCreationTests" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -136,23 +153,6 @@
       </extension>
       <option name="PACKAGE_NAME" value="dd.pyrkova.addressbook.tests" />
       <option name="MAIN_CLASS_NAME" value="dd.pyrkova.addressbook.tests.UserContactTests" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserModificationTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="addressbook-web-tests.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="dd.pyrkova.addressbook.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="dd.pyrkova.addressbook.tests" />
-      <option name="MAIN_CLASS_NAME" value="dd.pyrkova.addressbook.tests.UserModificationTests" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -178,11 +178,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.CreateNewUser" />
+        <item itemvalue="TestNG.GroupCreationTests" />
         <item itemvalue="TestNG.dd.pyrkova.addressbook.tests" />
         <item itemvalue="TestNG.UserContactTests" />
         <item itemvalue="TestNG.DeleteUserTests" />
-        <item itemvalue="TestNG.GroupModificationTests" />
-        <item itemvalue="TestNG.UserModificationTests" />
       </list>
     </recent_temporary>
   </component>
@@ -221,9 +221,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1582997454490" />
-    <state x="730" y="222" key="#com.intellij.ide.util.MemberChooser" timestamp="1583656995394">
+    <state x="730" y="222" key="#com.intellij.ide.util.MemberChooser" timestamp="1584172238703">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="730" y="222" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584172238703" />
     <state x="730" y="222" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1583656995394" />
     <state x="689" y="305" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1581368329632">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -249,44 +250,52 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="461" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581837963120" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1583679450940">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="314" key="GridCell.Tab.0.bottom" timestamp="1584177101801">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="314" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584177101801" />
     <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583679450940" />
     <state width="1877" height="372" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583658537890" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1583679450940">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="314" key="GridCell.Tab.0.center" timestamp="1584177101800">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="314" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584177101800" />
     <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583679450940" />
     <state width="1877" height="372" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583658537890" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1583679450940">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="314" key="GridCell.Tab.0.left" timestamp="1584177101800">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="314" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584177101800" />
     <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583679450940" />
     <state width="1877" height="372" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583658537890" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1583679450940">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="314" key="GridCell.Tab.0.right" timestamp="1584177101801">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="314" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584177101801" />
     <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583679450940" />
     <state width="1877" height="372" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583658537890" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1583679450940">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1584177069721">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584177069721" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583679450940" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583611125445" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1583679450940">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1584177069721">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584177069721" />
     <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583679450940" />
     <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583611125445" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1583679450940">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1584177069721">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584177069721" />
     <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583679450940" />
     <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583611125445" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1583679450940">
-      <screen x="1920" y="0" width="1920" height="1040" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1584177069721">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584177069721" />
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583679450940" />
     <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583611125445" />
     <state x="702" y="380" key="NewModule_or_Project.wizard" timestamp="1581782885998">
@@ -309,9 +318,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="776" y="303" key="chooseDestDirectoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581193560881" />
-    <state x="769" y="666" key="com.intellij.ide.util.TipDialog" timestamp="1583043269566">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="2689" y="666" key="com.intellij.ide.util.TipDialog" timestamp="1584171627917">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
+    <state x="2689" y="666" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584171627917" />
     <state x="769" y="666" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1583043269566" />
     <state x="536" y="257" width="847" height="602" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1581362592859">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -329,6 +339,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1581782449403" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/dd/pyrkova/addressbook/tests/CreateNewUser.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/dd/pyrkova/addressbook/appmanager/UserHelper.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/java_st_b12$SquareTests.ic" NAME="SquareTests Coverage Results" MODIFIED="1581362624140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

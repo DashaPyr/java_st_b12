@@ -39,6 +39,7 @@ public class UserHelper extends HelperBase {
     select(By.name("bday"), userData.getBirthday());
     select(By.name("bmonth"), userData.getBirthmonth());
     type(By.name("byear"), userData.getBirthyear());
+    attach(By.name("photo"), userData.getPhoto());
 
     if (creation) {
       new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(userData.getGroup());
