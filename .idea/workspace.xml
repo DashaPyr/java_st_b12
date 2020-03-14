@@ -91,7 +91,7 @@
       <recent name="dd.pyrkova.addressbook" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.UserDataGenerator">
+  <component name="RunManager" selected="TestNG.GroupCreationTests">
     <configuration name="GroupDataGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dd.pyrkova.addressbook.generators.GroupDataGenerator" />
       <module name="addressbook-web-tests.test" />
@@ -156,7 +156,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="dd.pyrkova.addressbook.tests" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="GroupCreationTests.testGroupCreation" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="addressbook-web-tests.test" />
       <extension name="coverage">
         <pattern>
@@ -165,7 +165,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="dd.pyrkova.addressbook.tests" />
-      <option name="TEST_OBJECT" value="PACKAGE" />
+      <option name="MAIN_CLASS_NAME" value="dd.pyrkova.addressbook.tests.GroupCreationTests" />
+      <option name="METHOD_NAME" value="testGroupCreation" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -176,16 +178,16 @@
       <item itemvalue="Application.GroupDataGenerator" />
       <item itemvalue="Application.UserDataGenerator" />
       <item itemvalue="TestNG.CreateNewUser" />
-      <item itemvalue="TestNG.dd.pyrkova.addressbook.tests" />
       <item itemvalue="TestNG.GroupCreationTests" />
+      <item itemvalue="TestNG.GroupCreationTests.testGroupCreation" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.GroupCreationTests" />
+        <item itemvalue="TestNG.CreateNewUser" />
+        <item itemvalue="TestNG.GroupCreationTests.testGroupCreation" />
         <item itemvalue="Application.UserDataGenerator" />
         <item itemvalue="Application.GroupDataGenerator" />
-        <item itemvalue="TestNG.CreateNewUser" />
-        <item itemvalue="TestNG.GroupCreationTests" />
-        <item itemvalue="TestNG.dd.pyrkova.addressbook.tests" />
       </list>
     </recent_temporary>
   </component>
@@ -255,28 +257,28 @@
     </state>
     <state x="0" y="461" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584183211732" />
     <state x="0" y="461" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1581837963120" />
-    <state width="1877" height="314" key="GridCell.Tab.0.bottom" timestamp="1584187027158">
+    <state width="1877" height="314" key="GridCell.Tab.0.bottom" timestamp="1584193372396">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="314" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584187027158" />
+    <state width="1877" height="314" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584193372396" />
     <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583679450940" />
     <state width="1877" height="372" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1583658537890" />
-    <state width="1877" height="314" key="GridCell.Tab.0.center" timestamp="1584187027158">
+    <state width="1877" height="314" key="GridCell.Tab.0.center" timestamp="1584193372395">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="314" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584187027158" />
+    <state width="1877" height="314" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584193372395" />
     <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583679450940" />
     <state width="1877" height="372" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1583658537890" />
-    <state width="1877" height="314" key="GridCell.Tab.0.left" timestamp="1584187027158">
+    <state width="1877" height="314" key="GridCell.Tab.0.left" timestamp="1584193372395">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="314" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584187027158" />
+    <state width="1877" height="314" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584193372395" />
     <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583679450940" />
     <state width="1877" height="372" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1583658537890" />
-    <state width="1877" height="314" key="GridCell.Tab.0.right" timestamp="1584187027158">
+    <state width="1877" height="314" key="GridCell.Tab.0.right" timestamp="1584193372395">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="314" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584187027158" />
+    <state width="1877" height="314" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1584193372395" />
     <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1583679450940" />
     <state width="1877" height="372" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1583658537890" />
     <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1584186566501">
@@ -350,7 +352,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/addressbook-web-tests/src/test/java/dd/pyrkova/addressbook/tests/CreateNewUser.java</url>
-          <line>31</line>
+          <line>53</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
