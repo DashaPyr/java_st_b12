@@ -17,21 +17,15 @@ public class UserData {
   private String middlename;
   @Expose
   private String lastname;
-  @Expose
   private String nickname;
-  @Expose
   private String company;
-  @Expose
   private String address;
   @Expose
   private String emailone;
-  @Expose
   private String emailtwo;
   @Expose
   private String phonehome;
-  @Expose
   private String phonemobile;
-  @Expose
   private String phonework;
   @Expose
   private String birthday;

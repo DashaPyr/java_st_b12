@@ -84,11 +84,11 @@ public class UserDataGenerator {
 
   private static List<UserData> generatorUsers(int count) {
     List<UserData> users = new ArrayList<UserData>();
-    File photo = new File("src/test/resouces/catbus.jpg");
+ //   File photo = new File("src/test/resouces/catbus.jpg");
     for (int i = 0; i < count; i++){
-      users.add(new UserData().withFirstname(String.format("Dasha %s\n", i+10))
-              .withMiddlename("V").withLastname(String.format("P\n %s", i+10))
-              .withPhonehome(String.format("+%s%s", i, i)).withEmailone(String.format("%s@g.c", i+10))
+      users.add(new UserData().withFirstname(String.format("Dasha %s", i+30))
+              .withMiddlename("V").withLastname(String.format("P %s", i+30))
+              .withPhonehome(String.format("+%s%s", i, i)).withEmailone(String.format("%s@g.c", i+30))
               .withBirthday("1").withBirthmonth("January").withBirthyear(String.format("199%s", i)).withGroup("[none]"));
     }
     return users;

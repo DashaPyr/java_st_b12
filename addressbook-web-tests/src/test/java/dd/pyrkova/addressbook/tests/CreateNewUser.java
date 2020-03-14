@@ -1,11 +1,12 @@
 package dd.pyrkova.addressbook.tests;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.thoughtworks.xstream.XStream;
 import dd.pyrkova.addressbook.model.*;
 import org.testng.annotations.*;
 
 import java.io.*;
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -16,9 +17,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 public class CreateNewUser extends TestBase {
 
   @DataProvider
-  public Iterator<Object[]> validUsers() throws IOException {
-    List<Object[]> list = new ArrayList<Object[]>();
-    File photo = new File("src/test/resouces/catbus.jpg");
+  public Iterator<Object[]> validUsersFromXml() throws IOException {
     BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resouces/users.xml")));
     String xml = "";
     String line = reader.readLine();
@@ -32,10 +31,24 @@ public class CreateNewUser extends TestBase {
     return users.stream().map((g) -> new Object[] {g}).collect(Collectors.toList()).iterator();
   }
 
-  @Test (dataProvider = "validUsers")
+  @DataProvider
+  public Iterator<Object[]> validUsersFromJson() throws IOException {
+    BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resouces/users.json")));
+    String json = "";
+    String line = reader.readLine();
+    while (line != null){
+      json += line;
+      line = reader.readLine();
+    }
+    Gson gson = new Gson();
+    List<UserData> users = gson.fromJson(json, new TypeToken<List<UserData>>(){}.getType()); //List<GroupData>.class
+    return users.stream().map((g) -> new Object[] {g}).collect(Collectors.toList()).iterator();
+  }
+
+  @Test (dataProvider = "validUsersFromJson")
   public void testCreateNewUser(UserData user) {
     app.goTo().homePage();
-//    File photo = new File("src/test/resouces/catbus.jpg");
+    File photo = new File("src/test/resouces/catbus.jpg");
     Users before = app.user().allUser();
 /*    UserData user = new UserData().withFirstname(firstname).withMiddlename(middlename).withLastname(lastname).withNickname("dd")
             .withCompany("U").withAddress("Dolgoprudny").withEmailone("d@u.ru").withEmailtwo("d@g.com")
