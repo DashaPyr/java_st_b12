@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dd.pyrkova.addressbook.tests.GroupCreationTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-03-14T18:35:51" hostname="CONGO" time="11.171">
+  <properties/>
+  <testcase name="testGroupCreation[0](GroupData{id='0', name='test 10'})" classname="dd.pyrkova.addressbook.tests.GroupCreationTests" time="5.108"/>
+  <testcase name="testGroupCreation[1](GroupData{id='0', name='test 11'})" classname="dd.pyrkova.addressbook.tests.GroupCreationTests" time="2.966"/>
+  <testcase name="testGroupCreation[2](GroupData{id='0', name='test 12'})" classname="dd.pyrkova.addressbook.tests.GroupCreationTests" time="3.093"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Security framework of XStream not initialized, XStream is probably vulnerable.
+]]></system-err>
+</testsuite>

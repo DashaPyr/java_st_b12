@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dd.pyrkova.addressbook.tests.DeleteUserTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-03-14T18:43:39" hostname="CONGO" time="10.157">
+  <properties/>
+  <testcase name="testDeleteUser" classname="dd.pyrkova.addressbook.tests.DeleteUserTests" time="10.157"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

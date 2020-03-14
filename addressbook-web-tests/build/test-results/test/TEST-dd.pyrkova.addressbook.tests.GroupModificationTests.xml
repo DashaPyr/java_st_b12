@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="dd.pyrkova.addressbook.tests.GroupModificationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-03-14T18:36:02" hostname="CONGO" time="2.843">
+  <properties/>
+  <testcase name="testGroupModification" classname="dd.pyrkova.addressbook.tests.GroupModificationTests" time="2.843"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
