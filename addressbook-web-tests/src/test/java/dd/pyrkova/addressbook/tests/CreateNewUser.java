@@ -1,5 +1,6 @@
 package dd.pyrkova.addressbook.tests;
 
+import com.thoughtworks.xstream.XStream;
 import dd.pyrkova.addressbook.model.*;
 import org.testng.annotations.*;
 
@@ -7,6 +8,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -16,18 +18,18 @@ public class CreateNewUser extends TestBase {
   @DataProvider
   public Iterator<Object[]> validUsers() throws IOException {
     List<Object[]> list = new ArrayList<Object[]>();
-//    File photo = new File("src/test/resouces/catbus.jpg");
-    BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resouces/users.csv")));
+    File photo = new File("src/test/resouces/catbus.jpg");
+    BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resouces/users.xml")));
+    String xml = "";
     String line = reader.readLine();
     while (line != null){
-      String[] split = line.split(";");
-      list.add(new Object[] {new UserData().withFirstname(split[0]).withMiddlename(split[1]).withLastname(split[2])
-              .withPhonehome(split[3]).withEmailone(split[4])
-              .withBirthday(split[5]).withBirthmonth(split[6]).withBirthyear(split[7])
-              .withGroup(split[8])});
+      xml += line;
       line = reader.readLine();
     }
-    return list.iterator();
+    XStream xstream = new XStream();
+    xstream.processAnnotations(UserData.class);
+    List<UserData> users = (List<UserData>) xstream.fromXML(xml);
+    return users.stream().map((g) -> new Object[] {g}).collect(Collectors.toList()).iterator();
   }
 
   @Test (dataProvider = "validUsers")
