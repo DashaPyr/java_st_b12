@@ -5,10 +5,7 @@ import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
 import org.hibernate.annotations.Type;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.File;
 import java.util.Objects;
 
@@ -18,64 +15,74 @@ import java.util.Objects;
 public class UserData {
   @XStreamOmitField
   @Id
-//  @Column(name = "id")
+  @Column(name = "id")
   private int id = Integer.MAX_VALUE;
 
   @Expose
   @Column(name = "firstname")
-  @Type(type = "text")
   private String firstname;
 
   @Expose
   @Column(name = "middlename")
-  @Type(type = "text")
   private String middlename;
 
   @Expose
   @Column(name = "lastname")
-  @Type(type = "text")
   private String lastname;
 
+  @Column(name = "nickname")
   private String nickname;
+
+  @Transient
   private String company;
+
+  @Transient
   private String address;
 
   @Expose
-  @Column(name = "emailone")
+  @Column(name = "email")
   @Type(type = "text")
   private String emailone;
 
+  @Column(name = "email2")
+  @Type(type = "text")
   private String emailtwo;
 
   @Expose
-  @Column(name = "phonehome")
+  @Column(name = "home")
   @Type(type = "text")
   private String phonehome;
 
+  @Transient
   private String phonemobile;
+
+  @Transient
   private String phonework;
 
-  @Expose
-  @Column(name = "birthday")
+  @Transient
   private String birthday;
 
   @Expose
-  @Column(name = "birthmonth")
-  @Type(type = "text")
+  @Transient
   private String birthmonth;
 
   @Expose
-  @Column(name = "birthyear")
+  @Transient
   private String birthyear;
 
   @Expose
-  @Column(name = "group")
-  @Type(type = "text")
+  @Transient
   private String group;
 
+  @Transient
   private String allPhones;
+  @Transient
   private String allEmails;
-  private File photo;
+
+  @Column(name = "photo")
+  @Type(type = "text")
+  private String photo;
+//  private File photo;
 
   public int getId() {
     return id;
@@ -143,7 +150,7 @@ public class UserData {
 
   public String getAllEmails() { return allEmails;  }
 
-  public File getPhoto() { return photo;  }
+  public File getPhoto() { return new File(photo);  }
 
   public UserData withId(int id) {
     this.id = id;
@@ -236,7 +243,7 @@ public class UserData {
   }
 
   public UserData withPhoto(File photo) {
-    this.photo = photo;
+    this.photo = photo.getPath();
     return this;
   }
 
