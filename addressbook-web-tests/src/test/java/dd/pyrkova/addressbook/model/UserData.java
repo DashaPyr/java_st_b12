@@ -57,10 +57,14 @@ public class UserData {
   @Type(type = "text")
   private String phonehome;
 
-  @Transient
+  @Expose
+  @Column(name = "mobile")
+  @Type(type = "text")
   private String phonemobile;
 
-  @Transient
+  @Expose
+  @Column(name = "work")
+  @Type(type = "text")
   private String phonework;
 
   @Expose

@@ -72,6 +72,7 @@ public class CreateNewUser extends TestBase {
     File photo = new File("src/test/resources/catbus.jpg");
     System.out.println(photo.getAbsolutePath());
     System.out.println(photo.exists());
+    verifyUserListUI();
   }
 
 }
