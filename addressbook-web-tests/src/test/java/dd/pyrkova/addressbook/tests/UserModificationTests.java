@@ -14,8 +14,8 @@ public class UserModificationTests extends TestBase {
 
   @BeforeMethod
   public void preconditions (){
-    app.goTo().homePage();
-    if (app.user().allUser().size() == 0){
+    if (app.db().users().size() == 0){
+      app.goTo().homePage();
       app.user().create(new UserData().withFirstname("Daria").withMiddlename("Vladimirovna").withLastname("Pyrkova").withNickname("dd")
               .withCompany("U").withAddress("Dolgoprudny").withEmailone("d@u.ru").withEmailtwo("d@g.com")
               .withPhonehome("999").withPhonemobile("777").withPhonework("888")
@@ -26,16 +26,17 @@ public class UserModificationTests extends TestBase {
 
   @Test
   public void testGroupModification() {
-    Users before = app.user().allUser();
+    Users before = app.db().users();
     UserData modifiedUser = before.iterator().next();
     UserData user = new UserData().withId(modifiedUser.getId()).withFirstname("Daria").withMiddlename("Vladimirovna").withLastname("Pyrkova").withNickname("dd")
             .withCompany("U").withAddress("Dolgoprudny").withEmailone("d@u.ru").withEmailtwo("d@g.com")
             .withPhonehome("999").withPhonemobile("777").withPhonework("888")
             .withBirthday("1").withBirthmonth("January").withBirthyear("1990");
+    app.goTo().homePage();
     app.user().modify(user);
     app.goTo().homePage();
-    assertThat(app.user().userCount(), equalTo(before.size()));
-    Users after = app.user().allUser();
+//    assertThat(app.user().userCount(), equalTo(before.size()));
+    Users after = app.db().users();
     assertThat(after, equalTo(before.without(modifiedUser).withAdded(user)));
   }
 

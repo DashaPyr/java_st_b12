@@ -51,8 +51,8 @@ public class CreateNewUser extends TestBase {
   @Test (dataProvider = "validUsersFromJson")
   public void testCreateNewUser(UserData user) {
     app.goTo().homePage();
-//    File photo = new File("src/test/resouces/catbus.jpg");
-    Users before = app.user().allUser();
+    File photo = new File("src/test/resouces/catbus.jpg");
+    Users before = app.db().users();
 /*    UserData user = new UserData().withFirstname(firstname).withMiddlename(middlename).withLastname(lastname).withNickname("dd")
             .withCompany("U").withAddress("Dolgoprudny").withEmailone("d@u.ru").withEmailtwo("d@g.com")
             .withPhonehome("999").withPhonemobile("777").withPhonework("888")
@@ -60,7 +60,7 @@ public class CreateNewUser extends TestBase {
     app.user().create(user, true);
     app.goTo().homePage();
     assertThat(app.user().userCount(), equalTo(before.size() + 1));
-    Users after = app.user().allUser();
+    Users after = app.db().users();
     assertThat(after, equalTo(
             before.withAdded(user.withId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt()))));
   }

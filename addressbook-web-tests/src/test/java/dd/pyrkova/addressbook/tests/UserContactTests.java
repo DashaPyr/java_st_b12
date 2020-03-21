@@ -16,8 +16,8 @@ public class UserContactTests extends TestBase {
 
   @BeforeMethod
   public void preconditions (){
-    app.goTo().homePage();
-    if (app.user().allUser().size() == 0){
+    if (app.db().users().size() == 0){
+      app.goTo().homePage();
       app.user().create(new UserData().withFirstname("Daria").withMiddlename("Vladimirovna").withLastname("Pyrkova").withNickname("dd")
               .withCompany("U").withAddress("Dolgoprudny").withEmailone("d@u.ru").withEmailtwo("d@g.com")
               .withPhonehome("999").withPhonemobile("777").withPhonework("888")
