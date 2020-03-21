@@ -6,6 +6,8 @@ import com.thoughtworks.xstream.XStream;
 import dd.pyrkova.addressbook.model.GroupData;
 import dd.pyrkova.addressbook.model.Groups;
 import dd.pyrkova.addressbook.model.TestBase;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.*;
 
 
