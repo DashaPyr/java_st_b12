@@ -30,13 +30,17 @@ public class UserData {
   @Column(name = "lastname")
   private String lastname;
 
+  @Expose
   @Column(name = "nickname")
   private String nickname;
 
-  @Transient
+  @Expose
+  @Column(name = "company")
   private String company;
 
-  @Transient
+  @Expose
+  @Column(name = "address")
+  @Type(type = "text")
   private String address;
 
   @Expose
@@ -59,6 +63,7 @@ public class UserData {
   @Transient
   private String phonework;
 
+  @Expose
   @Transient
   private String birthday;
 
@@ -79,14 +84,12 @@ public class UserData {
   @Transient
   private String allEmails;
 
-  @Column(name = "photo")
-  @Type(type = "text")
-  private String photo;
-//  private File photo;
+  @Transient
+//  private String photo;
+  private File photo;
 
-  public int getId() {
-    return id;
-  }
+
+  public int getId() { return id; }
 
   public String getFirstname() {
     return firstname;
@@ -150,7 +153,7 @@ public class UserData {
 
   public String getAllEmails() { return allEmails;  }
 
-  public File getPhoto() { return new File(photo);  }
+  public File getPhoto() { return photo;  }
 
   public UserData withId(int id) {
     this.id = id;
@@ -243,7 +246,7 @@ public class UserData {
   }
 
   public UserData withPhoto(File photo) {
-    this.photo = photo.getPath();
+    this.photo = photo;
     return this;
   }
 
@@ -256,18 +259,26 @@ public class UserData {
             '}';
   }
 
+
   @Override
   public boolean equals(Object o) {
     if (this == o) return true;
-    if (o == null || getClass() != o.getClass()) return false;
+    if (!(o instanceof UserData)) return false;
     UserData userData = (UserData) o;
     return id == userData.id &&
             Objects.equals(firstname, userData.firstname) &&
-            Objects.equals(lastname, userData.lastname);
+            Objects.equals(middlename, userData.middlename) &&
+            Objects.equals(lastname, userData.lastname) &&
+            Objects.equals(nickname, userData.nickname) &&
+            Objects.equals(company, userData.company) &&
+            Objects.equals(address, userData.address) &&
+            Objects.equals(emailone, userData.emailone) &&
+            Objects.equals(phonehome, userData.phonehome);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, firstname, lastname);
+    return Objects.hash(id, firstname, middlename, lastname, nickname, company, address, emailone, phonehome);
   }
+
 }

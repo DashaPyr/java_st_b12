@@ -1,9 +1,12 @@
 [
   {
-    "firstname": "Dasha 30",
+    "firstname": "Dasha 20",
     "middlename": "V",
-    "lastname": "P 30",
-    "emailone": "30@g.c",
+    "lastname": "P 20",
+    "nickname": "Dd",
+    "company": "A",
+    "address": "MWO",
+    "emailone": "20@g.c",
     "phonehome": "+00",
     "birthday": "1",
     "birthmonth": "January",
@@ -11,25 +14,17 @@
     "group": "[none]"
   },
   {
-    "firstname": "Dasha 31",
+    "firstname": "Dasha 21",
     "middlename": "V",
-    "lastname": "P 31",
-    "emailone": "31@g.c",
+    "lastname": "P 21",
+    "nickname": "Dd",
+    "company": "A",
+    "address": "MWO",
+    "emailone": "21@g.c",
     "phonehome": "+11",
-    "birthday": "1",
+    "birthday": "2",
     "birthmonth": "January",
     "birthyear": "1991",
-    "group": "[none]"
-  },
-  {
-    "firstname": "Dasha 32",
-    "middlename": "V",
-    "lastname": "P 32",
-    "emailone": "32@g.c",
-    "phonehome": "+22",
-    "birthday": "1",
-    "birthmonth": "January",
-    "birthyear": "1992",
     "group": "[none]"
   }
 ]

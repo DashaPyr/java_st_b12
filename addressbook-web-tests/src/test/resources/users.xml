@@ -1,10 +1,12 @@
 <list>
   <user>
-    <firstname>Dasha 10
-</firstname>
+    <firstname>Dasha 20</firstname>
     <middlename>V</middlename>
-    <lastname>P10</lastname>
-    <emailone>10@g.c</emailone>
+    <lastname>P 20</lastname>
+    <nickname>Dd</nickname>
+    <company>A</company>
+    <address>MWO</address>
+    <emailone>20@g.c</emailone>
     <phonehome>+00</phonehome>
     <birthday>1</birthday>
     <birthmonth>January</birthmonth>
@@ -12,27 +14,17 @@
     <group>[none]</group>
   </user>
   <user>
-    <firstname>Dasha11
-</firstname>
+    <firstname>Dasha 21</firstname>
     <middlename>V</middlename>
-    <lastname>P11</lastname>
-    <emailone>11@g.c</emailone>
+    <lastname>P 21</lastname>
+    <nickname>Dd</nickname>
+    <company>A</company>
+    <address>MWO</address>
+    <emailone>21@g.c</emailone>
     <phonehome>+11</phonehome>
-    <birthday>1</birthday>
+    <birthday>2</birthday>
     <birthmonth>January</birthmonth>
     <birthyear>1991</birthyear>
-    <group>[none]</group>
-  </user>
-  <user>
-    <firstname>Dasha12
-</firstname>
-    <middlename>V</middlename>
-    <lastname>P12</lastname>
-    <emailone>12@g.c</emailone>
-    <phonehome>+22</phonehome>
-    <birthday>1</birthday>
-    <birthmonth>January</birthmonth>
-    <birthyear>1992</birthyear>
     <group>[none]</group>
   </user>
 </list>

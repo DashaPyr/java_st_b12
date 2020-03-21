@@ -18,7 +18,7 @@ public class CreateNewUser extends TestBase {
 
   @DataProvider
   public Iterator<Object[]> validUsersFromXml() throws IOException {
-    try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resouces/users.xml")))) {
+    try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/users.xml")))) {
       String xml = "";
       String line = reader.readLine();
       while (line != null) {
@@ -48,10 +48,10 @@ public class CreateNewUser extends TestBase {
     }
   }
 
-  @Test (dataProvider = "validUsersFromJson")
+  @Test (dataProvider = "validUsersFromXml")
   public void testCreateNewUser(UserData user) {
     app.goTo().homePage();
-    File photo = new File("src/test/resouces/catbus.jpg");
+    File photo = new File("src/test/resources/catbus.jpg");
     Users before = app.db().users();
 /*    UserData user = new UserData().withFirstname(firstname).withMiddlename(middlename).withLastname(lastname).withNickname("dd")
             .withCompany("U").withAddress("Dolgoprudny").withEmailone("d@u.ru").withEmailtwo("d@g.com")
@@ -59,7 +59,7 @@ public class CreateNewUser extends TestBase {
             .withBirthday("1").withBirthmonth("January").withBirthyear("1990").withGroup("[none]").withPhoto(photo); */
     app.user().create(user, true);
     app.goTo().homePage();
-    assertThat(app.user().userCount(), equalTo(before.size() + 1));
+//    assertThat(app.user().userCount(), equalTo(before.size() + 1));
     Users after = app.db().users();
     assertThat(after, equalTo(
             before.withAdded(user.withId(after.stream().mapToInt((g) -> g.getId()).max().getAsInt()))));

@@ -74,9 +74,9 @@ public class UserDataGenerator {
   private static void saveAsCsv(List<UserData> users, File file) throws IOException {
     try (Writer writer = new FileWriter(file)){
       for (UserData user : users) {
-        writer.write(String.format("%s;%s;%s;%s;%s;%s;%s;%s;%s\n", user.getFirstname(),
-                user.getMiddlename(), user.getLastname(), user.getPhonehome(), user.getEmailone(),
-                user.getBirthday(), user.getBirthmonth(), user.getBirthyear(), user.getGroup()));
+        writer.write(String.format("%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s\n", user.getFirstname(), user.getMiddlename(),
+                user.getLastname(), user.getNickname(), user.getCompany(), user.getAddress(), user.getPhonehome(),
+                user.getEmailone(), user.getBirthday(), user.getBirthmonth(), user.getBirthyear(), user.getGroup()));
       }
     }
   }
@@ -85,10 +85,10 @@ public class UserDataGenerator {
     List<UserData> users = new ArrayList<UserData>();
  //   File photo = new File("src/test/resouces/catbus.jpg");
     for (int i = 0; i < count; i++){
-      users.add(new UserData().withFirstname(String.format("Dasha %s", i+30))
-              .withMiddlename("V").withLastname(String.format("P %s", i+30))
-              .withPhonehome(String.format("+%s%s", i, i)).withEmailone(String.format("%s@g.c", i+30))
-              .withBirthday("1").withBirthmonth("January").withBirthyear(String.format("199%s", i)).withGroup("[none]"));
+      users.add(new UserData().withFirstname(String.format("Dasha %s", i+20))
+              .withMiddlename("V").withLastname(String.format("P %s", i+20)).withNickname("Dd").withCompany("A").withAddress("MWO")
+              .withPhonehome(String.format("+%s%s", i, i)).withEmailone(String.format("%s@g.c", i+20))
+              .withBirthday(String.format("%s", i+1)).withBirthmonth("January").withBirthyear(String.format("199%s", i)).withGroup("[none]"));
     }
     return users;
   }

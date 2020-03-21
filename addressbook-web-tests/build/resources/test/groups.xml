@@ -1,20 +1,20 @@
 <list>
   <group>
-    <name>test 10</name>
+    <name>test 20</name>
     <header>header
- 10</header>
-    <footer>Footer 10</footer>
+ 20</header>
+    <footer>Footer 20</footer>
   </group>
   <group>
-    <name>test 11</name>
+    <name>test 21</name>
     <header>header
- 11</header>
-    <footer>Footer 11</footer>
+ 21</header>
+    <footer>Footer 21</footer>
   </group>
   <group>
-    <name>test 12</name>
+    <name>test 22</name>
     <header>header
- 12</header>
-    <footer>Footer 12</footer>
+ 22</header>
+    <footer>Footer 22</footer>
   </group>
 </list>
