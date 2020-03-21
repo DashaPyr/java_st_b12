@@ -21,7 +21,7 @@ public class UserContactTests extends TestBase {
       app.user().create(new UserData().withFirstname("Daria").withMiddlename("Vladimirovna").withLastname("Pyrkova").withNickname("dd")
               .withCompany("U").withAddress("Dolgoprudny").withEmailone("d@u.ru").withEmailtwo("d@g.com")
               .withPhonehome("999").withPhonemobile("777").withPhonework("888")
-              .withBirthday("1").withBirthmonth("January").withBirthyear("1990").withGroup("[none]"), true);
+              .withBirthday("1").withBirthmonth("January").withBirthyear("1990"), true);
       app.goTo().homePage();
     }
   }

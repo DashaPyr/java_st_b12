@@ -1,19 +1,13 @@
 package dd.pyrkova.addressbook.tests;
 
+import dd.pyrkova.addressbook.model.GroupData;
 import dd.pyrkova.addressbook.model.TestBase;
 import dd.pyrkova.addressbook.model.UserData;
-import dd.pyrkova.addressbook.model.Users;
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.equalTo;
-
-public class DeleteUserTests extends TestBase {
-
+public class AddUserToGroup extends TestBase {
   @BeforeMethod
-  public void preconditions(){
+  public void preconditions (){
     if (app.db().users().size() == 0){
       app.goTo().homePage();
       app.user().create(new UserData().withFirstname("Daria").withMiddlename("Vladimirovna").withLastname("Pyrkova").withNickname("dd")
@@ -22,19 +16,9 @@ public class DeleteUserTests extends TestBase {
               .withBirthday("1").withBirthmonth("January").withBirthyear("1990"), true);
       app.goTo().homePage();
     }
+    if (app.db().groups().size() == 0){
+      app.goTo().groupPage();
+      app.group().create(new GroupData().withName("test1").withHeader("test2").withFooter("test3"));
+    }
   }
-
-  @Test
-  public void testDeleteUser() throws Exception {
-    Users before = app.db().users();
-    UserData deletedUser = before.iterator().next();
-    app.user().delete(deletedUser);
-    app.goTo().homePage();
-    assertThat(app.user().userCount(), equalTo(before.size() - 1));
-    Users after = app.db().users();
-    assertThat(after, equalTo(before.without(deletedUser)));
-    verifyUserListUI();
-  }
-
-
 }

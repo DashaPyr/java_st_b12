@@ -16,6 +16,14 @@ import static org.hamcrest.MatcherAssert.assertThat;
 
 public class CreateNewUser extends TestBase {
 
+  @BeforeMethod
+  public void preconditions() {
+    if (app.db().groups().size() == 0){
+      app.goTo().groupPage();
+      app.group().create(new GroupData().withName("test1").withHeader("test2").withFooter("test3"));
+    }
+  }
+
   @DataProvider
   public Iterator<Object[]> validUsersFromXml() throws IOException {
     try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/users.xml")))) {
@@ -48,15 +56,18 @@ public class CreateNewUser extends TestBase {
     }
   }
 
-  @Test (dataProvider = "validUsersFromXml")
-  public void testCreateNewUser(UserData user) {
+//  @Test (dataProvider = "validUsersFromXml")
+//  public void testCreateNewUser(UserData user) {
+  @Test ()
+  public void testCreateNewUser() {
+    Groups groups = app.db().groups();
     app.goTo().homePage();
     File photo = new File("src/test/resources/catbus.jpg");
     Users before = app.db().users();
-/*    UserData user = new UserData().withFirstname(firstname).withMiddlename(middlename).withLastname(lastname).withNickname("dd")
+    UserData user = new UserData().withFirstname("firstname").withMiddlename("middlename").withLastname("lastname").withNickname("dd")
             .withCompany("U").withAddress("Dolgoprudny").withEmailone("d@u.ru").withEmailtwo("d@g.com")
             .withPhonehome("999").withPhonemobile("777").withPhonework("888")
-            .withBirthday("1").withBirthmonth("January").withBirthyear("1990").withGroup("[none]").withPhoto(photo); */
+            .withBirthday("1").withBirthmonth("January").withBirthyear("1990").withPhoto(photo).inGroup(groups.iterator().next());
     app.user().create(user, true);
     app.goTo().homePage();
 //    assertThat(app.user().userCount(), equalTo(before.size() + 1));

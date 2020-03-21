@@ -76,7 +76,7 @@ public class UserDataGenerator {
       for (UserData user : users) {
         writer.write(String.format("%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s\n", user.getFirstname(), user.getMiddlename(),
                 user.getLastname(), user.getNickname(), user.getCompany(), user.getAddress(), user.getPhonehome(),
-                user.getEmailone(), user.getBirthday(), user.getBirthmonth(), user.getBirthyear(), user.getGroup()));
+                user.getEmailone(), user.getBirthday(), user.getBirthmonth(), user.getBirthyear()));
       }
     }
   }
@@ -88,7 +88,7 @@ public class UserDataGenerator {
       users.add(new UserData().withFirstname(String.format("Dasha %s", i+20))
               .withMiddlename("V").withLastname(String.format("P %s", i+20)).withNickname("Dd").withCompany("A").withAddress("MWO")
               .withPhonehome(String.format("+%s%s", i, i)).withEmailone(String.format("%s@g.c", i+20))
-              .withBirthday(String.format("%s", i+1)).withBirthmonth("January").withBirthyear(String.format("199%s", i)).withGroup("[none]"));
+              .withBirthday(String.format("%s", i+1)).withBirthmonth("January").withBirthyear(String.format("199%s", i)));
     }
     return users;
   }

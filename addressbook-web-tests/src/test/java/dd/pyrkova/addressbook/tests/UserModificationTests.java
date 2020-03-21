@@ -1,8 +1,6 @@
 package dd.pyrkova.addressbook.tests;
 
-import dd.pyrkova.addressbook.model.TestBase;
-import dd.pyrkova.addressbook.model.UserData;
-import dd.pyrkova.addressbook.model.Users;
+import dd.pyrkova.addressbook.model.*;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -19,7 +17,7 @@ public class UserModificationTests extends TestBase {
       app.user().create(new UserData().withFirstname("Daria").withMiddlename("Vladimirovna").withLastname("Pyrkova").withNickname("dd")
               .withCompany("U").withAddress("Dolgoprudny").withEmailone("d@u.ru").withEmailtwo("d@g.com")
               .withPhonehome("999").withPhonemobile("777").withPhonework("888")
-              .withBirthday("1").withBirthmonth("January").withBirthyear("1990").withGroup("[none]"), true);
+              .withBirthday("1").withBirthmonth("January").withBirthyear("1990"), true);
       app.goTo().homePage();
     }
   }

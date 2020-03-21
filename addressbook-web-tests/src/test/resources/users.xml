@@ -11,7 +11,6 @@
     <birthday>1</birthday>
     <birthmonth>January</birthmonth>
     <birthyear>1990</birthyear>
-    <group>[none]</group>
   </user>
   <user>
     <firstname>Dasha 21</firstname>
@@ -25,6 +24,5 @@
     <birthday>2</birthday>
     <birthmonth>January</birthmonth>
     <birthyear>1991</birthyear>
-    <group>[none]</group>
   </user>
 </list>

@@ -7,7 +7,9 @@ import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
 import java.io.File;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 @XStreamAlias("user")
 @Entity
@@ -79,10 +81,6 @@ public class UserData {
   @Transient
   private String birthyear;
 
-  @Expose
-  @Transient
-  private String group;
-
   @Transient
   private String allPhones;
   @Transient
@@ -92,72 +90,51 @@ public class UserData {
 //  private String photo;
   private File photo;
 
+  @ManyToMany(fetch = FetchType.EAGER)
+  @JoinTable(name = "address_in_groups"
+          , joinColumns = @JoinColumn(name = "id"), inverseJoinColumns = @JoinColumn(name = "group_id"))
+  private Set<GroupData> groups = new HashSet<GroupData>();
+
 
   public int getId() { return id; }
 
-  public String getFirstname() {
-    return firstname;
-  }
+  public String getFirstname() { return firstname; }
 
-  public String getMiddlename() {
-    return middlename;
-  }
+  public String getMiddlename() { return middlename; }
 
-  public String getLastname() {
-    return lastname;
-  }
+  public String getLastname() { return lastname; }
 
-  public String getNickname() {
-    return nickname;
-  }
+  public String getNickname() { return nickname; }
 
-  public String getCompany() {
-    return company;
-  }
+  public String getCompany() { return company; }
 
   public String getAddress() { return address; }
 
-  public String getEmailone() {
-    return emailone;
-  }
+  public String getEmailone() { return emailone; }
 
-  public String getEmailtwo() {
-    return emailtwo;
-  }
+  public String getEmailtwo() { return emailtwo; }
 
-  public String getPhonehome() {
-    return phonehome;
-  }
+  public String getPhonehome() { return phonehome; }
 
-  public String getPhonemobile() {
-    return phonemobile;
-  }
+  public String getPhonemobile() { return phonemobile; }
 
-  public String getPhonework() {
-    return phonework;
-  }
+  public String getPhonework() { return phonework; }
 
-  public String getBirthday() {
-    return birthday;
-  }
+  public String getBirthday() { return birthday; }
 
-  public String getBirthmonth() {
-    return birthmonth;
-  }
+  public String getBirthmonth() { return birthmonth; }
 
-  public String getBirthyear() {
-    return birthyear;
-  }
-
-  public String getGroup() {
-    return group;
-  }
+  public String getBirthyear() { return birthyear; }
 
   public String getAllPhones() { return allPhones; }
 
   public String getAllEmails() { return allEmails;  }
 
   public File getPhoto() { return photo;  }
+
+  public Groups getGroups() {
+    return new Groups(groups);
+  }
 
   public UserData withId(int id) {
     this.id = id;
@@ -234,11 +211,6 @@ public class UserData {
     return this;
   }
 
-  public UserData withGroup(String group) {
-    this.group = group;
-    return this;
-  }
-
   public UserData withAllPhones(String allPhones) {
     this.allPhones = allPhones;
     return this;
@@ -285,4 +257,8 @@ public class UserData {
     return Objects.hash(id, firstname, middlename, lastname, nickname, company, address, emailone, phonehome);
   }
 
+  public UserData inGroup(GroupData group) {
+    groups.add(group);
+    return this;
+  }
 }
