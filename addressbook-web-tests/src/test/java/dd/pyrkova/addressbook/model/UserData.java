@@ -3,38 +3,76 @@ package dd.pyrkova.addressbook.model;
 import com.google.gson.annotations.Expose;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamOmitField;
+import org.hibernate.annotations.Type;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.io.File;
 import java.util.Objects;
 
 @XStreamAlias("user")
+@Entity
+@Table(name = "addressbook")
 public class UserData {
   @XStreamOmitField
+  @Id
+//  @Column(name = "id")
   private int id = Integer.MAX_VALUE;
+
   @Expose
+  @Column(name = "firstname")
+  @Type(type = "text")
   private String firstname;
+
   @Expose
+  @Column(name = "middlename")
+  @Type(type = "text")
   private String middlename;
+
   @Expose
+  @Column(name = "lastname")
+  @Type(type = "text")
   private String lastname;
+
   private String nickname;
   private String company;
   private String address;
+
   @Expose
+  @Column(name = "emailone")
+  @Type(type = "text")
   private String emailone;
+
   private String emailtwo;
+
   @Expose
+  @Column(name = "phonehome")
+  @Type(type = "text")
   private String phonehome;
+
   private String phonemobile;
   private String phonework;
+
   @Expose
+  @Column(name = "birthday")
   private String birthday;
+
   @Expose
+  @Column(name = "birthmonth")
+  @Type(type = "text")
   private String birthmonth;
+
   @Expose
+  @Column(name = "birthyear")
   private String birthyear;
+
   @Expose
+  @Column(name = "group")
+  @Type(type = "text")
   private String group;
+
   private String allPhones;
   private String allEmails;
   private File photo;
