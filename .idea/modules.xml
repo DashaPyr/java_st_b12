@@ -6,6 +6,8 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/addressbook-web-tests.main.iml" filepath="$PROJECT_DIR$/.idea/modules/addressbook-web-tests.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/addressbook-web-tests.test.iml" filepath="$PROJECT_DIR$/.idea/modules/addressbook-web-tests.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/java_st_b12.iml" filepath="$PROJECT_DIR$/.idea/java_st_b12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/java_st_b12.addressbook-web-tests.main.iml" filepath="$PROJECT_DIR$/.idea/modules/java_st_b12.addressbook-web-tests.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/java_st_b12.addressbook-web-tests.test.iml" filepath="$PROJECT_DIR$/.idea/modules/java_st_b12.addressbook-web-tests.test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sandbox.iml" filepath="$PROJECT_DIR$/.idea/modules/sandbox.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sandbox.main.iml" filepath="$PROJECT_DIR$/.idea/modules/sandbox.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/sandbox.test.iml" filepath="$PROJECT_DIR$/.idea/modules/sandbox.test.iml" />
