@@ -34,7 +34,7 @@ public class CreateNewUser extends TestBase {
 
   @DataProvider
   public Iterator<Object[]> validUsersFromJson() throws IOException {
-    try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resouces/users.json")))) {
+    try (BufferedReader reader = new BufferedReader(new FileReader(new File("src/test/resources/users.json")))) {
       String json = "";
       String line = reader.readLine();
       while (line != null) {
@@ -69,7 +69,7 @@ public class CreateNewUser extends TestBase {
   public void testCurrentDir(){
     File currentDir = new File(".");
     System.out.println(currentDir.getAbsolutePath());
-    File photo = new File("src/test/resouces/catbus.jpg");
+    File photo = new File("src/test/resources/catbus.jpg");
     System.out.println(photo.getAbsolutePath());
     System.out.println(photo.exists());
   }

@@ -1,0 +1,41 @@
+<list>
+  <user>
+    <firstname>Dasha 10
+</firstname>
+    <middlename>V</middlename>
+    <lastname>P
+ 10</lastname>
+    <emailone>10@g.c</emailone>
+    <phonehome>+00</phonehome>
+    <birthday>1</birthday>
+    <birthmonth>January</birthmonth>
+    <birthyear>1990</birthyear>
+    <group>[none]</group>
+  </user>
+  <user>
+    <firstname>Dasha 11
+</firstname>
+    <middlename>V</middlename>
+    <lastname>P
+ 11</lastname>
+    <emailone>11@g.c</emailone>
+    <phonehome>+11</phonehome>
+    <birthday>1</birthday>
+    <birthmonth>January</birthmonth>
+    <birthyear>1991</birthyear>
+    <group>[none]</group>
+  </user>
+  <user>
+    <firstname>Dasha 12
+</firstname>
+    <middlename>V</middlename>
+    <lastname>P
+ 12</lastname>
+    <emailone>12@g.c</emailone>
+    <phonehome>+22</phonehome>
+    <birthday>1</birthday>
+    <birthmonth>January</birthmonth>
+    <birthyear>1992</birthyear>
+    <group>[none]</group>
+  </user>
+</list>

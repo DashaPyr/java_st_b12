@@ -1,0 +1,20 @@
+<list>
+  <group>
+    <name>test 10</name>
+    <header>header
+ 10</header>
+    <footer>Footer 10</footer>
+  </group>
+  <group>
+    <name>test 11</name>
+    <header>header
+ 11</header>
+    <footer>Footer 11</footer>
+  </group>
+  <group>
+    <name>test 12</name>
+    <header>header
+ 12</header>
+    <footer>Footer 12</footer>
+  </group>
+</list>

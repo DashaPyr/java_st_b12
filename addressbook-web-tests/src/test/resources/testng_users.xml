@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite1" verbose="1" >
+    <test name="Users">
+        <classes>
+            <class name="dd.pyrkova.addressbook.tests.CreateNewUser"/>
+            <class name="dd.pyrkova.addressbook.tests.UserModificationTests"/>
+            <class name="dd.pyrkova.addressbook.tests.DeleteUserTests"/>
+        </classes>
+    </test>
+</suite>
