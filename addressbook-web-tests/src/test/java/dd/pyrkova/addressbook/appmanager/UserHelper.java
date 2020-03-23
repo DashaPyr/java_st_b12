@@ -3,6 +3,7 @@ package dd.pyrkova.addressbook.appmanager;
 import dd.pyrkova.addressbook.model.Groups;
 import dd.pyrkova.addressbook.model.UserData;
 import dd.pyrkova.addressbook.model.Users;
+import org.checkerframework.checker.units.qual.A;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -106,6 +107,28 @@ public class UserHelper extends HelperBase {
   public int userCount() {
     return wd.findElements(By.name("selected[]")).size();
   }
+
+  public void addUserToGroup() {
+    wd.findElement(By.name("add")).click();
+  }
+
+  public void selectGroupStatic(UserData user) {
+    selectUserById(user.getId());
+    new Select(wd.findElement(By.name("to_group"))).selectByVisibleText("test33");
+    addUserToGroup();
+  }
+
+  public void selectGroup(UserData user, boolean select){
+    selectUserById(user.getId());
+    if (select){
+      if (user.getGroups().size() > 0) {
+        Assert.assertTrue(user.getGroups().size() == 1);
+        new Select(wd.findElement(By.name("to_group"))).selectByVisibleText(user.getGroups().iterator().next().getName());
+      }
+    }
+    addUserToGroup();
+  }
+
 
   private Users userCache = null;
 
