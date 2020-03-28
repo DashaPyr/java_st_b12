@@ -1,7 +1,6 @@
 package dd.pyrkova.addressbook.tests;
 
 import dd.pyrkova.addressbook.model.*;
-import org.hamcrest.CoreMatchers;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -10,7 +9,7 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class AddUserToGroup extends TestBase {
 
-   @BeforeMethod
+  @BeforeMethod
   public void preconditions (){
     Groups groups = app.db().groups();
     if (app.db().users().size() == 0){
@@ -60,7 +59,8 @@ public class AddUserToGroup extends TestBase {
 
     app.goTo().homePage();
     app.user().allGroupsOnUserPage();
-    app.user().selectGroupFin(userSelect, groupSelect);
+    app.user().selectGroup(userSelect, groupSelect);
+    app.goTo().homePage();
 
     Users usersAllAfter= app.db().users();
     for (UserData currentUserAfter : usersAll){
