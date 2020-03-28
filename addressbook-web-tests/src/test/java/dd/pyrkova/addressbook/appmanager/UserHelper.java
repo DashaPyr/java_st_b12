@@ -1,5 +1,6 @@
 package dd.pyrkova.addressbook.appmanager;
 
+import dd.pyrkova.addressbook.model.GroupData;
 import dd.pyrkova.addressbook.model.Groups;
 import dd.pyrkova.addressbook.model.UserData;
 import dd.pyrkova.addressbook.model.Users;
@@ -112,21 +113,23 @@ public class UserHelper extends HelperBase {
     wd.findElement(By.name("add")).click();
   }
 
-  public void selectGroupStatic(String groupName, UserData user) {
+  public void selectGroup(UserData user, int groupid){
     selectUserById(user.getId());
-    new Select(wd.findElement(By.name("to_group"))).selectByVisibleText(groupName);
+    wd.findElement(By.xpath(String.format("//div[@class='right']//select[@name='to_group']//option[@value='%s']", groupid))).click();
     addUserToGroup();
+    userCache = null;
   }
 
-  public void selectGroup(UserData user, boolean select){
+  public void allGroupsOnUserPage() {
+    new Select(wd.findElement(By.name("group"))).selectByVisibleText("[all]");
+  }
+
+  public void selectGroupFin(UserData user, GroupData group){
     selectUserById(user.getId());
-    if (select){
-      if (user.getGroups().size() > 0) {
-        Assert.assertTrue(user.getGroups().size() == 1);
-        new Select(wd.findElement(By.name("to_group"))).selectByVisibleText(user.getGroups().iterator().next().getName());
-      }
-    }
+    String id = String.valueOf(group.getId());
+    new Select(wd.findElement(By.name("to_group"))).selectByValue(id);
     addUserToGroup();
+    userCache = null;
   }
 
 

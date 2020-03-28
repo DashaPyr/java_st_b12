@@ -9,8 +9,8 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 
 public class AddUserToGroup extends TestBase {
- @BeforeMethod
 
+   @BeforeMethod
   public void preconditions (){
     Groups groups = app.db().groups();
     if (app.db().users().size() == 0){
@@ -30,15 +30,45 @@ public class AddUserToGroup extends TestBase {
 
   @Test
   public void testAddUserToGroup() {
-    Users before = app.db().users();
-    UserData selectUser = before.iterator().next();
-    Groups groups = app.db().groups();
-    app.user().selectGroup(selectUser, true);
+    Users usersAll = app.db().users();
+ //   UserData selectUser = before.iterator().next();
+    Groups groupsAll = app.db().groups();
+
+    UserData userSelect = null;
+    GroupData groupSelect = null;
+    UserData userAfter = null;
+
+    for (UserData currentUser : usersAll){
+      Groups groupsOfSelecteUser = currentUser.getGroups();
+      if(groupsOfSelecteUser.size() != groupsAll.size()){
+        groupsAll.removeAll(groupsOfSelecteUser);
+        groupSelect = groupsAll.iterator().next();
+        userSelect = currentUser;
+        break;
+      }
+    }
+    if (groupSelect == null) {
+      UserData user = new UserData().withFirstname("Daria").withMiddlename("Vladimirovna").withLastname("Pyrkova").withEmailone("d@u.ru")
+              .withPhonehome("999").withPhonemobile("777").withPhonework("888")
+              .withBirthday("1").withBirthmonth("January").withBirthyear("1990");
+      app.user().create(user, true);
+      Users userA = app.db().users();
+      user.withId(userA.stream().mapToInt((g) -> (g).getId()).max().getAsInt());
+      userSelect = user;
+      groupSelect = groupsAll.iterator().next();
+    }
+
     app.goTo().homePage();
- //   assertThat(app.user().userCount(), equalTo(before.size() - 1));
-    Users after = app.db().users();
-    assertThat(after.size(), CoreMatchers.equalTo(before.size()));
-//    assertThat(after, equalTo(before.without(selectUser)));
-    verifyUserListUI();
+    app.user().allGroupsOnUserPage();
+    app.user().selectGroupFin(userSelect, groupSelect);
+
+    Users usersAllAfter= app.db().users();
+    for (UserData currentUserAfter : usersAll){
+      if (currentUserAfter.getId() == userSelect.getId()){
+        userAfter = currentUserAfter;
+      }
+    }
+
+    assertThat(userSelect.getGroups(), equalTo(userAfter.getGroups().without(groupSelect)));
   }
 }

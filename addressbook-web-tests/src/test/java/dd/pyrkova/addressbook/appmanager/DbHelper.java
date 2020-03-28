@@ -48,4 +48,17 @@ public class DbHelper {
     session.close();
     return users;
   }
+
+  public UserData userById(int userId){
+    Session session = sessionFactory.openSession();
+    UserData resutluserid = (UserData) session.createQuery("from UserData where id = " + userId).getSingleResult();
+    session.close();
+    return resutluserid;
+  }
+
+  public GroupData groupById(int groupId){
+    Session session = sessionFactory.openSession();
+    GroupData resultgroupid = (GroupData) session.createQuery("from GroupData where id = " +groupId).getSingleResult();
+    return resultgroupid;
+  }
 }
