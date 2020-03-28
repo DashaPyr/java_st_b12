@@ -226,6 +226,11 @@ public class UserData {
     return this;
   }
 
+  public UserData inGroup(GroupData group) {
+    groups.add(group);
+    return this;
+  }
+
   @Override
   public String toString() {
     return "UserData{" +
@@ -257,8 +262,5 @@ public class UserData {
     return Objects.hash(id, firstname, middlename, lastname, nickname, company, address, emailone, phonehome);
   }
 
-  public UserData inGroup(GroupData group) {
-    groups.add(group);
-    return this;
-  }
+
 }

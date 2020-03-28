@@ -50,7 +50,7 @@ public class GroupData {
     return footer;
   }
 
-  public Users getUsers() {
+  public Set<UserData> getUsers() {
     return new Users(users);
   }
 

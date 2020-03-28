@@ -68,7 +68,7 @@ public class CreateNewUser extends TestBase {
             .withCompany("U").withAddress("Dolgoprudny").withEmailone("d@u.ru").withEmailtwo("d@g.com")
             .withPhonehome("999").withPhonemobile("777").withPhonework("888")
             .withBirthday("1").withBirthmonth("January").withBirthyear("1990").withPhoto(photo).inGroup(groups.iterator().next());
-    app.user().create(user, true);
+    app.user().create(user.inGroup(groups.iterator().next()), true);
     app.goTo().homePage();
 //    assertThat(app.user().userCount(), equalTo(before.size() + 1));
     Users after = app.db().users();

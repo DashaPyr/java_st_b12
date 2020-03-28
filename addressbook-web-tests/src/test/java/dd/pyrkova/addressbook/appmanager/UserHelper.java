@@ -112,9 +112,9 @@ public class UserHelper extends HelperBase {
     wd.findElement(By.name("add")).click();
   }
 
-  public void selectGroupStatic(UserData user) {
+  public void selectGroupStatic(String groupName, UserData user) {
     selectUserById(user.getId());
-    new Select(wd.findElement(By.name("to_group"))).selectByVisibleText("test33");
+    new Select(wd.findElement(By.name("to_group"))).selectByVisibleText(groupName);
     addUserToGroup();
   }
 
