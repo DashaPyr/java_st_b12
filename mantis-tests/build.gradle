@@ -17,20 +17,21 @@ dependencies {
     implementation 'com.joyent.http-signature:java-http-signature:4.1.1'
     implementation 'com.cisco.oss.foundation:http-client-apache:1.2.2-4'
     implementation 'commons-net:commons-net:3.6'
+    implementation 'org.subethamail:subethasmtp:3.1.7'
+    implementation 'ru.lanwen.verbalregex:java-verbal-expressions:1.6'
 }
 
 test{
     useTestNG{
-        suites 'src/test/resources/testng.xml'
-    }
-    if (project.hasProperty('browser')){
-        systemProperty 'browser', "${browser}"
-    }
-    if (project.hasProperty('target')){
-        systemProperty 'target', "${target}"
-    }
-    if (project.hasProperty('verifyUI')){
-        systemProperty 'verifyUI', "${verifyUI}"
+        if (project.hasProperty('browser')){
+            systemProperty 'browser', "${browser}"
+        }
+        if (project.hasProperty('target')) {
+            systemProperty 'target', "${target}"
+        }
+       if (project.hasProperty('verifyUI')) {
+           systemProperty 'verifyUI', "${verifyUI}"
+       }
     }
 }
 
