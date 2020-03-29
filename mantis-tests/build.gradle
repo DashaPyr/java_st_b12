@@ -1,4 +1,5 @@
 apply plugin: 'java'
+apply plugin: 'java-library'
 
 repositories {
     mavenCentral()
@@ -13,12 +14,17 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'ch.qos.logback:logback-classic:1.2.3'
     implementation 'com.joyent.http-signature:apache-http-client-signature:4.1.1'
+    implementation 'com.joyent.http-signature:java-http-signature:4.1.1'
     implementation 'com.cisco.oss.foundation:http-client-apache:1.2.2-4'
+}
+
+tasks.withType(JavaCompile){
+    options.encoding = 'UTF-8'
 }
 
 test{
     useTestNG{
-        suites 'src/test/resouces/testng.xml'
+        suites 'src/test/resources/testng.xml'
     }
     if (project.hasProperty('browser')){
         systemProperty 'browser', "${browser}"
