@@ -4,6 +4,7 @@
     <test name="Login" >
         <classes>
             <class name="dd.pyrkova.mantis.tests.LoginTests" />
+            <class name="dd.pyrkova.mantis.tests.RegistrationTests" />
         </classes>
     </test>
 </suite>
