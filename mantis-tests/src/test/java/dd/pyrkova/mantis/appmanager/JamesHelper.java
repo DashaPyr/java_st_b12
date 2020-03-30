@@ -75,9 +75,9 @@ public class JamesHelper {
 
     // Second login attempt, must be succesful
     readUntil("Login id:");
-    write("");
+    write(login);
     readUntil("Password:");
-    write("");
+    write(password);
 
     // Read welcome message
     readUntil("Welcome " + login + ". HELP for a list of commands");
