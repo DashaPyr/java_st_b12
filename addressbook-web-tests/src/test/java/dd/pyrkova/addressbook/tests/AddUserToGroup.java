@@ -63,7 +63,7 @@ public class AddUserToGroup extends TestBase {
     app.goTo().homePage();
 
     Users usersAllAfter= app.db().users();
-    for (UserData currentUserAfter : usersAll){
+    for (UserData currentUserAfter : usersAllAfter){
       if (currentUserAfter.getId() == userSelect.getId()){
         userAfter = currentUserAfter;
       }
