@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="dd.pyrkova.mantis.tests.SoapTests" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-04-04T16:51:09" hostname="CONGO" time="0.596">
+<testsuite name="dd.pyrkova.mantis.tests.SoapTests" tests="1" skipped="0" failures="1" errors="0" timestamp="2020-04-04T17:34:15" hostname="CONGO" time="17.556">
   <properties/>
-  <testcase name="testGetProjects" classname="dd.pyrkova.mantis.tests.SoapTests" time="0.596">
-    <failure message="(301)Moved Permanently" type="org.apache.axis.AxisFault">(301)Moved Permanently
-	at org.apache.axis.transport.http.HTTPSender.readFromSocket(HTTPSender.java:744)
+  <testcase name="testGetProjects" classname="dd.pyrkova.mantis.tests.SoapTests" time="17.556">
+    <failure message="org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Content is not allowed in prolog." type="org.apache.axis.AxisFault">org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Content is not allowed in prolog.
+	at org.apache.axis.AxisFault.makeFault(AxisFault.java:101)
+	at org.apache.axis.SOAPPart.getAsSOAPEnvelope(SOAPPart.java:701)
+	at org.apache.axis.Message.getSOAPEnvelope(Message.java:435)
+	at org.apache.axis.transport.http.HTTPSender.readFromSocket(HTTPSender.java:796)
 	at org.apache.axis.transport.http.HTTPSender.invoke(HTTPSender.java:144)
 	at org.apache.axis.strategies.InvocationStrategy.visit(InvocationStrategy.java:32)
 	at org.apache.axis.SimpleChain.doVisiting(SimpleChain.java:118)
@@ -15,7 +18,8 @@
 	at org.apache.axis.client.Call.invoke(Call.java:2366)
 	at org.apache.axis.client.Call.invoke(Call.java:1812)
 	at biz.futureware.mantis.rpc.soap.client.MantisConnectBindingStub.mc_projects_get_user_accessible(MantisConnectBindingStub.java:2750)
-	at dd.pyrkova.mantis.tests.SoapTests.testGetProjects(SoapTests.java:19)
+	at dd.pyrkova.mantis.appmanager.SoapHelper.getProjects(SoapHelper.java:26)
+	at dd.pyrkova.mantis.tests.SoapTests.testGetProjects(SoapTests.java:16)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -69,34 +73,53 @@
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
 	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Content is not allowed in prolog.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1472)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:994)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:112)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:327)
+	at org.apache.axis.encoding.DeserializationContext.parse(DeserializationContext.java:227)
+	at org.apache.axis.SOAPPart.getAsSOAPEnvelope(SOAPPart.java:696)
+	... 68 more
 </failure>
   </testcase>
-  <system-out><![CDATA[19:51:09.593 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - getBundle(org.apache.axis,org.apache.axis.i18n,resource,null,...)
-19:51:09.604 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - loadBundle: Ignoring MissingResourceException: Can't find bundle for base name org.apache.axis.resource, locale ru_RU
-19:51:09.604 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - Created org.apache.axis.i18n.resource, linked to parent null
-19:51:09.605 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - getBundle(org.apache.axis,org.apache.axis.utils,resource,null,...)
-19:51:09.607 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - loadBundle: Ignoring MissingResourceException: Can't find bundle for base name org.apache.axis.utils.resource, locale ru_RU
-19:51:09.607 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - loadBundle: Ignoring MissingResourceException: Can't find bundle for base name org.apache.axis.resource, locale ru_RU
-19:51:09.607 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - Root package not found, cross link to org.apache.axis.i18n.resource
-19:51:09.607 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - Root package not found, cross link to org.apache.axis.i18n.resource
-19:51:09.607 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(engineConfigLoadFactory)
-19:51:09.608 [Test worker] DEBUG org.apache.axis.configuration.EngineConfigurationFactoryFinder - Factory org.apache.axis.configuration.EngineConfigurationFactoryServlet Ignored: unable to load/resolve class.
-19:51:09.608 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(engineFactory)
-19:51:09.609 [Test worker] DEBUG org.apache.axis.configuration.EngineConfigurationFactoryFinder - Got EngineFactory: org.apache.axis.configuration.EngineConfigurationFactoryDefault
-19:51:09.611 [Test worker] DEBUG org.apache.axis.AxisEngine - Enter: AxisEngine::init
-19:51:09.683 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(attachEnabled)
-19:51:09.683 [Test worker] DEBUG org.apache.axis.utils.JavaUtils - Attachment support is enabled?  true
-19:51:09.696 [Test worker] DEBUG org.apache.axis.encoding.ser.JAFDataHandlerDeserializerFactory - Enter/Exit: JAFDataHandlerDeserializerFactory(class java.lang.String, {http://xml.apache.org/xml-soap}PlainText)
-19:51:09.697 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(oddDigits00)
-19:51:09.697 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(badChars01)
-19:51:09.729 [Test worker] DEBUG org.apache.axis.encoding.ser.JAFDataHandlerDeserializerFactory - Enter/Exit: JAFDataHandlerDeserializerFactory(class java.awt.Image, {http://xml.apache.org/xml-soap}Image)
-19:51:09.731 [Test worker] DEBUG org.apache.axis.encoding.ser.JAFDataHandlerDeserializerFactory - Enter/Exit: JAFDataHandlerDeserializerFactory(class javax.mail.internet.MimeMultipart, {http://xml.apache.org/xml-soap}Multipart)
-19:51:09.732 [Test worker] DEBUG org.apache.axis.encoding.ser.JAFDataHandlerDeserializerFactory - Enter/Exit: JAFDataHandlerDeserializerFactory(interface javax.xml.transform.Source, {http://xml.apache.org/xml-soap}Source)
-19:51:09.733 [Test worker] DEBUG org.apache.axis.encoding.ser.JAFDataHandlerDeserializerFactory - Enter/Exit: JAFDataHandlerDeserializerFactory(class org.apache.axis.attachments.OctetStream, {http://xml.apache.org/xml-soap}octet-stream)
-19:51:09.733 [Test worker] DEBUG org.apache.axis.encoding.ser.JAFDataHandlerDeserializerFactory - Enter/Exit: JAFDataHandlerDeserializerFactory()
-19:51:09.762 [Test worker] DEBUG org.apache.axis.AxisEngine - Exit: AxisEngine::init
-19:51:09.777 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6d2fa20esetReturnType({http://www.w3.org/2001/XMLSchema}string)
-19:51:09.780 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @412a4451 added parameter >name:       username
+  <system-out><![CDATA[20:34:15.849 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - getBundle(org.apache.axis,org.apache.axis.i18n,resource,null,...)
+20:34:15.862 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - loadBundle: Ignoring MissingResourceException: Can't find bundle for base name org.apache.axis.resource, locale ru_RU
+20:34:15.862 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - Created org.apache.axis.i18n.resource, linked to parent null
+20:34:15.863 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - getBundle(org.apache.axis,org.apache.axis.utils,resource,null,...)
+20:34:15.865 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - loadBundle: Ignoring MissingResourceException: Can't find bundle for base name org.apache.axis.utils.resource, locale ru_RU
+20:34:15.866 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - loadBundle: Ignoring MissingResourceException: Can't find bundle for base name org.apache.axis.resource, locale ru_RU
+20:34:15.866 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - Root package not found, cross link to org.apache.axis.i18n.resource
+20:34:15.866 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - Root package not found, cross link to org.apache.axis.i18n.resource
+20:34:15.866 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(engineConfigLoadFactory)
+20:34:15.867 [Test worker] DEBUG org.apache.axis.configuration.EngineConfigurationFactoryFinder - Factory org.apache.axis.configuration.EngineConfigurationFactoryServlet Ignored: unable to load/resolve class.
+20:34:15.868 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(engineFactory)
+20:34:15.868 [Test worker] DEBUG org.apache.axis.configuration.EngineConfigurationFactoryFinder - Got EngineFactory: org.apache.axis.configuration.EngineConfigurationFactoryDefault
+20:34:15.872 [Test worker] DEBUG org.apache.axis.AxisEngine - Enter: AxisEngine::init
+20:34:15.957 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(attachEnabled)
+20:34:15.957 [Test worker] DEBUG org.apache.axis.utils.JavaUtils - Attachment support is enabled?  true
+20:34:15.974 [Test worker] DEBUG org.apache.axis.encoding.ser.JAFDataHandlerDeserializerFactory - Enter/Exit: JAFDataHandlerDeserializerFactory(class java.lang.String, {http://xml.apache.org/xml-soap}PlainText)
+20:34:15.975 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(oddDigits00)
+20:34:15.975 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(badChars01)
+20:34:16.015 [Test worker] DEBUG org.apache.axis.encoding.ser.JAFDataHandlerDeserializerFactory - Enter/Exit: JAFDataHandlerDeserializerFactory(class java.awt.Image, {http://xml.apache.org/xml-soap}Image)
+20:34:16.016 [Test worker] DEBUG org.apache.axis.encoding.ser.JAFDataHandlerDeserializerFactory - Enter/Exit: JAFDataHandlerDeserializerFactory(class javax.mail.internet.MimeMultipart, {http://xml.apache.org/xml-soap}Multipart)
+20:34:16.018 [Test worker] DEBUG org.apache.axis.encoding.ser.JAFDataHandlerDeserializerFactory - Enter/Exit: JAFDataHandlerDeserializerFactory(interface javax.xml.transform.Source, {http://xml.apache.org/xml-soap}Source)
+20:34:16.019 [Test worker] DEBUG org.apache.axis.encoding.ser.JAFDataHandlerDeserializerFactory - Enter/Exit: JAFDataHandlerDeserializerFactory(class org.apache.axis.attachments.OctetStream, {http://xml.apache.org/xml-soap}octet-stream)
+20:34:16.019 [Test worker] DEBUG org.apache.axis.encoding.ser.JAFDataHandlerDeserializerFactory - Enter/Exit: JAFDataHandlerDeserializerFactory()
+20:34:16.054 [Test worker] DEBUG org.apache.axis.AxisEngine - Exit: AxisEngine::init
+20:34:16.070 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5cff9a6bsetReturnType({http://www.w3.org/2001/XMLSchema}string)
+20:34:16.074 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @9a20e25 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -105,8 +128,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@3e04b1cc<total parameters:1
-19:51:09.780 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @412a4451 added parameter >name:       password
+@61f00283<total parameters:1
+20:34:16.075 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @9a20e25 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -115,9 +138,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@226923ae<total parameters:2
-19:51:09.781 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @412a4451setReturnType({http://futureware.biz/mantisconnect}UserData)
-19:51:09.781 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3f9826fc added parameter >name:       username
+@9c54c8d<total parameters:2
+20:34:16.075 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @9a20e25setReturnType({http://futureware.biz/mantisconnect}UserData)
+20:34:16.076 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3944c675 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -126,8 +149,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@548706f2<total parameters:1
-19:51:09.782 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3f9826fc added parameter >name:       password
+@1a4654f4<total parameters:1
+20:34:16.076 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3944c675 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -136,9 +159,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@76ef853e<total parameters:2
-19:51:09.782 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3f9826fcsetReturnType({http://futureware.biz/mantisconnect}ObjectRefArray)
-19:51:09.783 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @bcf706e added parameter >name:       username
+@5a45414<total parameters:2
+20:34:16.077 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3944c675setReturnType({http://futureware.biz/mantisconnect}ObjectRefArray)
+20:34:16.078 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @638a0631 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -147,8 +170,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@183c25c<total parameters:1
-19:51:09.783 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @bcf706e added parameter >name:       password
+@4429eaa0<total parameters:1
+20:34:16.078 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @638a0631 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -157,9 +180,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@94e6766<total parameters:2
-19:51:09.784 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @bcf706esetReturnType({http://futureware.biz/mantisconnect}ObjectRefArray)
-19:51:09.784 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @7477b8bd added parameter >name:       username
+@48402653<total parameters:2
+20:34:16.079 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @638a0631setReturnType({http://futureware.biz/mantisconnect}ObjectRefArray)
+20:34:16.079 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @1b82fcc0 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -168,8 +191,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@44bea5d<total parameters:1
-19:51:09.784 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @7477b8bd added parameter >name:       password
+@288ada0f<total parameters:1
+20:34:16.079 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @1b82fcc0 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -178,9 +201,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@1b4549aa<total parameters:2
-19:51:09.785 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @7477b8bdsetReturnType({http://futureware.biz/mantisconnect}ObjectRefArray)
-19:51:09.785 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @614a68f3 added parameter >name:       username
+@23fd4954<total parameters:2
+20:34:16.080 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @1b82fcc0setReturnType({http://futureware.biz/mantisconnect}ObjectRefArray)
+20:34:16.080 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6ac681c6 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -189,8 +212,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@28b18637<total parameters:1
-19:51:09.785 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @614a68f3 added parameter >name:       password
+@662e14a2<total parameters:1
+20:34:16.080 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6ac681c6 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -199,9 +222,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@7373987e<total parameters:2
-19:51:09.786 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @614a68f3setReturnType({http://futureware.biz/mantisconnect}ObjectRefArray)
-19:51:09.786 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @424a97a3 added parameter >name:       username
+@180af0ca<total parameters:2
+20:34:16.081 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6ac681c6setReturnType({http://futureware.biz/mantisconnect}ObjectRefArray)
+20:34:16.081 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5174bd76 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -210,8 +233,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@707572e9<total parameters:1
-19:51:09.786 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @424a97a3 added parameter >name:       password
+@fe2ce2f<total parameters:1
+20:34:16.082 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5174bd76 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -220,9 +243,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@5451d2ee<total parameters:2
-19:51:09.787 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @424a97a3setReturnType({http://futureware.biz/mantisconnect}ObjectRefArray)
-19:51:09.787 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3b8e0072 added parameter >name:       username
+@19ff4075<total parameters:2
+20:34:16.082 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5174bd76setReturnType({http://futureware.biz/mantisconnect}ObjectRefArray)
+20:34:16.082 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @56bc7f20 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -231,8 +254,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@2def7f2f<total parameters:1
-19:51:09.787 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3b8e0072 added parameter >name:       password
+@22d7e78c<total parameters:1
+20:34:16.083 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @56bc7f20 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -241,9 +264,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@7656b241<total parameters:2
-19:51:09.787 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3b8e0072setReturnType({http://futureware.biz/mantisconnect}ObjectRefArray)
-19:51:09.787 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2c4ac8c7 added parameter >name:       username
+@3b5dd64f<total parameters:2
+20:34:16.083 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @56bc7f20setReturnType({http://futureware.biz/mantisconnect}ObjectRefArray)
+20:34:16.084 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @58c2d5b9 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -252,8 +275,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@678cd0ac<total parameters:1
-19:51:09.788 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2c4ac8c7 added parameter >name:       password
+@6d32f4fe<total parameters:1
+20:34:16.084 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @58c2d5b9 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -262,9 +285,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@314ccd75<total parameters:2
-19:51:09.788 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2c4ac8c7setReturnType({http://futureware.biz/mantisconnect}ObjectRefArray)
-19:51:09.788 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @72cba5a7 added parameter >name:       username
+@70c49553<total parameters:2
+20:34:16.084 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @58c2d5b9setReturnType({http://futureware.biz/mantisconnect}ObjectRefArray)
+20:34:16.085 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @257edaaa added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -273,8 +296,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@8bd47c9<total parameters:1
-19:51:09.789 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @72cba5a7 added parameter >name:       password
+@6bdfaca1<total parameters:1
+20:34:16.085 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @257edaaa added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -283,9 +306,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@9b5efc2<total parameters:2
-19:51:09.789 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @72cba5a7setReturnType({http://futureware.biz/mantisconnect}ObjectRefArray)
-19:51:09.790 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5e45bce4 added parameter >name:       username
+@11b02020<total parameters:2
+20:34:16.085 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @257edaaasetReturnType({http://futureware.biz/mantisconnect}ObjectRefArray)
+20:34:16.086 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @458a4148 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -294,8 +317,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@710ccc16<total parameters:1
-19:51:09.790 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5e45bce4 added parameter >name:       password
+@16f268d9<total parameters:1
+20:34:16.086 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @458a4148 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -304,9 +327,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@13ed5ef1<total parameters:2
-19:51:09.791 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5e45bce4setReturnType({http://futureware.biz/mantisconnect}ObjectRefArray)
-19:51:09.791 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @350078b1 added parameter >name:       username
+@5e6402<total parameters:2
+20:34:16.086 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @458a4148setReturnType({http://futureware.biz/mantisconnect}ObjectRefArray)
+20:34:16.087 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @107fe509 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -315,8 +338,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@46d15069<total parameters:1
-19:51:09.791 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @350078b1 added parameter >name:       password
+@7e8664f<total parameters:1
+20:34:16.087 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @107fe509 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -325,9 +348,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@512a58d9<total parameters:2
-19:51:09.792 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @350078b1setReturnType({http://futureware.biz/mantisconnect}ObjectRefArray)
-19:51:09.792 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @28c99edb added parameter >name:       username
+@25972cb<total parameters:2
+20:34:16.087 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @107fe509setReturnType({http://futureware.biz/mantisconnect}ObjectRefArray)
+20:34:16.088 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @715478f6 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -336,8 +359,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@1ebabe83<total parameters:1
-19:51:09.792 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @28c99edb added parameter >name:       password
+@1eec8c78<total parameters:1
+20:34:16.088 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @715478f6 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -346,9 +369,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@52a4f725<total parameters:2
-19:51:09.793 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @28c99edbsetReturnType({http://futureware.biz/mantisconnect}ObjectRefArray)
-19:51:09.793 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @514b8138 added parameter >name:       username
+@5a725bf4<total parameters:2
+20:34:16.089 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @715478f6setReturnType({http://futureware.biz/mantisconnect}ObjectRefArray)
+20:34:16.089 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @1374a55b added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -357,8 +380,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@3590f28c<total parameters:1
-19:51:09.793 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @514b8138 added parameter >name:       password
+@4135fc0b<total parameters:1
+20:34:16.090 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @1374a55b added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -367,9 +390,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@7e150c1b<total parameters:2
-19:51:09.794 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @514b8138setReturnType({http://futureware.biz/mantisconnect}ObjectRefArray)
-19:51:09.794 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @b7dc123 added parameter >name:       username
+@3b402719<total parameters:2
+20:34:16.091 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @1374a55bsetReturnType({http://futureware.biz/mantisconnect}ObjectRefArray)
+20:34:16.091 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @73a5767e added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -378,8 +401,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@632c335<total parameters:1
-19:51:09.794 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @b7dc123 added parameter >name:       password
+@454d5b2c<total parameters:1
+20:34:16.092 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @73a5767e added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -388,8 +411,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@340455ed<total parameters:2
-19:51:09.794 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @b7dc123 added parameter >name:       enumeration
+@2bf6322a<total parameters:2
+20:34:16.093 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @73a5767e added parameter >name:       enumeration
 typeEntry:  null
 mode:       IN
 position:   2
@@ -398,9 +421,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@62a7f2a2<total parameters:3
-19:51:09.795 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @b7dc123setReturnType({http://www.w3.org/2001/XMLSchema}string)
-19:51:09.795 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @736430c added parameter >name:       username
+@11b4b0a2<total parameters:3
+20:34:16.093 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @73a5767esetReturnType({http://www.w3.org/2001/XMLSchema}string)
+20:34:16.093 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @49fa326c added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -409,8 +432,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@178d03b4<total parameters:1
-19:51:09.795 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @736430c added parameter >name:       password
+@66c18444<total parameters:1
+20:34:16.094 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @49fa326c added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -419,39 +442,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@1308795<total parameters:2
-19:51:09.795 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @736430c added parameter >name:       issue_id
-typeEntry:  null
-mode:       IN
-position:   2
-isReturn:   false
-typeQName:  {http://www.w3.org/2001/XMLSchema}integer
-javaType:   class java.math.BigInteger
-inHeader:   false
-outHeader:  false
-@5cdf47f3<total parameters:3
-19:51:09.795 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @736430csetReturnType({http://www.w3.org/2001/XMLSchema}boolean)
-19:51:09.796 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @69444147 added parameter >name:       username
-typeEntry:  null
-mode:       IN
-position:   0
-isReturn:   false
-typeQName:  {http://www.w3.org/2001/XMLSchema}string
-javaType:   class java.lang.String
-inHeader:   false
-outHeader:  false
-@162b6f78<total parameters:1
-19:51:09.796 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @69444147 added parameter >name:       password
-typeEntry:  null
-mode:       IN
-position:   1
-isReturn:   false
-typeQName:  {http://www.w3.org/2001/XMLSchema}string
-javaType:   class java.lang.String
-inHeader:   false
-outHeader:  false
-@13224e07<total parameters:2
-19:51:09.796 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @69444147 added parameter >name:       issue_id
+@7cbc8dd4<total parameters:2
+20:34:16.095 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @49fa326c added parameter >name:       issue_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -460,9 +452,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@3564734f<total parameters:3
-19:51:09.796 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @69444147setReturnType({http://futureware.biz/mantisconnect}IssueData)
-19:51:09.797 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @32af80d8 added parameter >name:       username
+@48b91341<total parameters:3
+20:34:16.095 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @49fa326csetReturnType({http://www.w3.org/2001/XMLSchema}boolean)
+20:34:16.095 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @50c82168 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -471,8 +463,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@24c773c9<total parameters:1
-19:51:09.798 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @32af80d8 added parameter >name:       password
+@3a416c91<total parameters:1
+20:34:16.096 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @50c82168 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -481,8 +473,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@50c4aa36<total parameters:2
-19:51:09.798 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @32af80d8 added parameter >name:       issue_id
+@220b9420<total parameters:2
+20:34:16.096 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @50c82168 added parameter >name:       issue_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -491,9 +483,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@6f848ea<total parameters:3
-19:51:09.798 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @32af80d8setReturnType({http://futureware.biz/mantisconnect}HistoryDataArray)
-19:51:09.799 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @22b95f8b added parameter >name:       username
+@22a8b83b<total parameters:3
+20:34:16.096 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @50c82168setReturnType({http://futureware.biz/mantisconnect}IssueData)
+20:34:16.098 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @7c3ae784 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -502,8 +494,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@66c2fc2e<total parameters:1
-19:51:09.799 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @22b95f8b added parameter >name:       password
+@1b34f158<total parameters:1
+20:34:16.101 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @7c3ae784 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -512,8 +504,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@53653b92<total parameters:2
-19:51:09.799 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @22b95f8b added parameter >name:       project_id
+@785e4d7f<total parameters:2
+20:34:16.102 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @7c3ae784 added parameter >name:       issue_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -522,9 +514,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@4af79088<total parameters:3
-19:51:09.799 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @22b95f8bsetReturnType({http://www.w3.org/2001/XMLSchema}integer)
-19:51:09.799 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @225adb5a added parameter >name:       username
+@c8fd638<total parameters:3
+20:34:16.102 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @7c3ae784setReturnType({http://futureware.biz/mantisconnect}HistoryDataArray)
+20:34:16.103 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @119f1ed9 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -533,8 +525,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@538860b3<total parameters:1
-19:51:09.800 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @225adb5a added parameter >name:       password
+@63d324c4<total parameters:1
+20:34:16.103 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @119f1ed9 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -543,8 +535,39 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@294b78fb<total parameters:2
-19:51:09.800 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @225adb5a added parameter >name:       summary
+@54f16b12<total parameters:2
+20:34:16.103 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @119f1ed9 added parameter >name:       project_id
+typeEntry:  null
+mode:       IN
+position:   2
+isReturn:   false
+typeQName:  {http://www.w3.org/2001/XMLSchema}integer
+javaType:   class java.math.BigInteger
+inHeader:   false
+outHeader:  false
+@4b259fde<total parameters:3
+20:34:16.104 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @119f1ed9setReturnType({http://www.w3.org/2001/XMLSchema}integer)
+20:34:16.104 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @222539b5 added parameter >name:       username
+typeEntry:  null
+mode:       IN
+position:   0
+isReturn:   false
+typeQName:  {http://www.w3.org/2001/XMLSchema}string
+javaType:   class java.lang.String
+inHeader:   false
+outHeader:  false
+@58aadc31<total parameters:1
+20:34:16.104 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @222539b5 added parameter >name:       password
+typeEntry:  null
+mode:       IN
+position:   1
+isReturn:   false
+typeQName:  {http://www.w3.org/2001/XMLSchema}string
+javaType:   class java.lang.String
+inHeader:   false
+outHeader:  false
+@75c95cd<total parameters:2
+20:34:16.105 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @222539b5 added parameter >name:       summary
 typeEntry:  null
 mode:       IN
 position:   2
@@ -553,9 +576,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@5fcede8a<total parameters:3
-19:51:09.800 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @225adb5asetReturnType({http://www.w3.org/2001/XMLSchema}integer)
-19:51:09.800 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2b3a4e22 added parameter >name:       username
+@60603197<total parameters:3
+20:34:16.105 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @222539b5setReturnType({http://www.w3.org/2001/XMLSchema}integer)
+20:34:16.105 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6b0344bf added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -564,8 +587,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@3ba72e0e<total parameters:1
-19:51:09.800 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2b3a4e22 added parameter >name:       password
+@65c646ba<total parameters:1
+20:34:16.105 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6b0344bf added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -574,8 +597,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@49591521<total parameters:2
-19:51:09.801 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2b3a4e22 added parameter >name:       issue
+@6574532<total parameters:2
+20:34:16.106 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6b0344bf added parameter >name:       issue
 typeEntry:  null
 mode:       IN
 position:   2
@@ -584,9 +607,9 @@ typeQName:  {http://futureware.biz/mantisconnect}IssueData
 javaType:   class biz.futureware.mantis.rpc.soap.client.IssueData
 inHeader:   false
 outHeader:  false
-@60cab80e<total parameters:3
-19:51:09.802 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2b3a4e22setReturnType({http://www.w3.org/2001/XMLSchema}integer)
-19:51:09.802 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @19f8a16b added parameter >name:       username
+@67da20e6<total parameters:3
+20:34:16.107 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6b0344bfsetReturnType({http://www.w3.org/2001/XMLSchema}integer)
+20:34:16.107 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @160db61e added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -595,8 +618,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@1bad2b04<total parameters:1
-19:51:09.802 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @19f8a16b added parameter >name:       password
+@41a9c1f3<total parameters:1
+20:34:16.107 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @160db61e added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -605,8 +628,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@1a5cd54d<total parameters:2
-19:51:09.802 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @19f8a16b added parameter >name:       issueId
+@7d6b7221<total parameters:2
+20:34:16.108 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @160db61e added parameter >name:       issueId
 typeEntry:  null
 mode:       IN
 position:   2
@@ -615,8 +638,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@2f6304c0<total parameters:3
-19:51:09.803 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @19f8a16b added parameter >name:       issue
+@4b00b07a<total parameters:3
+20:34:16.108 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @160db61e added parameter >name:       issue
 typeEntry:  null
 mode:       IN
 position:   3
@@ -625,9 +648,9 @@ typeQName:  {http://futureware.biz/mantisconnect}IssueData
 javaType:   class biz.futureware.mantis.rpc.soap.client.IssueData
 inHeader:   false
 outHeader:  false
-@734c1bbe<total parameters:4
-19:51:09.803 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @19f8a16bsetReturnType({http://www.w3.org/2001/XMLSchema}boolean)
-19:51:09.803 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @14bebd8 added parameter >name:       username
+@30465242<total parameters:4
+20:34:16.108 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @160db61esetReturnType({http://www.w3.org/2001/XMLSchema}boolean)
+20:34:16.108 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3f6fabe0 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -636,8 +659,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@7dc1b001<total parameters:1
-19:51:09.803 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @14bebd8 added parameter >name:       password
+@19b33c56<total parameters:1
+20:34:16.109 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3f6fabe0 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -646,8 +669,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@4a33ee7d<total parameters:2
-19:51:09.805 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @14bebd8 added parameter >name:       issue_id
+@57fecc7a<total parameters:2
+20:34:16.109 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3f6fabe0 added parameter >name:       issue_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -656,8 +679,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@59b19d6e<total parameters:3
-19:51:09.806 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @14bebd8 added parameter >name:       tags
+@55285085<total parameters:3
+20:34:16.110 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3f6fabe0 added parameter >name:       tags
 typeEntry:  null
 mode:       IN
 position:   3
@@ -666,9 +689,9 @@ typeQName:  {http://futureware.biz/mantisconnect}TagDataArray
 javaType:   class [Lbiz.futureware.mantis.rpc.soap.client.TagData;
 inHeader:   false
 outHeader:  false
-@225e097f<total parameters:4
-19:51:09.807 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @14bebd8setReturnType({http://www.w3.org/2001/XMLSchema}boolean)
-19:51:09.807 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @77d1aab7 added parameter >name:       username
+@36b79ddd<total parameters:4
+20:34:16.111 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3f6fabe0setReturnType({http://www.w3.org/2001/XMLSchema}boolean)
+20:34:16.111 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @210c4ff6 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -677,8 +700,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@25bc6b16<total parameters:1
-19:51:09.807 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @77d1aab7 added parameter >name:       password
+@609c0325<total parameters:1
+20:34:16.111 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @210c4ff6 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -687,8 +710,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@85502f5<total parameters:2
-19:51:09.807 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @77d1aab7 added parameter >name:       issue_id
+@2faaa822<total parameters:2
+20:34:16.111 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @210c4ff6 added parameter >name:       issue_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -697,9 +720,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@5a12e771<total parameters:3
-19:51:09.808 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @77d1aab7setReturnType({http://www.w3.org/2001/XMLSchema}boolean)
-19:51:09.808 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @206c7a96 added parameter >name:       username
+@2579917f<total parameters:3
+20:34:16.112 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @210c4ff6setReturnType({http://www.w3.org/2001/XMLSchema}boolean)
+20:34:16.112 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @664919d9 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -708,8 +731,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@664e5156<total parameters:1
-19:51:09.808 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @206c7a96 added parameter >name:       password
+@664cbb1e<total parameters:1
+20:34:16.112 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @664919d9 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -718,8 +741,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@46acb5c0<total parameters:2
-19:51:09.808 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @206c7a96 added parameter >name:       issue_id
+@1c5df44d<total parameters:2
+20:34:16.112 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @664919d9 added parameter >name:       issue_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -728,8 +751,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@b48eb0b<total parameters:3
-19:51:09.809 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @206c7a96 added parameter >name:       note
+@75466cd0<total parameters:3
+20:34:16.113 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @664919d9 added parameter >name:       note
 typeEntry:  null
 mode:       IN
 position:   3
@@ -738,9 +761,9 @@ typeQName:  {http://futureware.biz/mantisconnect}IssueNoteData
 javaType:   class biz.futureware.mantis.rpc.soap.client.IssueNoteData
 inHeader:   false
 outHeader:  false
-@7f420866<total parameters:4
-19:51:09.810 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @206c7a96setReturnType({http://www.w3.org/2001/XMLSchema}integer)
-19:51:09.810 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @331ea436 added parameter >name:       username
+@2bf48896<total parameters:4
+20:34:16.114 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @664919d9setReturnType({http://www.w3.org/2001/XMLSchema}integer)
+20:34:16.114 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6d1251d4 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -749,8 +772,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@67b83803<total parameters:1
-19:51:09.810 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @331ea436 added parameter >name:       password
+@4f7c34a2<total parameters:1
+20:34:16.114 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6d1251d4 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -759,8 +782,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@26be2fa7<total parameters:2
-19:51:09.810 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @331ea436 added parameter >name:       issue_note_id
+@5019f735<total parameters:2
+20:34:16.114 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6d1251d4 added parameter >name:       issue_note_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -769,9 +792,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@49d0022e<total parameters:3
-19:51:09.810 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @331ea436setReturnType({http://www.w3.org/2001/XMLSchema}boolean)
-19:51:09.811 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @f293036 added parameter >name:       username
+@5fa67598<total parameters:3
+20:34:16.115 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6d1251d4setReturnType({http://www.w3.org/2001/XMLSchema}boolean)
+20:34:16.115 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @20c51349 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -780,8 +803,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@29f769f0<total parameters:1
-19:51:09.811 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @f293036 added parameter >name:       password
+@e32fad7<total parameters:1
+20:34:16.115 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @20c51349 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -790,8 +813,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@7e63a87e<total parameters:2
-19:51:09.811 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @f293036 added parameter >name:       note
+@110d147b<total parameters:2
+20:34:16.115 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @20c51349 added parameter >name:       note
 typeEntry:  null
 mode:       IN
 position:   2
@@ -800,9 +823,9 @@ typeQName:  {http://futureware.biz/mantisconnect}IssueNoteData
 javaType:   class biz.futureware.mantis.rpc.soap.client.IssueNoteData
 inHeader:   false
 outHeader:  false
-@37eb04ee<total parameters:3
-19:51:09.811 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @f293036setReturnType({http://www.w3.org/2001/XMLSchema}boolean)
-19:51:09.811 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @71053aa5 added parameter >name:       username
+@7d6ba977<total parameters:3
+20:34:16.115 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @20c51349setReturnType({http://www.w3.org/2001/XMLSchema}boolean)
+20:34:16.116 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @75bca2c8 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -811,8 +834,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@63af759c<total parameters:1
-19:51:09.812 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @71053aa5 added parameter >name:       password
+@6c411aea<total parameters:1
+20:34:16.116 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @75bca2c8 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -821,8 +844,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@6c11cf<total parameters:2
-19:51:09.812 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @71053aa5 added parameter >name:       issue_id
+@159665d5<total parameters:2
+20:34:16.116 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @75bca2c8 added parameter >name:       issue_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -831,8 +854,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@6f4fa958<total parameters:3
-19:51:09.813 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @71053aa5 added parameter >name:       relationship
+@35964601<total parameters:3
+20:34:16.118 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @75bca2c8 added parameter >name:       relationship
 typeEntry:  null
 mode:       IN
 position:   3
@@ -841,9 +864,9 @@ typeQName:  {http://futureware.biz/mantisconnect}RelationshipData
 javaType:   class biz.futureware.mantis.rpc.soap.client.RelationshipData
 inHeader:   false
 outHeader:  false
-@4f5e78ba<total parameters:4
-19:51:09.813 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @71053aa5setReturnType({http://www.w3.org/2001/XMLSchema}integer)
-19:51:09.813 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5dc90d60 added parameter >name:       username
+@67c0adaf<total parameters:4
+20:34:16.118 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @75bca2c8setReturnType({http://www.w3.org/2001/XMLSchema}integer)
+20:34:16.118 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @60614918 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -852,8 +875,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@5132b799<total parameters:1
-19:51:09.813 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5dc90d60 added parameter >name:       password
+@254c7d5d<total parameters:1
+20:34:16.119 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @60614918 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -862,8 +885,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@19918886<total parameters:2
-19:51:09.814 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5dc90d60 added parameter >name:       issue_id
+@12218358<total parameters:2
+20:34:16.119 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @60614918 added parameter >name:       issue_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -872,8 +895,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@2536b8a6<total parameters:3
-19:51:09.814 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5dc90d60 added parameter >name:       relationship_id
+@70eef966<total parameters:3
+20:34:16.120 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @60614918 added parameter >name:       relationship_id
 typeEntry:  null
 mode:       IN
 position:   3
@@ -882,9 +905,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@3081136d<total parameters:4
-19:51:09.815 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5dc90d60setReturnType({http://www.w3.org/2001/XMLSchema}boolean)
-19:51:09.816 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @74cbe49b added parameter >name:       username
+@1aad57ea<total parameters:4
+20:34:16.120 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @60614918setReturnType({http://www.w3.org/2001/XMLSchema}boolean)
+20:34:16.120 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5ccd6777 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -893,8 +916,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@618b973c<total parameters:1
-19:51:09.816 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @74cbe49b added parameter >name:       password
+@42e804f5<total parameters:1
+20:34:16.120 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5ccd6777 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -903,8 +926,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@71e8e023<total parameters:2
-19:51:09.817 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @74cbe49b added parameter >name:       issue_id
+@45caf007<total parameters:2
+20:34:16.121 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5ccd6777 added parameter >name:       issue_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -913,8 +936,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@49ca9f08<total parameters:3
-19:51:09.817 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @74cbe49b added parameter >name:       name
+@35a8fd53<total parameters:3
+20:34:16.121 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5ccd6777 added parameter >name:       name
 typeEntry:  null
 mode:       IN
 position:   3
@@ -923,8 +946,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@628e5596<total parameters:4
-19:51:09.819 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @74cbe49b added parameter >name:       file_type
+@2e9c24e<total parameters:4
+20:34:16.121 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5ccd6777 added parameter >name:       file_type
 typeEntry:  null
 mode:       IN
 position:   4
@@ -933,8 +956,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@5f811c8c<total parameters:5
-19:51:09.821 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @74cbe49b added parameter >name:       content
+@a4a14a<total parameters:5
+20:34:16.122 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5ccd6777 added parameter >name:       content
 typeEntry:  null
 mode:       IN
 position:   5
@@ -943,9 +966,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}base64Binary
 javaType:   class [B
 inHeader:   false
 outHeader:  false
-@69de06a7<total parameters:6
-19:51:09.821 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @74cbe49bsetReturnType({http://www.w3.org/2001/XMLSchema}integer)
-19:51:09.821 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @7471f64b added parameter >name:       username
+@127c3391<total parameters:6
+20:34:16.122 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5ccd6777setReturnType({http://www.w3.org/2001/XMLSchema}integer)
+20:34:16.122 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @60cc16e8 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -954,8 +977,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@64433fb6<total parameters:1
-19:51:09.822 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @7471f64b added parameter >name:       password
+@2c7b430d<total parameters:1
+20:34:16.122 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @60cc16e8 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -964,8 +987,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@33712ace<total parameters:2
-19:51:09.822 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @7471f64b added parameter >name:       issue_attachment_id
+@9700939<total parameters:2
+20:34:16.123 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @60cc16e8 added parameter >name:       issue_attachment_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -974,9 +997,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@2a83f939<total parameters:3
-19:51:09.823 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @7471f64bsetReturnType({http://www.w3.org/2001/XMLSchema}boolean)
-19:51:09.824 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @51bb918c added parameter >name:       username
+@7a63533d<total parameters:3
+20:34:16.123 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @60cc16e8setReturnType({http://www.w3.org/2001/XMLSchema}boolean)
+20:34:16.123 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @7a9861cf added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -985,8 +1008,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@2c78ba82<total parameters:1
-19:51:09.824 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @51bb918c added parameter >name:       password
+@c8d26ba<total parameters:1
+20:34:16.123 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @7a9861cf added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -995,8 +1018,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@16e5d299<total parameters:2
-19:51:09.824 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @51bb918c added parameter >name:       issue_attachment_id
+@53ddfd3<total parameters:2
+20:34:16.123 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @7a9861cf added parameter >name:       issue_attachment_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -1005,9 +1028,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@239aab4d<total parameters:3
-19:51:09.824 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @51bb918csetReturnType({http://www.w3.org/2001/XMLSchema}base64Binary)
-19:51:09.824 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2ea06943 added parameter >name:       username
+@65278ef2<total parameters:3
+20:34:16.124 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @7a9861cfsetReturnType({http://www.w3.org/2001/XMLSchema}base64Binary)
+20:34:16.124 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5c080d80 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -1016,8 +1039,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@47656abf<total parameters:1
-19:51:09.824 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2ea06943 added parameter >name:       password
+@39d5584d<total parameters:1
+20:34:16.124 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5c080d80 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -1026,8 +1049,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@7f2c09d0<total parameters:2
-19:51:09.826 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2ea06943 added parameter >name:       project
+@527dcbe3<total parameters:2
+20:34:16.125 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5c080d80 added parameter >name:       project
 typeEntry:  null
 mode:       IN
 position:   2
@@ -1036,9 +1059,9 @@ typeQName:  {http://futureware.biz/mantisconnect}ProjectData
 javaType:   class biz.futureware.mantis.rpc.soap.client.ProjectData
 inHeader:   false
 outHeader:  false
-@4881391c<total parameters:3
-19:51:09.826 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2ea06943setReturnType({http://www.w3.org/2001/XMLSchema}integer)
-19:51:09.826 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @57fccb55 added parameter >name:       username
+@488c22f<total parameters:3
+20:34:16.125 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5c080d80setReturnType({http://www.w3.org/2001/XMLSchema}integer)
+20:34:16.126 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3896338e added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -1047,8 +1070,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@e923bcc<total parameters:1
-19:51:09.826 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @57fccb55 added parameter >name:       password
+@17372543<total parameters:1
+20:34:16.126 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3896338e added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -1057,8 +1080,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@467a556b<total parameters:2
-19:51:09.826 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @57fccb55 added parameter >name:       project_id
+@67f669f9<total parameters:2
+20:34:16.126 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3896338e added parameter >name:       project_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -1067,9 +1090,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@7f2dd61<total parameters:3
-19:51:09.826 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @57fccb55setReturnType({http://www.w3.org/2001/XMLSchema}boolean)
-19:51:09.826 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @366518a9 added parameter >name:       username
+@252d4692<total parameters:3
+20:34:16.126 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3896338esetReturnType({http://www.w3.org/2001/XMLSchema}boolean)
+20:34:16.126 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2cae0bfa added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -1078,8 +1101,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@293609f2<total parameters:1
-19:51:09.827 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @366518a9 added parameter >name:       password
+@21d3e11<total parameters:1
+20:34:16.126 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2cae0bfa added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -1088,8 +1111,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@3df3d0b2<total parameters:2
-19:51:09.827 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @366518a9 added parameter >name:       project_id
+@5670260a<total parameters:2
+20:34:16.127 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2cae0bfa added parameter >name:       project_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -1098,8 +1121,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@2c7b1bb8<total parameters:3
-19:51:09.827 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @366518a9 added parameter >name:       project
+@1926f380<total parameters:3
+20:34:16.127 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2cae0bfa added parameter >name:       project
 typeEntry:  null
 mode:       IN
 position:   3
@@ -1108,9 +1131,9 @@ typeQName:  {http://futureware.biz/mantisconnect}ProjectData
 javaType:   class biz.futureware.mantis.rpc.soap.client.ProjectData
 inHeader:   false
 outHeader:  false
-@32c5fece<total parameters:4
-19:51:09.827 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @366518a9setReturnType({http://www.w3.org/2001/XMLSchema}boolean)
-19:51:09.827 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2b2508fd added parameter >name:       username
+@450bca85<total parameters:4
+20:34:16.127 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2cae0bfasetReturnType({http://www.w3.org/2001/XMLSchema}boolean)
+20:34:16.127 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2e0d9983 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -1119,8 +1142,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@8f03b6b<total parameters:1
-19:51:09.827 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2b2508fd added parameter >name:       password
+@791aba3e<total parameters:1
+20:34:16.127 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2e0d9983 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -1129,8 +1152,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@7c225716<total parameters:2
-19:51:09.827 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2b2508fd added parameter >name:       project_name
+@570eec6e<total parameters:2
+20:34:16.127 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2e0d9983 added parameter >name:       project_name
 typeEntry:  null
 mode:       IN
 position:   2
@@ -1139,9 +1162,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@618cf5d2<total parameters:3
-19:51:09.828 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2b2508fdsetReturnType({http://www.w3.org/2001/XMLSchema}integer)
-19:51:09.828 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @62ed7bfe added parameter >name:       username
+@4c4a5be8<total parameters:3
+20:34:16.129 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2e0d9983setReturnType({http://www.w3.org/2001/XMLSchema}integer)
+20:34:16.130 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @e491263 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -1150,8 +1173,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@6bcf3fab<total parameters:1
-19:51:09.828 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @62ed7bfe added parameter >name:       password
+@22ae82de<total parameters:1
+20:34:16.130 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @e491263 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -1160,8 +1183,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@5bb4f23<total parameters:2
-19:51:09.828 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @62ed7bfe added parameter >name:       project_id
+@2e36779<total parameters:2
+20:34:16.130 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @e491263 added parameter >name:       project_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -1170,8 +1193,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@39f1823<total parameters:3
-19:51:09.828 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @62ed7bfe added parameter >name:       filter_type
+@1c68f9d6<total parameters:3
+20:34:16.130 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @e491263 added parameter >name:       filter_type
 typeEntry:  null
 mode:       IN
 position:   3
@@ -1180,8 +1203,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@aa4b125<total parameters:4
-19:51:09.829 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @62ed7bfe added parameter >name:       target_user
+@5a743a32<total parameters:4
+20:34:16.131 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @e491263 added parameter >name:       target_user
 typeEntry:  null
 mode:       IN
 position:   4
@@ -1190,8 +1213,8 @@ typeQName:  {http://futureware.biz/mantisconnect}AccountData
 javaType:   class biz.futureware.mantis.rpc.soap.client.AccountData
 inHeader:   false
 outHeader:  false
-@3c3c3519<total parameters:5
-19:51:09.829 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @62ed7bfe added parameter >name:       page_number
+@4e2670b1<total parameters:5
+20:34:16.132 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @e491263 added parameter >name:       page_number
 typeEntry:  null
 mode:       IN
 position:   5
@@ -1200,8 +1223,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@13be9622<total parameters:6
-19:51:09.829 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @62ed7bfe added parameter >name:       per_page
+@357866ed<total parameters:6
+20:34:16.132 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @e491263 added parameter >name:       per_page
 typeEntry:  null
 mode:       IN
 position:   6
@@ -1210,9 +1233,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@2c28a0f5<total parameters:7
-19:51:09.830 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @62ed7bfesetReturnType({http://futureware.biz/mantisconnect}IssueDataArray)
-19:51:09.830 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @20a38912 added parameter >name:       username
+@6ee7dfe9<total parameters:7
+20:34:16.132 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @e491263setReturnType({http://futureware.biz/mantisconnect}IssueDataArray)
+20:34:16.132 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2799d005 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -1221,8 +1244,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@7d6af4e2<total parameters:1
-19:51:09.830 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @20a38912 added parameter >name:       password
+@5ac79fbf<total parameters:1
+20:34:16.132 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2799d005 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -1231,8 +1254,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@1a8262eb<total parameters:2
-19:51:09.830 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @20a38912 added parameter >name:       project_id
+@2c7ed504<total parameters:2
+20:34:16.132 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2799d005 added parameter >name:       project_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -1241,8 +1264,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@73444646<total parameters:3
-19:51:09.830 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @20a38912 added parameter >name:       page_number
+@7c364ff5<total parameters:3
+20:34:16.132 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2799d005 added parameter >name:       page_number
 typeEntry:  null
 mode:       IN
 position:   3
@@ -1251,8 +1274,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@4f13aa25<total parameters:4
-19:51:09.830 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @20a38912 added parameter >name:       per_page
+@1546b18e<total parameters:4
+20:34:16.133 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2799d005 added parameter >name:       per_page
 typeEntry:  null
 mode:       IN
 position:   4
@@ -1261,9 +1284,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@65748ac1<total parameters:5
-19:51:09.830 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @20a38912setReturnType({http://futureware.biz/mantisconnect}IssueDataArray)
-19:51:09.830 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6ce839be added parameter >name:       username
+@731afefe<total parameters:5
+20:34:16.133 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2799d005setReturnType({http://futureware.biz/mantisconnect}IssueDataArray)
+20:34:16.133 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2996c36c added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -1272,8 +1295,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@3d4f2413<total parameters:1
-19:51:09.830 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6ce839be added parameter >name:       password
+@6791784c<total parameters:1
+20:34:16.133 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2996c36c added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -1282,8 +1305,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@6fdfe31d<total parameters:2
-19:51:09.830 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6ce839be added parameter >name:       project_id
+@47fb6ff1<total parameters:2
+20:34:16.133 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2996c36c added parameter >name:       project_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -1292,8 +1315,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@2ebc5ea5<total parameters:3
-19:51:09.830 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6ce839be added parameter >name:       page_number
+@633284fe<total parameters:3
+20:34:16.133 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2996c36c added parameter >name:       page_number
 typeEntry:  null
 mode:       IN
 position:   3
@@ -1302,8 +1325,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@334a705<total parameters:4
-19:51:09.831 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6ce839be added parameter >name:       per_page
+@7ca0a657<total parameters:4
+20:34:16.133 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2996c36c added parameter >name:       per_page
 typeEntry:  null
 mode:       IN
 position:   4
@@ -1312,9 +1335,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@471f74cc<total parameters:5
-19:51:09.831 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6ce839besetReturnType({http://futureware.biz/mantisconnect}IssueHeaderDataArray)
-19:51:09.831 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3d6705e0 added parameter >name:       username
+@109fe297<total parameters:5
+20:34:16.133 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2996c36csetReturnType({http://futureware.biz/mantisconnect}IssueHeaderDataArray)
+20:34:16.134 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @28e70ad added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -1323,8 +1346,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@162bf94<total parameters:1
-19:51:09.831 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3d6705e0 added parameter >name:       password
+@6deaa131<total parameters:1
+20:34:16.135 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @28e70ad added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -1333,8 +1356,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@13398ef9<total parameters:2
-19:51:09.832 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3d6705e0 added parameter >name:       project_id
+@5dc1340d<total parameters:2
+20:34:16.135 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @28e70ad added parameter >name:       project_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -1343,8 +1366,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@64ab7490<total parameters:3
-19:51:09.832 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3d6705e0 added parameter >name:       access
+@96c758e<total parameters:3
+20:34:16.135 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @28e70ad added parameter >name:       access
 typeEntry:  null
 mode:       IN
 position:   3
@@ -1353,9 +1376,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@616635e0<total parameters:4
-19:51:09.832 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3d6705e0setReturnType({http://futureware.biz/mantisconnect}AccountDataArray)
-19:51:09.832 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @75eca847 added parameter >name:       username
+@78166716<total parameters:4
+20:34:16.135 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @28e70adsetReturnType({http://futureware.biz/mantisconnect}AccountDataArray)
+20:34:16.135 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @404da20c added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -1364,8 +1387,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@2a7dbe45<total parameters:1
-19:51:09.832 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @75eca847 added parameter >name:       password
+@14788754<total parameters:1
+20:34:16.135 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @404da20c added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -1374,9 +1397,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@154d406e<total parameters:2
-19:51:09.832 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @75eca847setReturnType({http://futureware.biz/mantisconnect}ProjectDataArray)
-19:51:09.832 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @4554be12 added parameter >name:       username
+@7ed25050<total parameters:2
+20:34:16.135 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @404da20csetReturnType({http://futureware.biz/mantisconnect}ProjectDataArray)
+20:34:16.135 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3537b64b added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -1385,8 +1408,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@556a986f<total parameters:1
-19:51:09.832 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @4554be12 added parameter >name:       password
+@18c72f23<total parameters:1
+20:34:16.135 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3537b64b added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -1395,8 +1418,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@12228b11<total parameters:2
-19:51:09.832 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @4554be12 added parameter >name:       project_id
+@48d55948<total parameters:2
+20:34:16.136 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3537b64b added parameter >name:       project_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -1405,9 +1428,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@6d13e70b<total parameters:3
-19:51:09.832 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @4554be12setReturnType({http://futureware.biz/mantisconnect}StringArray)
-19:51:09.833 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @dd77095 added parameter >name:       username
+@24e9c0d2<total parameters:3
+20:34:16.137 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3537b64bsetReturnType({http://futureware.biz/mantisconnect}StringArray)
+20:34:16.137 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2ce4bfea added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -1416,8 +1439,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@c7f28a0<total parameters:1
-19:51:09.833 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @dd77095 added parameter >name:       password
+@dfb3362<total parameters:1
+20:34:16.137 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2ce4bfea added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -1426,8 +1449,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@a83403d<total parameters:2
-19:51:09.833 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @dd77095 added parameter >name:       project_id
+@6f86248c<total parameters:2
+20:34:16.137 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2ce4bfea added parameter >name:       project_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -1436,8 +1459,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@78dad5d9<total parameters:3
-19:51:09.833 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @dd77095 added parameter >name:       p_category_name
+@58386fe<total parameters:3
+20:34:16.137 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2ce4bfea added parameter >name:       p_category_name
 typeEntry:  null
 mode:       IN
 position:   3
@@ -1446,9 +1469,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@4ebf518f<total parameters:4
-19:51:09.833 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @dd77095setReturnType({http://www.w3.org/2001/XMLSchema}integer)
-19:51:09.833 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3bf04ad0 added parameter >name:       username
+@c91724b<total parameters:4
+20:34:16.137 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2ce4bfeasetReturnType({http://www.w3.org/2001/XMLSchema}integer)
+20:34:16.138 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @58a53098 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -1457,8 +1480,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@2b62673b<total parameters:1
-19:51:09.833 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3bf04ad0 added parameter >name:       password
+@6d9dd44<total parameters:1
+20:34:16.138 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @58a53098 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -1467,8 +1490,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@5b80b93<total parameters:2
-19:51:09.833 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3bf04ad0 added parameter >name:       project_id
+@1f740f17<total parameters:2
+20:34:16.138 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @58a53098 added parameter >name:       project_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -1477,8 +1500,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@313f0182<total parameters:3
-19:51:09.833 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3bf04ad0 added parameter >name:       p_category_name
+@18f03598<total parameters:3
+20:34:16.139 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @58a53098 added parameter >name:       p_category_name
 typeEntry:  null
 mode:       IN
 position:   3
@@ -1487,9 +1510,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@8206bbf<total parameters:4
-19:51:09.833 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3bf04ad0setReturnType({http://www.w3.org/2001/XMLSchema}integer)
-19:51:09.833 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @30439e3f added parameter >name:       username
+@69a0e7ee<total parameters:4
+20:34:16.139 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @58a53098setReturnType({http://www.w3.org/2001/XMLSchema}integer)
+20:34:16.139 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @21db2463 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -1498,8 +1521,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@75e2ff37<total parameters:1
-19:51:09.833 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @30439e3f added parameter >name:       password
+@1ee89bf8<total parameters:1
+20:34:16.140 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @21db2463 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -1508,8 +1531,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@3c18c318<total parameters:2
-19:51:09.833 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @30439e3f added parameter >name:       project_id
+@72d3148<total parameters:2
+20:34:16.140 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @21db2463 added parameter >name:       project_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -1518,8 +1541,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@37ee2ab7<total parameters:3
-19:51:09.834 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @30439e3f added parameter >name:       p_category_name
+@69dc29d4<total parameters:3
+20:34:16.140 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @21db2463 added parameter >name:       p_category_name
 typeEntry:  null
 mode:       IN
 position:   3
@@ -1528,8 +1551,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@1bf0e813<total parameters:4
-19:51:09.834 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @30439e3f added parameter >name:       p_category_name_new
+@11dcf0b0<total parameters:4
+20:34:16.140 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @21db2463 added parameter >name:       p_category_name_new
 typeEntry:  null
 mode:       IN
 position:   4
@@ -1538,8 +1561,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@7909b71d<total parameters:5
-19:51:09.834 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @30439e3f added parameter >name:       p_assigned_to
+@4bb19e28<total parameters:5
+20:34:16.140 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @21db2463 added parameter >name:       p_assigned_to
 typeEntry:  null
 mode:       IN
 position:   5
@@ -1548,9 +1571,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@3f3ab27<total parameters:6
-19:51:09.834 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @30439e3fsetReturnType({http://www.w3.org/2001/XMLSchema}integer)
-19:51:09.834 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @458e827c added parameter >name:       username
+@25f84167<total parameters:6
+20:34:16.140 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @21db2463setReturnType({http://www.w3.org/2001/XMLSchema}integer)
+20:34:16.140 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2d624e85 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -1559,8 +1582,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@59a25aae<total parameters:1
-19:51:09.834 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @458e827c added parameter >name:       password
+@5bcd72e9<total parameters:1
+20:34:16.140 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2d624e85 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -1569,8 +1592,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@6da7bfd8<total parameters:2
-19:51:09.834 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @458e827c added parameter >name:       project_id
+@1c4ae766<total parameters:2
+20:34:16.143 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2d624e85 added parameter >name:       project_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -1579,9 +1602,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@73939bd8<total parameters:3
-19:51:09.834 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @458e827csetReturnType({http://futureware.biz/mantisconnect}ProjectVersionDataArray)
-19:51:09.835 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @590a18f0 added parameter >name:       username
+@7bde7ef1<total parameters:3
+20:34:16.143 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2d624e85setReturnType({http://futureware.biz/mantisconnect}ProjectVersionDataArray)
+20:34:16.144 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3fa7d106 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -1590,8 +1613,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@36a80552<total parameters:1
-19:51:09.835 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @590a18f0 added parameter >name:       password
+@378619f5<total parameters:1
+20:34:16.144 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3fa7d106 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -1600,8 +1623,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@f7b33f9<total parameters:2
-19:51:09.835 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @590a18f0 added parameter >name:       version
+@4b86aa35<total parameters:2
+20:34:16.145 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3fa7d106 added parameter >name:       version
 typeEntry:  null
 mode:       IN
 position:   2
@@ -1610,9 +1633,9 @@ typeQName:  {http://futureware.biz/mantisconnect}ProjectVersionData
 javaType:   class biz.futureware.mantis.rpc.soap.client.ProjectVersionData
 inHeader:   false
 outHeader:  false
-@1f13cd66<total parameters:3
-19:51:09.835 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @590a18f0setReturnType({http://www.w3.org/2001/XMLSchema}integer)
-19:51:09.839 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @16d79bec added parameter >name:       username
+@54cdaea8<total parameters:3
+20:34:16.145 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3fa7d106setReturnType({http://www.w3.org/2001/XMLSchema}integer)
+20:34:16.145 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @55637ad6 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -1621,8 +1644,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@60a38ef1<total parameters:1
-19:51:09.839 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @16d79bec added parameter >name:       password
+@52ad883e<total parameters:1
+20:34:16.145 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @55637ad6 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -1631,8 +1654,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@36118de7<total parameters:2
-19:51:09.840 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @16d79bec added parameter >name:       version_id
+@2c04475c<total parameters:2
+20:34:16.145 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @55637ad6 added parameter >name:       version_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -1641,8 +1664,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@37e81ebe<total parameters:3
-19:51:09.840 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @16d79bec added parameter >name:       version
+@1505049a<total parameters:3
+20:34:16.145 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @55637ad6 added parameter >name:       version
 typeEntry:  null
 mode:       IN
 position:   3
@@ -1651,9 +1674,9 @@ typeQName:  {http://futureware.biz/mantisconnect}ProjectVersionData
 javaType:   class biz.futureware.mantis.rpc.soap.client.ProjectVersionData
 inHeader:   false
 outHeader:  false
-@1d4aeb54<total parameters:4
-19:51:09.840 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @16d79becsetReturnType({http://www.w3.org/2001/XMLSchema}boolean)
-19:51:09.840 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @61622a0a added parameter >name:       username
+@5bfe7926<total parameters:4
+20:34:16.146 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @55637ad6setReturnType({http://www.w3.org/2001/XMLSchema}boolean)
+20:34:16.146 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @65ace61f added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -1662,8 +1685,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@5b26ed74<total parameters:1
-19:51:09.840 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @61622a0a added parameter >name:       password
+@6b1c6351<total parameters:1
+20:34:16.146 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @65ace61f added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -1672,8 +1695,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@2c4c1540<total parameters:2
-19:51:09.840 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @61622a0a added parameter >name:       version_id
+@56009b7c<total parameters:2
+20:34:16.146 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @65ace61f added parameter >name:       version_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -1682,9 +1705,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@66964bd6<total parameters:3
-19:51:09.840 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @61622a0asetReturnType({http://www.w3.org/2001/XMLSchema}boolean)
-19:51:09.840 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @16d41f74 added parameter >name:       username
+@7e9fefd3<total parameters:3
+20:34:16.146 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @65ace61fsetReturnType({http://www.w3.org/2001/XMLSchema}boolean)
+20:34:16.146 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @7c817201 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -1693,8 +1716,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@7af50d97<total parameters:1
-19:51:09.840 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @16d41f74 added parameter >name:       password
+@740f902b<total parameters:1
+20:34:16.147 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @7c817201 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -1703,8 +1726,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@365fe19c<total parameters:2
-19:51:09.841 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @16d41f74 added parameter >name:       project_id
+@26862ead<total parameters:2
+20:34:16.147 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @7c817201 added parameter >name:       project_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -1713,9 +1736,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@62c3c47a<total parameters:3
-19:51:09.841 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @16d41f74setReturnType({http://futureware.biz/mantisconnect}ProjectVersionDataArray)
-19:51:09.841 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @54da48e9 added parameter >name:       username
+@2766acd9<total parameters:3
+20:34:16.147 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @7c817201setReturnType({http://futureware.biz/mantisconnect}ProjectVersionDataArray)
+20:34:16.147 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5000d34e added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -1724,8 +1747,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@6117e50<total parameters:1
-19:51:09.841 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @54da48e9 added parameter >name:       password
+@58068fad<total parameters:1
+20:34:16.150 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5000d34e added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -1734,8 +1757,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@4f0b3c0f<total parameters:2
-19:51:09.841 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @54da48e9 added parameter >name:       project_id
+@4f623146<total parameters:2
+20:34:16.150 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5000d34e added parameter >name:       project_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -1744,9 +1767,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@3317d180<total parameters:3
-19:51:09.841 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @54da48e9setReturnType({http://futureware.biz/mantisconnect}ProjectVersionDataArray)
-19:51:09.841 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @358c4a0b added parameter >name:       username
+@5df04c17<total parameters:3
+20:34:16.150 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5000d34esetReturnType({http://futureware.biz/mantisconnect}ProjectVersionDataArray)
+20:34:16.150 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @bbc7e44 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -1755,8 +1778,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@38625114<total parameters:1
-19:51:09.841 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @358c4a0b added parameter >name:       password
+@67abf379<total parameters:1
+20:34:16.152 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @bbc7e44 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -1765,8 +1788,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@2e1ff953<total parameters:2
-19:51:09.841 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @358c4a0b added parameter >name:       project_id
+@399d06cb<total parameters:2
+20:34:16.153 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @bbc7e44 added parameter >name:       project_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -1775,9 +1798,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@2309a6c1<total parameters:3
-19:51:09.842 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @358c4a0bsetReturnType({http://futureware.biz/mantisconnect}ProjectAttachmentDataArray)
-19:51:09.842 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @fc6c636 added parameter >name:       username
+@66d2651b<total parameters:3
+20:34:16.157 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @bbc7e44setReturnType({http://futureware.biz/mantisconnect}ProjectAttachmentDataArray)
+20:34:16.158 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6706801d added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -1786,8 +1809,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@619756a1<total parameters:1
-19:51:09.843 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @fc6c636 added parameter >name:       password
+@1289db5b<total parameters:1
+20:34:16.158 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6706801d added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -1796,8 +1819,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@617198e<total parameters:2
-19:51:09.843 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @fc6c636 added parameter >name:       project_id
+@3f1ec260<total parameters:2
+20:34:16.158 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6706801d added parameter >name:       project_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -1806,9 +1829,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@4bd68c99<total parameters:3
-19:51:09.843 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @fc6c636setReturnType({http://futureware.biz/mantisconnect}CustomFieldDefinitionDataArray)
-19:51:09.844 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @1784d1c4 added parameter >name:       username
+@6a2d788f<total parameters:3
+20:34:16.158 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6706801dsetReturnType({http://futureware.biz/mantisconnect}CustomFieldDefinitionDataArray)
+20:34:16.160 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2c339fd4 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -1817,8 +1840,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@68c925e9<total parameters:1
-19:51:09.844 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @1784d1c4 added parameter >name:       password
+@2ddb73dd<total parameters:1
+20:34:16.160 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2c339fd4 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -1827,8 +1850,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@5a46194f<total parameters:2
-19:51:09.844 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @1784d1c4 added parameter >name:       project_attachment_id
+@5487b03a<total parameters:2
+20:34:16.160 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2c339fd4 added parameter >name:       project_attachment_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -1837,9 +1860,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@78b5cd96<total parameters:3
-19:51:09.844 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @1784d1c4setReturnType({http://www.w3.org/2001/XMLSchema}base64Binary)
-19:51:09.844 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @498e29b5 added parameter >name:       username
+@bc9b7ee<total parameters:3
+20:34:16.160 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @2c339fd4setReturnType({http://www.w3.org/2001/XMLSchema}base64Binary)
+20:34:16.161 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3bb4547c added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -1848,8 +1871,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@68c9bb00<total parameters:1
-19:51:09.844 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @498e29b5 added parameter >name:       password
+@4d078d4c<total parameters:1
+20:34:16.161 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3bb4547c added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -1858,8 +1881,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@22f5b37<total parameters:2
-19:51:09.844 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @498e29b5 added parameter >name:       project_id
+@2468f2b6<total parameters:2
+20:34:16.161 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3bb4547c added parameter >name:       project_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -1868,8 +1891,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@54a0ff99<total parameters:3
-19:51:09.845 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @498e29b5 added parameter >name:       name
+@62d85712<total parameters:3
+20:34:16.161 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3bb4547c added parameter >name:       name
 typeEntry:  null
 mode:       IN
 position:   3
@@ -1878,8 +1901,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@6cdbb739<total parameters:4
-19:51:09.845 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @498e29b5 added parameter >name:       title
+@7b56f881<total parameters:4
+20:34:16.161 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3bb4547c added parameter >name:       title
 typeEntry:  null
 mode:       IN
 position:   4
@@ -1888,8 +1911,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@49ef0019<total parameters:5
-19:51:09.845 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @498e29b5 added parameter >name:       description
+@aca674a<total parameters:5
+20:34:16.161 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3bb4547c added parameter >name:       description
 typeEntry:  null
 mode:       IN
 position:   5
@@ -1898,8 +1921,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@31610cf0<total parameters:6
-19:51:09.845 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @498e29b5 added parameter >name:       file_type
+@69d4d9e7<total parameters:6
+20:34:16.161 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3bb4547c added parameter >name:       file_type
 typeEntry:  null
 mode:       IN
 position:   6
@@ -1908,8 +1931,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@626e7172<total parameters:7
-19:51:09.845 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @498e29b5 added parameter >name:       content
+@49146308<total parameters:7
+20:34:16.162 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3bb4547c added parameter >name:       content
 typeEntry:  null
 mode:       IN
 position:   7
@@ -1918,9 +1941,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}base64Binary
 javaType:   class [B
 inHeader:   false
 outHeader:  false
-@533d7079<total parameters:8
-19:51:09.845 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @498e29b5setReturnType({http://www.w3.org/2001/XMLSchema}integer)
-19:51:09.845 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @62634dcf added parameter >name:       username
+@5ca085b<total parameters:8
+20:34:16.162 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3bb4547csetReturnType({http://www.w3.org/2001/XMLSchema}integer)
+20:34:16.162 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5c63cf9f added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -1929,8 +1952,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@5bdccbff<total parameters:1
-19:51:09.846 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @62634dcf added parameter >name:       password
+@13373e15<total parameters:1
+20:34:16.162 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5c63cf9f added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -1939,8 +1962,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@4aa8d417<total parameters:2
-19:51:09.846 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @62634dcf added parameter >name:       project_attachment_id
+@79d11358<total parameters:2
+20:34:16.162 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5c63cf9f added parameter >name:       project_attachment_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -1949,9 +1972,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@722edb83<total parameters:3
-19:51:09.846 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @62634dcfsetReturnType({http://www.w3.org/2001/XMLSchema}boolean)
-19:51:09.846 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @a5bed3c added parameter >name:       username
+@2c0c54e9<total parameters:3
+20:34:16.165 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5c63cf9fsetReturnType({http://www.w3.org/2001/XMLSchema}boolean)
+20:34:16.166 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6e5169c0 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -1960,8 +1983,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@37e55cbb<total parameters:1
-19:51:09.846 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @a5bed3c added parameter >name:       password
+@443c2589<total parameters:1
+20:34:16.166 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6e5169c0 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -1970,8 +1993,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@3be13e3c<total parameters:2
-19:51:09.846 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @a5bed3c added parameter >name:       project_id
+@3506b585<total parameters:2
+20:34:16.166 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6e5169c0 added parameter >name:       project_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -1980,9 +2003,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@3f170800<total parameters:3
-19:51:09.846 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @a5bed3csetReturnType({http://futureware.biz/mantisconnect}StringArray)
-19:51:09.846 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6af030d3 added parameter >name:       username
+@7b6304d0<total parameters:3
+20:34:16.166 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6e5169c0setReturnType({http://futureware.biz/mantisconnect}StringArray)
+20:34:16.167 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @1e196d15 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -1991,8 +2014,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@77eda9b2<total parameters:1
-19:51:09.846 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6af030d3 added parameter >name:       password
+@3bac0332<total parameters:1
+20:34:16.171 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @1e196d15 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -2001,8 +2024,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@45cf79ad<total parameters:2
-19:51:09.847 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6af030d3 added parameter >name:       project_id
+@3b06335f<total parameters:2
+20:34:16.172 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @1e196d15 added parameter >name:       project_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -2011,9 +2034,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@421f3e1c<total parameters:3
-19:51:09.847 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6af030d3setReturnType({http://futureware.biz/mantisconnect}FilterDataArray)
-19:51:09.848 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @d847154 added parameter >name:       username
+@58a0f56b<total parameters:3
+20:34:16.172 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @1e196d15setReturnType({http://futureware.biz/mantisconnect}FilterDataArray)
+20:34:16.173 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5cfc20e7 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -2022,8 +2045,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@36d04126<total parameters:1
-19:51:09.848 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @d847154 added parameter >name:       password
+@3289dbe<total parameters:1
+20:34:16.173 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5cfc20e7 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -2032,8 +2055,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@8addc10<total parameters:2
-19:51:09.848 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @d847154 added parameter >name:       project_id
+@2cd6ee56<total parameters:2
+20:34:16.173 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5cfc20e7 added parameter >name:       project_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -2042,8 +2065,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@78415d86<total parameters:3
-19:51:09.848 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @d847154 added parameter >name:       filter_id
+@295461ef<total parameters:3
+20:34:16.173 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5cfc20e7 added parameter >name:       filter_id
 typeEntry:  null
 mode:       IN
 position:   3
@@ -2052,8 +2075,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@56619d0b<total parameters:4
-19:51:09.848 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @d847154 added parameter >name:       page_number
+@1492873a<total parameters:4
+20:34:16.173 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5cfc20e7 added parameter >name:       page_number
 typeEntry:  null
 mode:       IN
 position:   4
@@ -2062,8 +2085,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@628c2f90<total parameters:5
-19:51:09.848 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @d847154 added parameter >name:       per_page
+@53102d7b<total parameters:5
+20:34:16.173 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5cfc20e7 added parameter >name:       per_page
 typeEntry:  null
 mode:       IN
 position:   5
@@ -2072,9 +2095,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@427228d<total parameters:6
-19:51:09.848 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @d847154setReturnType({http://futureware.biz/mantisconnect}IssueDataArray)
-19:51:09.849 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @7678e2e2 added parameter >name:       username
+@48afdd11<total parameters:6
+20:34:16.174 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5cfc20e7setReturnType({http://futureware.biz/mantisconnect}IssueDataArray)
+20:34:16.174 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @427e96f2 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -2083,8 +2106,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@2c2bb0e3<total parameters:1
-19:51:09.849 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @7678e2e2 added parameter >name:       password
+@425572d0<total parameters:1
+20:34:16.174 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @427e96f2 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -2093,8 +2116,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@2f58ea59<total parameters:2
-19:51:09.849 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @7678e2e2 added parameter >name:       project_id
+@10fcf414<total parameters:2
+20:34:16.174 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @427e96f2 added parameter >name:       project_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -2103,8 +2126,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@12568675<total parameters:3
-19:51:09.849 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @7678e2e2 added parameter >name:       filter_id
+@268df44f<total parameters:3
+20:34:16.174 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @427e96f2 added parameter >name:       filter_id
 typeEntry:  null
 mode:       IN
 position:   3
@@ -2113,8 +2136,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@2308092f<total parameters:4
-19:51:09.849 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @7678e2e2 added parameter >name:       page_number
+@10722f6a<total parameters:4
+20:34:16.174 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @427e96f2 added parameter >name:       page_number
 typeEntry:  null
 mode:       IN
 position:   4
@@ -2123,8 +2146,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@52d51905<total parameters:5
-19:51:09.849 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @7678e2e2 added parameter >name:       per_page
+@79580c46<total parameters:5
+20:34:16.174 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @427e96f2 added parameter >name:       per_page
 typeEntry:  null
 mode:       IN
 position:   5
@@ -2133,9 +2156,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@3ab72b24<total parameters:6
-19:51:09.849 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @7678e2e2setReturnType({http://futureware.biz/mantisconnect}IssueHeaderDataArray)
-19:51:09.849 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @1cf47729 added parameter >name:       username
+@e730b2d<total parameters:6
+20:34:16.174 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @427e96f2setReturnType({http://futureware.biz/mantisconnect}IssueHeaderDataArray)
+20:34:16.175 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @4795a920 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -2144,8 +2167,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@7f5654e9<total parameters:1
-19:51:09.849 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @1cf47729 added parameter >name:       password
+@469dc7c7<total parameters:1
+20:34:16.175 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @4795a920 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -2154,8 +2177,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@5317737<total parameters:2
-19:51:09.850 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @1cf47729 added parameter >name:       config_var
+@7f1ed96e<total parameters:2
+20:34:16.175 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @4795a920 added parameter >name:       config_var
 typeEntry:  null
 mode:       IN
 position:   2
@@ -2164,9 +2187,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@6dc92be<total parameters:3
-19:51:09.850 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @1cf47729setReturnType({http://www.w3.org/2001/XMLSchema}string)
-19:51:09.850 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @39aee073 added parameter >name:       username
+@69a29fc3<total parameters:3
+20:34:16.175 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @4795a920setReturnType({http://www.w3.org/2001/XMLSchema}string)
+20:34:16.175 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @314f77e added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -2175,8 +2198,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@74920ab3<total parameters:1
-19:51:09.850 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @39aee073 added parameter >name:       password
+@2b9fbb24<total parameters:1
+20:34:16.175 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @314f77e added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -2185,8 +2208,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@7a9453d9<total parameters:2
-19:51:09.850 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @39aee073 added parameter >name:       issue_id
+@22c3d290<total parameters:2
+20:34:16.175 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @314f77e added parameter >name:       issue_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -2195,8 +2218,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@183f7757<total parameters:3
-19:51:09.850 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @39aee073 added parameter >name:       comment
+@5f620d8c<total parameters:3
+20:34:16.175 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @314f77e added parameter >name:       comment
 typeEntry:  null
 mode:       IN
 position:   3
@@ -2205,8 +2228,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@56dcb15b<total parameters:4
-19:51:09.850 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @39aee073 added parameter >name:       fixed
+@7be9be19<total parameters:4
+20:34:16.175 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @314f77e added parameter >name:       fixed
 typeEntry:  null
 mode:       IN
 position:   4
@@ -2215,9 +2238,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}boolean
 javaType:   boolean
 inHeader:   false
 outHeader:  false
-@327ffea1<total parameters:5
-19:51:09.850 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @39aee073setReturnType({http://www.w3.org/2001/XMLSchema}boolean)
-19:51:09.850 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6aad79ac added parameter >name:       username
+@2df97cdb<total parameters:5
+20:34:16.175 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @314f77esetReturnType({http://www.w3.org/2001/XMLSchema}boolean)
+20:34:16.175 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @11926ca6 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -2226,8 +2249,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@94b3e61<total parameters:1
-19:51:09.850 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6aad79ac added parameter >name:       password
+@5e531d75<total parameters:1
+20:34:16.176 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @11926ca6 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -2236,8 +2259,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@3a2e007a<total parameters:2
-19:51:09.850 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6aad79ac added parameter >name:       project_id
+@68fc79d0<total parameters:2
+20:34:16.176 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @11926ca6 added parameter >name:       project_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -2246,8 +2269,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@77e97b68<total parameters:3
-19:51:09.851 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6aad79ac added parameter >name:       pref_name
+@e85dfb0<total parameters:3
+20:34:16.176 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @11926ca6 added parameter >name:       pref_name
 typeEntry:  null
 mode:       IN
 position:   3
@@ -2256,9 +2279,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@76880c20<total parameters:4
-19:51:09.851 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @6aad79acsetReturnType({http://www.w3.org/2001/XMLSchema}string)
-19:51:09.851 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @26608ca6 added parameter >name:       username
+@c70659a<total parameters:4
+20:34:16.178 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @11926ca6setReturnType({http://www.w3.org/2001/XMLSchema}string)
+20:34:16.178 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @4a0e79d4 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -2267,8 +2290,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@6c0775c0<total parameters:1
-19:51:09.851 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @26608ca6 added parameter >name:       password
+@4137bbbc<total parameters:1
+20:34:16.178 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @4a0e79d4 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -2277,8 +2300,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@50097113<total parameters:2
-19:51:09.851 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @26608ca6 added parameter >name:       page_number
+@61ef9475<total parameters:2
+20:34:16.178 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @4a0e79d4 added parameter >name:       page_number
 typeEntry:  null
 mode:       IN
 position:   2
@@ -2287,8 +2310,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@66d69e3e<total parameters:3
-19:51:09.851 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @26608ca6 added parameter >name:       per_page
+@6ebc6167<total parameters:3
+20:34:16.178 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @4a0e79d4 added parameter >name:       per_page
 typeEntry:  null
 mode:       IN
 position:   3
@@ -2297,9 +2320,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@44f12bfe<total parameters:4
-19:51:09.851 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @26608ca6setReturnType({http://futureware.biz/mantisconnect}ProfileDataSearchResult)
-19:51:09.852 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5a60dd0c added parameter >name:       username
+@574565bd<total parameters:4
+20:34:16.178 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @4a0e79d4setReturnType({http://futureware.biz/mantisconnect}ProfileDataSearchResult)
+20:34:16.179 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3b38437f added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -2308,8 +2331,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@1703b365<total parameters:1
-19:51:09.852 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5a60dd0c added parameter >name:       password
+@47acb128<total parameters:1
+20:34:16.179 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3b38437f added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -2318,8 +2341,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@7b9e1707<total parameters:2
-19:51:09.852 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5a60dd0c added parameter >name:       page_number
+@723fc131<total parameters:2
+20:34:16.180 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3b38437f added parameter >name:       page_number
 typeEntry:  null
 mode:       IN
 position:   2
@@ -2328,8 +2351,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@5f05c2df<total parameters:3
-19:51:09.852 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5a60dd0c added parameter >name:       per_page
+@51c2b2d4<total parameters:3
+20:34:16.180 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3b38437f added parameter >name:       per_page
 typeEntry:  null
 mode:       IN
 position:   3
@@ -2338,9 +2361,9 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@351ec8e<total parameters:4
-19:51:09.852 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @5a60dd0csetReturnType({http://futureware.biz/mantisconnect}TagDataSearchResult)
-19:51:09.853 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @738cdea2 added parameter >name:       username
+@28982028<total parameters:4
+20:34:16.180 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @3b38437fsetReturnType({http://futureware.biz/mantisconnect}TagDataSearchResult)
+20:34:16.182 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @42b5c9db added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -2349,8 +2372,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@7f3579c1<total parameters:1
-19:51:09.853 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @738cdea2 added parameter >name:       password
+@2bc538c5<total parameters:1
+20:34:16.182 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @42b5c9db added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -2359,8 +2382,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@6998e202<total parameters:2
-19:51:09.853 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @738cdea2 added parameter >name:       tag
+@5e20dcbe<total parameters:2
+20:34:16.182 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @42b5c9db added parameter >name:       tag
 typeEntry:  null
 mode:       IN
 position:   2
@@ -2369,9 +2392,9 @@ typeQName:  {http://futureware.biz/mantisconnect}TagData
 javaType:   class biz.futureware.mantis.rpc.soap.client.TagData
 inHeader:   false
 outHeader:  false
-@1c3b1e8c<total parameters:3
-19:51:09.853 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @738cdea2setReturnType({http://www.w3.org/2001/XMLSchema}integer)
-19:51:09.853 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @957aa67 added parameter >name:       username
+@74d1cb74<total parameters:3
+20:34:16.182 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @42b5c9dbsetReturnType({http://www.w3.org/2001/XMLSchema}integer)
+20:34:16.182 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @18c62f24 added parameter >name:       username
 typeEntry:  null
 mode:       IN
 position:   0
@@ -2380,8 +2403,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@5df821fd<total parameters:1
-19:51:09.853 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @957aa67 added parameter >name:       password
+@1a472fe9<total parameters:1
+20:34:16.182 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @18c62f24 added parameter >name:       password
 typeEntry:  null
 mode:       IN
 position:   1
@@ -2390,8 +2413,8 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}string
 javaType:   class java.lang.String
 inHeader:   false
 outHeader:  false
-@735e50b2<total parameters:2
-19:51:09.853 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @957aa67 added parameter >name:       tag_id
+@42dac533<total parameters:2
+20:34:16.182 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @18c62f24 added parameter >name:       tag_id
 typeEntry:  null
 mode:       IN
 position:   2
@@ -2400,12 +2423,12 @@ typeQName:  {http://www.w3.org/2001/XMLSchema}integer
 javaType:   class java.math.BigInteger
 inHeader:   false
 outHeader:  false
-@3755ef2b<total parameters:3
-19:51:09.853 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @957aa67setReturnType({http://www.w3.org/2001/XMLSchema}boolean)
-19:51:09.874 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(transport00)
-19:51:09.874 [Test worker] DEBUG org.apache.axis.client.Call - Transport is org.apache.axis.transport.http.HTTPTransport@1bcb5650
-19:51:09.983 [Test worker] DEBUG org.apache.axis.client.Call - Enter: Call::invoke(ns, meth, args)
-19:51:09.994 [Test worker] DEBUG org.apache.axis.client.Call - operation=name:        mc_projects_get_user_accessible
+@38aa2c77<total parameters:3
+20:34:16.182 [Test worker] DEBUG org.apache.axis.description.OperationDesc - @18c62f24setReturnType({http://www.w3.org/2001/XMLSchema}boolean)
+20:34:33.006 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(transport00)
+20:34:33.006 [Test worker] DEBUG org.apache.axis.client.Call - Transport is org.apache.axis.transport.http.HTTPTransport@11c0fd55
+20:34:33.071 [Test worker] DEBUG org.apache.axis.client.Call - Enter: Call::invoke(ns, meth, args)
+20:34:33.077 [Test worker] DEBUG org.apache.axis.client.Call - operation=name:        mc_projects_get_user_accessible
 returnQName: return
 returnType:  {http://futureware.biz/mantisconnect}ProjectDataArray
 returnClass: class [Lbiz.futureware.mantis.rpc.soap.client.ProjectData;
@@ -2438,21 +2461,21 @@ method:null
   outHeader:  false
 
 
-19:51:09.995 [Test worker] DEBUG org.apache.axis.client.Call - operation.getNumParams()=2
-19:51:09.995 [Test worker] DEBUG org.apache.axis.client.Call - getParamList number of params: 2
-19:51:10.006 [Test worker] DEBUG org.apache.axis.client.Call - Enter: Call::invoke(RPCElement)
-19:51:10.014 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(attachEnabled)
-19:51:10.014 [Test worker] DEBUG org.apache.axis.Message - Attachment support is enabled?  true
-19:51:10.020 [Test worker] DEBUG org.apache.axis.SOAPPart - Enter: SOAPPart ctor(FORM_SOAPENVELOPE)
-19:51:10.020 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(setMsgForm)
-19:51:10.020 [Test worker] DEBUG org.apache.axis.SOAPPart - Setting current message form to: FORM_SOAPENVELOPE (currentMessage is now org.apache.axis.message.SOAPEnvelope)
-19:51:10.020 [Test worker] DEBUG org.apache.axis.SOAPPart - Exit: SOAPPart ctor()
-19:51:10.020 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(addBody00)
-19:51:10.020 [Test worker] DEBUG org.apache.axis.message.SOAPBody - Adding body element to message...
-19:51:10.020 [Test worker] DEBUG org.apache.axis.client.Call - Enter: Call::invoke()
-19:51:10.020 [Test worker] DEBUG org.apache.axis.MessageContext - MessageContext: setTargetService(MantisConnectPort)
-19:51:10.021 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(noService10)
-19:51:10.023 [Test worker] DEBUG org.apache.axis.ConfigurationException - Exception: 
+20:34:33.077 [Test worker] DEBUG org.apache.axis.client.Call - operation.getNumParams()=2
+20:34:33.077 [Test worker] DEBUG org.apache.axis.client.Call - getParamList number of params: 2
+20:34:33.085 [Test worker] DEBUG org.apache.axis.client.Call - Enter: Call::invoke(RPCElement)
+20:34:33.094 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(attachEnabled)
+20:34:33.094 [Test worker] DEBUG org.apache.axis.Message - Attachment support is enabled?  true
+20:34:33.098 [Test worker] DEBUG org.apache.axis.SOAPPart - Enter: SOAPPart ctor(FORM_SOAPENVELOPE)
+20:34:33.098 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(setMsgForm)
+20:34:33.098 [Test worker] DEBUG org.apache.axis.SOAPPart - Setting current message form to: FORM_SOAPENVELOPE (currentMessage is now org.apache.axis.message.SOAPEnvelope)
+20:34:33.098 [Test worker] DEBUG org.apache.axis.SOAPPart - Exit: SOAPPart ctor()
+20:34:33.099 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(addBody00)
+20:34:33.099 [Test worker] DEBUG org.apache.axis.message.SOAPBody - Adding body element to message...
+20:34:33.099 [Test worker] DEBUG org.apache.axis.client.Call - Enter: Call::invoke()
+20:34:33.099 [Test worker] DEBUG org.apache.axis.MessageContext - MessageContext: setTargetService(MantisConnectPort)
+20:34:33.099 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(noService10)
+20:34:33.104 [Test worker] DEBUG org.apache.axis.ConfigurationException - Exception: 
 org.apache.axis.ConfigurationException: No service named MantisConnectPort is available
 	at org.apache.axis.configuration.FileProvider.getService(FileProvider.java:233)
 	at org.apache.axis.AxisEngine.getService(AxisEngine.java:311)
@@ -2462,7 +2485,8 @@ org.apache.axis.ConfigurationException: No service named MantisConnectPort is av
 	at org.apache.axis.client.Call.invoke(Call.java:2366)
 	at org.apache.axis.client.Call.invoke(Call.java:1812)
 	at biz.futureware.mantis.rpc.soap.client.MantisConnectBindingStub.mc_projects_get_user_accessible(MantisConnectBindingStub.java:2750)
-	at dd.pyrkova.mantis.tests.SoapTests.testGetProjects(SoapTests.java:19)
+	at dd.pyrkova.mantis.appmanager.SoapHelper.getProjects(SoapHelper.java:26)
+	at dd.pyrkova.mantis.tests.SoapTests.testGetProjects(SoapTests.java:16)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2516,12 +2540,12 @@ org.apache.axis.ConfigurationException: No service named MantisConnectPort is av
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
 	at java.lang.Thread.run(Thread.java:748)
-19:51:10.024 [Test worker] DEBUG org.apache.axis.MessageContext - MessageContext: setServiceHandler(null)
-19:51:10.024 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(targetService)
-19:51:10.024 [Test worker] DEBUG org.apache.axis.client.Call - Target service:  MantisConnectPort
-19:51:10.024 [Test worker] DEBUG org.apache.axis.MessageContext - MessageContext: setTargetService(http://www.mantisbt.org/bugs/api/soap/mantisconnect.php/mc_projects_get_user_accessible)
-19:51:10.024 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(noService10)
-19:51:10.025 [Test worker] DEBUG org.apache.axis.ConfigurationException - Exception: 
+20:34:33.106 [Test worker] DEBUG org.apache.axis.MessageContext - MessageContext: setServiceHandler(null)
+20:34:33.106 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(targetService)
+20:34:33.106 [Test worker] DEBUG org.apache.axis.client.Call - Target service:  MantisConnectPort
+20:34:33.106 [Test worker] DEBUG org.apache.axis.MessageContext - MessageContext: setTargetService(http://www.mantisbt.org/bugs/api/soap/mantisconnect.php/mc_projects_get_user_accessible)
+20:34:33.106 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(noService10)
+20:34:33.107 [Test worker] DEBUG org.apache.axis.ConfigurationException - Exception: 
 org.apache.axis.ConfigurationException: No service named http://www.mantisbt.org/bugs/api/soap/mantisconnect.php/mc_projects_get_user_accessible is available
 	at org.apache.axis.configuration.FileProvider.getService(FileProvider.java:233)
 	at org.apache.axis.AxisEngine.getService(AxisEngine.java:311)
@@ -2533,7 +2557,8 @@ org.apache.axis.ConfigurationException: No service named http://www.mantisbt.org
 	at org.apache.axis.client.Call.invoke(Call.java:2366)
 	at org.apache.axis.client.Call.invoke(Call.java:1812)
 	at biz.futureware.mantis.rpc.soap.client.MantisConnectBindingStub.mc_projects_get_user_accessible(MantisConnectBindingStub.java:2750)
-	at dd.pyrkova.mantis.tests.SoapTests.testGetProjects(SoapTests.java:19)
+	at dd.pyrkova.mantis.appmanager.SoapHelper.getProjects(SoapHelper.java:26)
+	at dd.pyrkova.mantis.tests.SoapTests.testGetProjects(SoapTests.java:16)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2587,90 +2612,90 @@ org.apache.axis.ConfigurationException: No service named http://www.mantisbt.org
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
 	at java.lang.Thread.run(Thread.java:748)
-19:51:10.025 [Test worker] DEBUG org.apache.axis.MessageContext - MessageContext: setServiceHandler(null)
-19:51:10.028 [Test worker] DEBUG org.apache.axis.SOAPPart - Enter: SOAPPart::getAsSOAPEnvelope()
-19:51:10.028 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(currForm)
-19:51:10.029 [Test worker] DEBUG org.apache.axis.SOAPPart - current form is FORM_SOAPENVELOPE
-19:51:10.029 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(register00)
-19:51:10.029 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - register 'soapenv' - 'http://schemas.xmlsoap.org/soap/envelope/'
-19:51:10.029 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(register00)
-19:51:10.029 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - register 'soapenv' - 'http://schemas.xmlsoap.org/soap/envelope/'
-19:51:10.029 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(register00)
-19:51:10.029 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - register 'xsd' - 'http://www.w3.org/2001/XMLSchema'
-19:51:10.029 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(register00)
-19:51:10.029 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - register 'xsi' - 'http://www.w3.org/2001/XMLSchema-instance'
-19:51:10.029 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(startElem00)
-19:51:10.029 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - Start element [http://schemas.xmlsoap.org/soap/envelope/]:Envelope
-19:51:10.032 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(startElem00)
-19:51:10.033 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - Start element [http://schemas.xmlsoap.org/soap/envelope/]:Body
-19:51:10.033 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(startElem00)
-19:51:10.033 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - Start element [http://futureware.biz/mantisconnect]:mc_projects_get_user_accessible
-19:51:10.033 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(register00)
-19:51:10.033 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - register 'ns1' - 'http://futureware.biz/mantisconnect'
-19:51:10.041 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(startElem00)
-19:51:10.041 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - Start element []:username
-19:51:10.041 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(endElem00)
-19:51:10.041 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - End element username
-19:51:10.041 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(startElem00)
-19:51:10.041 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - Start element []:password
-19:51:10.041 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(endElem00)
-19:51:10.041 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - End element password
-19:51:10.041 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(endElem00)
-19:51:10.041 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - End element ns1:mc_projects_get_user_accessible
-19:51:10.041 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(endElem00)
-19:51:10.042 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - End element soapenv:Body
-19:51:10.042 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(endElem00)
-19:51:10.042 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - End element soapenv:Envelope
-19:51:10.042 [Test worker] DEBUG org.apache.axis.client.Call - <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><ns1:mc_projects_get_user_accessible soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:ns1="http://futureware.biz/mantisconnect"><username xsi:type="xsd:string">administratot</username><password xsi:type="xsd:string">root</password></ns1:mc_projects_get_user_accessible></soapenv:Body></soapenv:Envelope>
-19:51:10.042 [Test worker] DEBUG org.apache.axis.client.AxisClient - Enter: AxisClient::invoke
-19:51:10.042 [Test worker] DEBUG org.apache.axis.client.AxisClient - EngineHandler: null
-19:51:10.048 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(axisUserAgent)
-19:51:10.053 [Test worker] DEBUG org.apache.axis.SimpleChain - Enter: SimpleChain::invoke
-19:51:10.053 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(enter00)
-19:51:10.053 [Test worker] DEBUG org.apache.axis.transport.http.HTTPSender - Enter:  HTTPSender::invoke
-19:51:10.055 [Test worker] DEBUG org.apache.axis.SOAPPart - Enter: SOAPPart::saveChanges
-19:51:10.058 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(register00)
-19:51:10.058 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - register 'soapenv' - 'http://schemas.xmlsoap.org/soap/envelope/'
-19:51:10.058 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(register00)
-19:51:10.058 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - register 'soapenv' - 'http://schemas.xmlsoap.org/soap/envelope/'
-19:51:10.058 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(register00)
-19:51:10.058 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - register 'xsd' - 'http://www.w3.org/2001/XMLSchema'
-19:51:10.058 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(register00)
-19:51:10.058 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - register 'xsi' - 'http://www.w3.org/2001/XMLSchema-instance'
-19:51:10.058 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(startElem00)
-19:51:10.059 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - Start element [http://schemas.xmlsoap.org/soap/envelope/]:Envelope
-19:51:10.059 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(startElem00)
-19:51:10.059 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - Start element [http://schemas.xmlsoap.org/soap/envelope/]:Body
-19:51:10.059 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(startElem00)
-19:51:10.059 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - Start element [http://futureware.biz/mantisconnect]:mc_projects_get_user_accessible
-19:51:10.059 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(register00)
-19:51:10.059 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - register 'ns1' - 'http://futureware.biz/mantisconnect'
-19:51:10.059 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(startElem00)
-19:51:10.059 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - Start element []:username
-19:51:10.060 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(endElem00)
-19:51:10.060 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - End element username
-19:51:10.060 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(startElem00)
-19:51:10.060 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - Start element []:password
-19:51:10.060 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(endElem00)
-19:51:10.060 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - End element password
-19:51:10.060 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(endElem00)
-19:51:10.060 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - End element ns1:mc_projects_get_user_accessible
-19:51:10.060 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(endElem00)
-19:51:10.060 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - End element soapenv:Body
-19:51:10.060 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(endElem00)
-19:51:10.060 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - End element soapenv:Envelope
-19:51:10.060 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(setMsgForm)
-19:51:10.060 [Test worker] DEBUG org.apache.axis.SOAPPart - Setting current message form to: FORM_OPTIMIZED (currentMessage is now org.apache.axis.utils.ByteArray)
-19:51:10.060 [Test worker] DEBUG org.apache.axis.SOAPPart - Exit: SOAPPart::saveChanges(): org.apache.axis.utils.ByteArray@5f0ce526
-19:51:10.061 [Test worker] DEBUG org.apache.axis.SOAPPart - Enter: SOAPPart::saveChanges
-19:51:10.061 [Test worker] DEBUG org.apache.axis.SOAPPart - Enter: SOAPPart::saveChanges
-19:51:10.074 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(createdHTTP00)
-19:51:10.074 [Test worker] DEBUG org.apache.axis.components.net.DefaultSocketFactory - Created an insecure HTTP connection
-19:51:10.075 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(xmlSent00)
-19:51:10.075 [Test worker] DEBUG org.apache.axis.transport.http.HTTPSender - XML sent:
-19:51:10.075 [Test worker] DEBUG org.apache.axis.transport.http.HTTPSender - ---------------------------------------------------
-19:51:10.075 [Test worker] DEBUG org.apache.axis.SOAPPart - Enter: SOAPPart::saveChanges
-19:51:10.076 [Test worker] DEBUG org.apache.axis.transport.http.HTTPSender - POST /mantisbt-2.24.0/api/soap HTTP/1.0
+20:34:33.107 [Test worker] DEBUG org.apache.axis.MessageContext - MessageContext: setServiceHandler(null)
+20:34:33.111 [Test worker] DEBUG org.apache.axis.SOAPPart - Enter: SOAPPart::getAsSOAPEnvelope()
+20:34:33.111 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(currForm)
+20:34:33.112 [Test worker] DEBUG org.apache.axis.SOAPPart - current form is FORM_SOAPENVELOPE
+20:34:33.112 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(register00)
+20:34:33.112 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - register 'soapenv' - 'http://schemas.xmlsoap.org/soap/envelope/'
+20:34:33.112 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(register00)
+20:34:33.112 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - register 'soapenv' - 'http://schemas.xmlsoap.org/soap/envelope/'
+20:34:33.112 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(register00)
+20:34:33.112 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - register 'xsd' - 'http://www.w3.org/2001/XMLSchema'
+20:34:33.112 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(register00)
+20:34:33.112 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - register 'xsi' - 'http://www.w3.org/2001/XMLSchema-instance'
+20:34:33.112 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+20:34:33.113 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - Start element [http://schemas.xmlsoap.org/soap/envelope/]:Envelope
+20:34:33.117 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+20:34:33.117 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - Start element [http://schemas.xmlsoap.org/soap/envelope/]:Body
+20:34:33.118 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+20:34:33.118 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - Start element [http://futureware.biz/mantisconnect]:mc_projects_get_user_accessible
+20:34:33.118 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(register00)
+20:34:33.118 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - register 'ns1' - 'http://futureware.biz/mantisconnect'
+20:34:33.126 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+20:34:33.126 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - Start element []:username
+20:34:33.126 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+20:34:33.126 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - End element username
+20:34:33.126 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+20:34:33.126 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - Start element []:password
+20:34:33.127 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+20:34:33.127 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - End element password
+20:34:33.127 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+20:34:33.127 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - End element ns1:mc_projects_get_user_accessible
+20:34:33.127 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+20:34:33.127 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - End element soapenv:Body
+20:34:33.127 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+20:34:33.127 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - End element soapenv:Envelope
+20:34:33.127 [Test worker] DEBUG org.apache.axis.client.Call - <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><ns1:mc_projects_get_user_accessible soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:ns1="http://futureware.biz/mantisconnect"><username xsi:type="xsd:string">administratot</username><password xsi:type="xsd:string">root</password></ns1:mc_projects_get_user_accessible></soapenv:Body></soapenv:Envelope>
+20:34:33.127 [Test worker] DEBUG org.apache.axis.client.AxisClient - Enter: AxisClient::invoke
+20:34:33.127 [Test worker] DEBUG org.apache.axis.client.AxisClient - EngineHandler: null
+20:34:33.131 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(axisUserAgent)
+20:34:33.137 [Test worker] DEBUG org.apache.axis.SimpleChain - Enter: SimpleChain::invoke
+20:34:33.137 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(enter00)
+20:34:33.137 [Test worker] DEBUG org.apache.axis.transport.http.HTTPSender - Enter:  HTTPSender::invoke
+20:34:33.139 [Test worker] DEBUG org.apache.axis.SOAPPart - Enter: SOAPPart::saveChanges
+20:34:33.141 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(register00)
+20:34:33.142 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - register 'soapenv' - 'http://schemas.xmlsoap.org/soap/envelope/'
+20:34:33.142 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(register00)
+20:34:33.142 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - register 'soapenv' - 'http://schemas.xmlsoap.org/soap/envelope/'
+20:34:33.142 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(register00)
+20:34:33.142 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - register 'xsd' - 'http://www.w3.org/2001/XMLSchema'
+20:34:33.142 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(register00)
+20:34:33.142 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - register 'xsi' - 'http://www.w3.org/2001/XMLSchema-instance'
+20:34:33.142 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+20:34:33.142 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - Start element [http://schemas.xmlsoap.org/soap/envelope/]:Envelope
+20:34:33.142 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+20:34:33.142 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - Start element [http://schemas.xmlsoap.org/soap/envelope/]:Body
+20:34:33.142 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+20:34:33.142 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - Start element [http://futureware.biz/mantisconnect]:mc_projects_get_user_accessible
+20:34:33.142 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(register00)
+20:34:33.142 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - register 'ns1' - 'http://futureware.biz/mantisconnect'
+20:34:33.142 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+20:34:33.143 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - Start element []:username
+20:34:33.143 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+20:34:33.143 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - End element username
+20:34:33.143 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(startElem00)
+20:34:33.143 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - Start element []:password
+20:34:33.143 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+20:34:33.143 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - End element password
+20:34:33.143 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+20:34:33.143 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - End element ns1:mc_projects_get_user_accessible
+20:34:33.143 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+20:34:33.143 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - End element soapenv:Body
+20:34:33.143 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(endElem00)
+20:34:33.143 [Test worker] DEBUG org.apache.axis.encoding.SerializationContext - End element soapenv:Envelope
+20:34:33.143 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(setMsgForm)
+20:34:33.144 [Test worker] DEBUG org.apache.axis.SOAPPart - Setting current message form to: FORM_OPTIMIZED (currentMessage is now org.apache.axis.utils.ByteArray)
+20:34:33.144 [Test worker] DEBUG org.apache.axis.SOAPPart - Exit: SOAPPart::saveChanges(): org.apache.axis.utils.ByteArray@94dc694
+20:34:33.144 [Test worker] DEBUG org.apache.axis.SOAPPart - Enter: SOAPPart::saveChanges
+20:34:33.144 [Test worker] DEBUG org.apache.axis.SOAPPart - Enter: SOAPPart::saveChanges
+20:34:33.156 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(createdHTTP00)
+20:34:33.156 [Test worker] DEBUG org.apache.axis.components.net.DefaultSocketFactory - Created an insecure HTTP connection
+20:34:33.156 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(xmlSent00)
+20:34:33.156 [Test worker] DEBUG org.apache.axis.transport.http.HTTPSender - XML sent:
+20:34:33.156 [Test worker] DEBUG org.apache.axis.transport.http.HTTPSender - ---------------------------------------------------
+20:34:33.156 [Test worker] DEBUG org.apache.axis.SOAPPart - Enter: SOAPPart::saveChanges
+20:34:33.157 [Test worker] DEBUG org.apache.axis.transport.http.HTTPSender - POST /mantisbt-2.24.0/api/soap/mantisconnect.php HTTP/1.0
 Content-Type: text/xml; charset=utf-8
 Accept: application/soap+xml, application/dime, multipart/related, text/*
 User-Agent: Axis/1.4
@@ -2681,23 +2706,42 @@ SOAPAction: "http://www.mantisbt.org/bugs/api/soap/mantisconnect.php/mc_projects
 Content-Length: 553
 
 <?xml version="1.0" encoding="UTF-8"?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><soapenv:Body><ns1:mc_projects_get_user_accessible soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" xmlns:ns1="http://futureware.biz/mantisconnect"><username xsi:type="xsd:string">administratot</username><password xsi:type="xsd:string">root</password></ns1:mc_projects_get_user_accessible></soapenv:Body></soapenv:Envelope>
-19:51:10.077 [Test worker] DEBUG org.apache.axis.transport.http.HTTPSender - HTTP/1.1 301 Moved Permanently
-19:51:10.077 [Test worker] DEBUG org.apache.axis.transport.http.HTTPSender - Date Sat, 04 Apr 2020 16:51:10 GMT
-19:51:10.077 [Test worker] DEBUG org.apache.axis.transport.http.HTTPSender - Server Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.4.2
-19:51:10.077 [Test worker] DEBUG org.apache.axis.transport.http.HTTPSender - Location http://localhost/mantisbt-2.24.0/api/soap/
-19:51:10.077 [Test worker] DEBUG org.apache.axis.transport.http.HTTPSender - Content-Length 349
-19:51:10.077 [Test worker] DEBUG org.apache.axis.transport.http.HTTPSender - Connection close
-19:51:10.077 [Test worker] DEBUG org.apache.axis.transport.http.HTTPSender - Content-Type text/html; charset=iso-8859-1
-19:51:10.085 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(return01)
-19:51:10.085 [Test worker] DEBUG org.apache.axis.transport.http.HTTPSender - (301)Moved Permanently
-19:51:10.085 [Test worker] DEBUG org.apache.axis.SOAPPart - Enter: SOAPPart ctor(FORM_FAULT)
-19:51:10.085 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(setMsgForm)
-19:51:10.086 [Test worker] DEBUG org.apache.axis.SOAPPart - Setting current message form to: FORM_FAULT (currentMessage is now org.apache.axis.AxisFault)
-19:51:10.086 [Test worker] DEBUG org.apache.axis.SOAPPart - Exit: SOAPPart ctor()
-19:51:10.086 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(toAxisFault00)
-19:51:10.086 [Test worker] DEBUG org.apache.axis.enterprise - Mapping Exception to AxisFault
-org.apache.axis.AxisFault: (301)Moved Permanently
-	at org.apache.axis.transport.http.HTTPSender.readFromSocket(HTTPSender.java:744)
+20:34:33.260 [Test worker] DEBUG org.apache.axis.transport.http.HTTPSender - HTTP/1.1 200 OK
+20:34:33.260 [Test worker] DEBUG org.apache.axis.transport.http.HTTPSender - Date Sat, 04 Apr 2020 17:34:33 GMT
+20:34:33.260 [Test worker] DEBUG org.apache.axis.transport.http.HTTPSender - Server Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.4.2
+20:34:33.260 [Test worker] DEBUG org.apache.axis.transport.http.HTTPSender - X-Powered-By PHP/7.4.2
+20:34:33.260 [Test worker] DEBUG org.apache.axis.transport.http.HTTPSender - Set-Cookie PHPSESSID=u2t2ievki2p21j38gp6j7vmfff; path=/; HttpOnly
+20:34:33.260 [Test worker] DEBUG org.apache.axis.transport.http.HTTPSender - Cache-Control private, max-age=10800
+20:34:33.260 [Test worker] DEBUG org.apache.axis.transport.http.HTTPSender - Last-Modified Sun, 29 Mar 2020 07:04:47 GMT
+20:34:33.260 [Test worker] DEBUG org.apache.axis.transport.http.HTTPSender - Content-Length 34
+20:34:33.260 [Test worker] DEBUG org.apache.axis.transport.http.HTTPSender - Connection close
+20:34:33.260 [Test worker] DEBUG org.apache.axis.transport.http.HTTPSender - Content-Type text/html; charset=UTF-8
+20:34:33.261 [Test worker] DEBUG org.apache.axis.SOAPPart - Enter: SOAPPart ctor(FORM_INPUTSTREAM)
+20:34:33.261 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(setMsgForm)
+20:34:33.261 [Test worker] DEBUG org.apache.axis.SOAPPart - Setting current message form to: FORM_INPUTSTREAM (currentMessage is now org.apache.axis.transport.http.SocketInputStream)
+20:34:33.261 [Test worker] DEBUG org.apache.axis.SOAPPart - Exit: SOAPPart ctor()
+20:34:33.261 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(xmlRecd00)
+20:34:33.261 [Test worker] DEBUG org.apache.axis.transport.http.HTTPSender - 
+XML received:
+20:34:33.261 [Test worker] DEBUG org.apache.axis.transport.http.HTTPSender - -----------------------------------------------
+20:34:33.261 [Test worker] DEBUG org.apache.axis.SOAPPart - Enter: SOAPPart::getAsSOAPEnvelope()
+20:34:33.261 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(currForm)
+20:34:33.261 [Test worker] DEBUG org.apache.axis.SOAPPart - current form is FORM_INPUTSTREAM
+20:34:33.270 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(pushHandler00)
+20:34:33.271 [Test worker] DEBUG org.apache.axis.encoding.DeserializationContext - Pushing handler org.apache.axis.message.EnvelopeHandler@55946e08
+20:34:33.286 [Test worker] DEBUG org.apache.axis.transport.http.HTTPSender - org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Content is not allowed in prolog.
+20:34:33.286 [Test worker] DEBUG org.apache.axis.SOAPPart - Enter: SOAPPart ctor(FORM_FAULT)
+20:34:33.286 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(setMsgForm)
+20:34:33.286 [Test worker] DEBUG org.apache.axis.SOAPPart - Setting current message form to: FORM_FAULT (currentMessage is now org.apache.axis.AxisFault)
+20:34:33.286 [Test worker] DEBUG org.apache.axis.SOAPPart - Exit: SOAPPart ctor()
+20:34:33.286 [Test worker] DEBUG org.apache.axis.i18n.ProjectResourceBundle - org.apache.axis.i18n.resource::handleGetObject(toAxisFault00)
+20:34:33.287 [Test worker] DEBUG org.apache.axis.enterprise - Mapping Exception to AxisFault
+org.apache.axis.AxisFault: ; nested exception is: 
+	org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Content is not allowed in prolog.
+	at org.apache.axis.AxisFault.makeFault(AxisFault.java:101)
+	at org.apache.axis.SOAPPart.getAsSOAPEnvelope(SOAPPart.java:701)
+	at org.apache.axis.Message.getSOAPEnvelope(Message.java:435)
+	at org.apache.axis.transport.http.HTTPSender.readFromSocket(HTTPSender.java:796)
 	at org.apache.axis.transport.http.HTTPSender.invoke(HTTPSender.java:144)
 	at org.apache.axis.strategies.InvocationStrategy.visit(InvocationStrategy.java:32)
 	at org.apache.axis.SimpleChain.doVisiting(SimpleChain.java:118)
@@ -2709,7 +2753,8 @@ org.apache.axis.AxisFault: (301)Moved Permanently
 	at org.apache.axis.client.Call.invoke(Call.java:2366)
 	at org.apache.axis.client.Call.invoke(Call.java:1812)
 	at biz.futureware.mantis.rpc.soap.client.MantisConnectBindingStub.mc_projects_get_user_accessible(MantisConnectBindingStub.java:2750)
-	at dd.pyrkova.mantis.tests.SoapTests.testGetProjects(SoapTests.java:19)
+	at dd.pyrkova.mantis.appmanager.SoapHelper.getProjects(SoapHelper.java:26)
+	at dd.pyrkova.mantis.tests.SoapTests.testGetProjects(SoapTests.java:16)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -2763,6 +2808,25 @@ org.apache.axis.AxisFault: (301)Moved Permanently
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
 	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
 	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.xml.sax.SAXParseException: Content is not allowed in prolog.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:203)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1472)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:994)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:602)
+	at com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:112)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:505)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:842)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:771)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:327)
+	at org.apache.axis.encoding.DeserializationContext.parse(DeserializationContext.java:227)
+	at org.apache.axis.SOAPPart.getAsSOAPEnvelope(SOAPPart.java:696)
+	... 68 common frames omitted
 ]]></system-out>
   <system-err><![CDATA[SLF4J: Class path contains multiple SLF4J bindings.
 SLF4J: Found binding in [jar:file:/C:/Users/dpyrk/.gradle/caches/modules-2/files-2.1/ch.qos.logback/logback-classic/1.2.3/7c4f3c474fb2c041d8028740440937705ebb473a/logback-classic-1.2.3.jar!/org/slf4j/impl/StaticLoggerBinder.class]
