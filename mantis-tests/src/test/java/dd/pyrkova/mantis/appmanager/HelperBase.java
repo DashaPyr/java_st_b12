@@ -1,6 +1,8 @@
 package dd.pyrkova.mantis.appmanager;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import java.io.File;
 
@@ -28,12 +30,21 @@ public class HelperBase {
     }
   }
 
-  public void attach(By locator, File file) {
-    if (file != null) {
-      String existingText = wd.findElement(locator).getAttribute("value");
-      wd.findElement(locator).sendKeys(file.getAbsolutePath());
+  protected boolean elementPresent(By locator) {
+    try {
+      wd.findElement(locator);
+      return true;
+    } catch (NoSuchElementException e) {
+      return false;
     }
   }
 
-
+  private boolean alertPresent() {
+    try {
+      wd.switchTo().alert();
+      return true;
+    } catch (NoAlertPresentException e) {
+      return false;
+    }
+  }
 }
