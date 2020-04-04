@@ -16,15 +16,18 @@ import java.util.stream.Collectors;
 public class SoapHelper {
 
   private ApplicationManager app;
+  private String url;
+  private String login;
+  private String password;
 
   public SoapHelper(ApplicationManager app) {
     this.app = app;
+    this.url = app.getProperty("web.soapUrl");
+    this.login = app.getProperty("web.adminLogin");
+    this.password = app.getProperty("web.adminPassword");
   }
 
   public Set<Project> getProjects() throws MalformedURLException, ServiceException, RemoteException {
-    String login = app.getProperty("web.adminLogin");
-    String password = app.getProperty("web.adminPassword");
-
     MantisConnectPortType mc = getMantisConnect();
     ProjectData[] projects = mc.mc_projects_get_user_accessible(login, password);
     return Arrays.asList(projects).stream().map((p) -> new Project().withId(p.getId().intValue()).withName(p.getName())).collect(Collectors.toSet());
@@ -32,15 +35,11 @@ public class SoapHelper {
   }
 
   public MantisConnectPortType getMantisConnect() throws ServiceException, MalformedURLException {
-    String url = app.getProperty("web.baseSoapUrl");
     return new MantisConnectLocator()
             .getMantisConnectPort(new URL(url));
   }
 
   public Issue addIssue(Issue issue) throws MalformedURLException, ServiceException, RemoteException {
-    String login = app.getProperty("web.adminLogin");
-    String password = app.getProperty("web.adminPassword");
-
     MantisConnectPortType mc = getMantisConnect();
     String[] categories = mc.mc_project_get_categories(login, password, BigInteger.valueOf(issue.getProject().getId()));
     IssueData issueData = new IssueData();
@@ -54,5 +53,9 @@ public class SoapHelper {
             .withSummary(newIssueData.getSummary()).withDescription(newIssueData.getDescription())
             .withProject(new Project().withId(newIssueData.getProject().getId().intValue())
                     .withName(newIssueData.getProject().getName()));
+  }
+
+  public MantisConnectPortType getCoonect() throws RemoteException, MalformedURLException, ServiceException{
+    return new MantisConnectLocator().getMantisConnectPort(new URL(url));
   }
 }
