@@ -21,28 +21,4 @@ public class ApplicationManager {
     this.browser = browser;
     this.properties = new Properties();
   }
-
-  public void init() throws IOException {
-    String target = System.getProperty("target", "local");
-    properties.load(new FileReader(new File(String.format("src/test/resources/%s.properties",target))));
-
-    if (browser.equals(BrowserType.FIREFOX)) {
-      wd = new FirefoxDriver();
-    } else if (browser.equals(BrowserType.CHROME)) {
-      wd = new ChromeDriver();
-    } else if (browser.equals(BrowserType.IE)) {
-      wd = new InternetExplorerDriver();
-    }
-
-    wd.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
-    wd.get(properties.getProperty("web.baseUrl"));
-  }
-
-  public void stop() {
-    if (wd != null){
-      wd.quit();
-    }
-  }
-
-
 }

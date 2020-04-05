@@ -14,13 +14,13 @@ import static org.testng.Assert.assertEquals;
 
 public class RestTests extends TestBase{
 
-/*  @BeforeClass
-  public void init(){
-    RestAssured.authentication = RestAssured.basic("288f44776e7bec4bf44fdfeb1e646490", "");
-  }*/
-
   @Test
   public void testCreateIssue() throws IOException {
+    //skipIfNotFixed(2673); // Bug status - Open
+    //skipIfNotFixed(608); // Bug status - Closed
+  //  skipIfNotFixed(768); // Bug status - Resolved
+    //skipIfNotFixed(1); // Bug status - Deleted
+
     Set<Issue> oldIssues = getIssues();
     Issue issue = new Issue().withSubject("Test subject").withDescription("Test description");
     int id = createIssue(issue);
