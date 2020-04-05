@@ -1,12 +1,8 @@
 package dd.pyrkova.rest;
 
-import dd.pyrkova.rest.Issue;
-import com.google.gson.Gson;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonParser;
-import com.google.gson.reflect.TypeToken;
-import org.apache.http.client.fluent.Executor;
-import org.apache.http.message.BasicNameValuePair;
+import com.jayway.restassured.RestAssured;
+import dd.pyrkova.rest.appmeneger.Issue;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
@@ -17,6 +13,11 @@ import static org.apache.http.client.fluent.Request.Post;
 import static org.testng.Assert.assertEquals;
 
 public class RestTests extends TestBase{
+
+/*  @BeforeClass
+  public void init(){
+    RestAssured.authentication = RestAssured.basic("288f44776e7bec4bf44fdfeb1e646490", "");
+  }*/
 
   @Test
   public void testCreateIssue() throws IOException {

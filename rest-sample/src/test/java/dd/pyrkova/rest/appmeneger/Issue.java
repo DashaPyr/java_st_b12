@@ -1,4 +1,4 @@
-package dd.pyrkova.rest;
+package dd.pyrkova.rest.appmeneger;
 
 import java.util.Objects;
 

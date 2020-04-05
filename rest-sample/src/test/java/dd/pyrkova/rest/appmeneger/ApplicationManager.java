@@ -1,4 +1,4 @@
-package dd.pyrkova.rest;
+package dd.pyrkova.rest.appmeneger;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -24,7 +24,6 @@ public class ApplicationManager {
 
   public void init() throws IOException {
     String target = System.getProperty("target", "local");
-    //String target = System.getProperty("target");
     properties.load(new FileReader(new File(String.format("src/test/resources/%s.properties",target))));
 
     if (browser.equals(BrowserType.FIREFOX)) {
