@@ -31,7 +31,7 @@ task testGroups (type: Test){
     }
 }
 
-task testUsers (type: Test){
+/*task testUsers (type: Test){
     useTestNG{
         suites 'src/test/resources/testng_users.xml'
     }
@@ -44,4 +44,4 @@ task testUsers (type: Test){
     if (project.hasProperty('verifyUI')){
         systemProperty 'verifyUI', "${verifyUI}"
     }
-}
+}*/
