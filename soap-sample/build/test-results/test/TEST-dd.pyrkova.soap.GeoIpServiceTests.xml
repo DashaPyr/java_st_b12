@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="dd.pyrkova.soap.GeoIpServiceTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-04T15:34:24" hostname="Congo" time="266.002">
+<testsuite name="dd.pyrkova.soap.GeoIpServiceTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-04-11T08:13:32" hostname="Congo" time="2.872">
   <properties/>
-  <testcase name="testIP" classname="dd.pyrkova.soap.GeoIpServiceTests" time="266.002"/>
+  <testcase name="testIP" classname="dd.pyrkova.soap.GeoIpServiceTests" time="2.872"/>
   <system-out><![CDATA[<GeoIP><Country>RU</Country><State>47</State></GeoIP>
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
