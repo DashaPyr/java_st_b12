@@ -1,6 +1,5 @@
 apply plugin: 'java'
 apply plugin: 'application'
-mainClassName = "MyFirstProgram"
 
 repositories {
     mavenCentral()
@@ -8,6 +7,10 @@ repositories {
 
 dependencies {
     implementation 'org.testng:testng:7.1.0'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
 }
 
 test{
