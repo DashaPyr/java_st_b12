@@ -3,9 +3,7 @@
 <suite name="Suite1" verbose="1" >
     <test name="Groups" >
         <classes>
-            <class name="dd.pyrkova.addressbook.tests.GroupCreationTests" />
             <class name="dd.pyrkova.addressbook.tests.GroupModificationTests" />
-            <class name="dd.pyrkova.addressbook.tests.GroupDeletionTests" />
         </classes>
     </test>
 </suite>
